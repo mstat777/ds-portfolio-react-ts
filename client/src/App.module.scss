@@ -1,0 +1,146 @@
+@use './global';
+
+/*************************************************************/
+/* ----------------------- GENERALES ----------------------- */
+/*************************************************************/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body{
+    font-size: 1.6rem;
+    font-family: global.$main-font;  
+    background-color: global.$secondary-color;
+    > div { // "root"
+        min-height: 100vh; // pour positionner le footer toujours en bas de la page
+        display: flex;
+        flex-direction: column;
+
+        main {
+            width: 100%;
+            margin-top: 60px;
+            text-align: center;
+            
+            @media screen and (min-width: global.$tablet) {
+                margin-top: 0;
+            }
+        }
+    }
+}
+
+/* ------------ HEADINGS ------------- */
+h1, h2, h3, h4 {
+    font-family: global.$title-font;
+    font-weight: 500;
+    color: global.$tertiary-color;
+}
+
+h1 {
+	font-size: 3.6rem;
+    margin: 3rem;
+}
+
+h2 {
+	font-size: 2.5rem;
+    margin: 2rem;
+}
+
+h3 {
+	font-size: 2.2rem;
+    margin: 1.6rem;
+}
+
+h4 {
+	font-size: 1.8rem;
+    margin: 1.2rem;
+}
+
+/* ------------- OTHERS -------------- */
+a {
+    text-decoration: none;
+    display: inline-block;
+}
+
+li {
+    list-style: none;
+}
+
+p {
+    margin: 1rem 0;
+}
+
+img {
+    display: block;
+    width: 100%;
+    max-height: 100%;
+}
+
+/* ------------- TABLES -------------- */
+table {
+	border-collapse: collapse;
+    font-size: 1.4rem;
+    thead {
+        th {
+            padding: 1.4rem;
+            border: 1px solid global.$lightgrey-color;
+            font-weight: 600;
+            text-align: center;
+        }
+    }
+    tbody {
+        tr {
+            td {
+                border: 1px solid global.$lightgrey-color;
+                text-align: center;
+            }
+            &:nth-child(odd) {
+                td {
+                    background-color: global.$verylightgrey-color;
+                }
+            }
+        }
+    }
+    tfoot {
+        th {
+            border-top: 1px solid global.$grey-color;
+        }
+    }
+}
+
+/* ---------- FORM ELEMENTS ----------- */
+input[type="text"],
+input[type="password"],
+input[type="search"],
+input[type="email"],
+input[type="tel"],
+input[type="date"],
+input[type="number"],
+input[type*="date"],
+select,
+textarea {
+	display: inline-block;
+	font-size: 1.6rem;
+    font-family: global.$main-font; 
+	color: global.$darkgrey-color; 
+	border: 1px solid global.$lightgrey-color;
+	border-radius: .6rem;
+}
+textarea {
+	display: block;
+    resize: none;
+}
+
+::placeholder {
+    font-weight: 400;
+	color: global.$grey-color; 
+}
+
+.hidden {
+    display: none;
+}

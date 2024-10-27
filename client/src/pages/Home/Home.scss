@@ -1,0 +1,15 @@
+@use '../../global';
+
+.home {
+
+    &_section {
+        height: auto;
+        margin: 3rem;
+        padding-bottom: 3rem;
+
+        h1 {
+            margin: 2.5rem auto;
+            font-size: 3rem;
+        }
+    }
+}

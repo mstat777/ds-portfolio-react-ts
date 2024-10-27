@@ -1,0 +1,19 @@
+@use '../../global';
+
+.about {
+    display: flex;
+    background-color: global.$primary-color;
+
+    &_section {
+        margin: 3rem;
+        padding: 30px;
+
+        h1 {
+            margin: 2.5rem auto;
+            font-size: 3rem;
+        }
+        p {
+            text-align: justify;
+        }
+    }
+}

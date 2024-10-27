@@ -1,0 +1,19 @@
+// ---------------------- Colors ---------------------- //
+$primary-color: white;                  // 60%
+$secondary-color: rgb(16, 28, 50); //#1a1a1a; // 30%
+$tertiary-color: #ffdd00;               // 10%
+
+$highlight-color: rgb(231, 19, 105);    // highlight texts, errors
+
+$darkgrey-color: #333;                  // input, textarea, select...
+$grey-color: grey;
+$lightgrey-color: rgb(204, 204, 204);   // table cells borders
+$verylightgrey-color: #f9f9f9;          // alternate table rows
+
+// ----------------------- Fonts ---------------------- //
+$main-font: 'Lato', sans-serif;      
+$title-font: 'Anta', sans-serif;        // for headings
+
+// ------------ Breakpoints (media queries) ----------- //
+$tablet: 768px;
+$desktop: 1100px;

@@ -1,0 +1,11 @@
+@use '../../global';
+
+.projects {
+    @media screen and (min-width: global.$tablet) {   
+
+    }
+
+    &_section {
+        
+    }
+}

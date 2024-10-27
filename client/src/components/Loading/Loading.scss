@@ -1,0 +1,11 @@
+@use '../../global';
+
+.spinner {
+    width: 80px;
+    height: 80px;
+    margin: 20vh auto;
+    
+    @media screen and (min-width: global.$tablet) {
+        margin: 30vh auto;
+    }
+}
