@@ -1,19 +1,33 @@
 @use '../../global';
 
 .about {
-    display: flex;
-    background-color: global.$primary-color;
+    padding: 3rem;
 
-    &_section {
-        margin: 3rem;
-        padding: 30px;
+    h1 {
+        margin: 2.5rem auto;
+        font-size: 3rem;
+    }
 
-        h1 {
-            margin: 2.5rem auto;
-            font-size: 3rem;
+    article {
+        color: global.$primary-color;
+
+        img {
+            width: 40%;
+            max-width: 200px;
+            float: left;
+            margin-right: 1.5rem;
+
+            @media screen and (min-width: global.$tablet){
+                margin-right: 2rem;
+            }
         }
+
         p {
-            text-align: justify;
+            text-align: left;
+
+            @media screen and (min-width: global.$tablet){
+                text-align: justify;
+            }
         }
     }
 }

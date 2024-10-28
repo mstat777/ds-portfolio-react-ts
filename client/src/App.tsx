@@ -1,3 +1,4 @@
+import './App.module.scss';
 import { BrowserRouter, Routes, Route, Outlet, Navigate } from 'react-router-dom';
 
 // ------------------- CONTAINERS  -----------------------

@@ -30,12 +30,20 @@ body{
             @media screen and (min-width: global.$tablet) {
                 margin-top: 0;
             }
+
+            > section {
+                max-width: 1000px;
+                margin: 0 auto;
+                padding: 0 2rem;
+                color: global.$primary-color;
+            }
         }
     }
 }
 
 /* ------------ HEADINGS ------------- */
 h1, h2, h3, h4 {
+    display: block;
     font-family: global.$title-font;
     font-weight: 500;
     color: global.$tertiary-color;
@@ -43,28 +51,29 @@ h1, h2, h3, h4 {
 
 h1 {
 	font-size: 3.6rem;
-    margin: 3rem;
+    margin: 3rem 0;
 }
 
 h2 {
 	font-size: 2.5rem;
-    margin: 2rem;
+    margin: 2rem 0;
 }
 
 h3 {
 	font-size: 2.2rem;
-    margin: 1.6rem;
+    margin: 1.6rem 0;
 }
 
 h4 {
 	font-size: 1.8rem;
-    margin: 1.2rem;
+    margin: 1.2rem 0;
 }
 
 /* ------------- OTHERS -------------- */
 a {
-    text-decoration: none;
     display: inline-block;
+    text-decoration: none;
+    color: global.$quaternary-color;
 }
 
 li {

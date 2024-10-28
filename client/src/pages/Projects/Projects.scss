@@ -1,11 +1,30 @@
 @use '../../global';
 
 .projects {
+
     @media screen and (min-width: global.$tablet) {   
 
     }
 
-    &_section {
-        
+    > article {
+        text-align: left;
+
+        h2 {
+            margin: 1rem 0;
+            font-size: 2.2rem;
+        }
+
+        p {
+            
+        }
+
+        .subtitle {
+
+        }
+
+        .project_link {
+            padding: 0 .5rem;
+            font-weight: 600;
+        }
     }
 }

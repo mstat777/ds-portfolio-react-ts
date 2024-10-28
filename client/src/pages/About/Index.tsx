@@ -9,15 +9,19 @@ export default function About(){
     },[]);
 
     return (
-        <main id="about" className="about">
+        <main id="about">
 
-            <section className="about_section">
+            <section className="about">
                 <h1>Dimitar Statev</h1>
 
                 <article>
                     <img src={`${IMG_URL}/dimitar-yellow-stilized-w300.jpg`} alt="Dimitar Statev"/>
                     
-                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quisquam corrupti molestias itaque facere sit quaerat ex tempora et maiores fugiat asperiores voluptate inventore, eaque obcaecati quas, voluptatem iste debitis magnam eum alias libero expedita hic! Quos quae veritatis, qui voluptatem laboriosam praesentium laborum quas. Necessitatibus, tempore repellat. Consequatur, quod nihil.</p>
+                    <p>Je suis développeur web pationné par la création des applications et des sites web.</p>
+
+                    <p>J'ai aussi un diplôme en architecture.</p>
+
+                    <p>Voici mon CV : télécharger</p>
                 </article>
                 
             </section>

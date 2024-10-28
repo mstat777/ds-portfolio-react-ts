@@ -1,8 +1,10 @@
 import './Contact.scss';
 import { useState, useEffect } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faPhone, faEnvelope, faLocationDot } from '@fortawesome/free-solid-svg-icons';
+import { faEnvelope } from '@fortawesome/free-solid-svg-icons';
+import { faLinkedin, faGithub } from '@fortawesome/free-brands-svg-icons';
 import { validateInput } from '../../utils/validate';
+import MainBtn from '../../components/MainBtn/Index';
 
 export default function Contact(){
     const IMG_URL = process.env.REACT_APP_IMG_URL;
@@ -38,7 +40,7 @@ export default function Contact(){
     },[isFormValid]);
 
     async function submitForm() {
-        
+        console.log("The from is validated now. Let's send the mail! :)");
     }
 
     function handleOnFocus(){
@@ -46,46 +48,46 @@ export default function Contact(){
         setErrMsg('');
     }
 
-    function handleSubmit(e: React.FormEvent<HTMLFormElement>){
-        e.preventDefault();
+    const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
+        event.preventDefault();
         validateForm();
     }
 
     return (
-        <main id="contact" className="contact">
-            <section className="text_section">
+        <main id="contact">
+            <section className="contact">
                 <h1>Contact</h1>
 
-                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quisquam corrupti molestias itaque facere sit quaerat ex tempora et maiores fugiat asperiores voluptate inventore, eaque obcaecati quas, voluptatem iste debitis magnam eum alias libero expedita hic!</p>
+                <p>Si vous êtez intéressé 'hésitez pas à me contacter.</p>
 
                 <div className="contact_details">
-                    <div className="detail_ctn">
+                    <div className="detail_ctn">        
                         <span>
-                            <FontAwesomeIcon icon={faPhone} className="icon"/>
-                            phone
+                            <FontAwesomeIcon icon={faEnvelope} className="icon"/> 
+                            email :
                         </span>
-                        <span>+1 (234)567-890</span>
+                        <span>statevd@gmail.com</span>
                     </div>
 
                     <div className="detail_ctn">        
                         <span>
-                            <FontAwesomeIcon icon={faEnvelope} className="icon"/> 
-                            e-mail
+                            <FontAwesomeIcon icon={faGithub} className="icon"/> 
+                            GitHub :
                         </span>
-                        <span>mymail@fotohunet.com</span>
+                        <a href="https://github.com/mstat777">mstat777</a>
                     </div>
 
-                    <div className="detail_ctn">
+                    <div className="detail_ctn">        
                         <span>
-                            <FontAwesomeIcon icon={faLocationDot} className="icon"/>
-                            address
+                            <FontAwesomeIcon icon={faLinkedin} className="icon"/> 
+                            LinkedIn :
                         </span>
-                        <address>San Francisco, CA 94107<br/>
-                        fa795 Folsom Ave, Suite 600</address>
+                        <a href="https://www.linkedin.com/in/dimitar-statev/">dimitar-statev</a>
                     </div>
                 </div>
 
                 <div className="contact_form_ctn">
+                    <h2>envoyez-moi un message</h2>
                     { (okMsg && userName && userEmail && userMessage) ? 
                         <p className="ok_msg">{okMsg}</p> : null }
                     { (errMsg && userName && userEmail && userMessage) ? 
@@ -117,7 +119,8 @@ export default function Contact(){
                             maxLength={600}
                             required />
 
-                        <button type="submit">send message</button>
+                        <MainBtn type="submit" 
+                                onClick={handleSubmit} text="send message"/>
                     </form>
                 </div>
         
