@@ -24,7 +24,7 @@ export default function About(){
                 <article>
                     <img src={`${IMG_URL}/dimitar.jpg`} alt="Dimitar Statev"/>
                     
-                    <p>{t("pages.about.text")}</p>
+                    <div>{t("pages.about.text")}</div>
                 </article>
                 {/* parse(sanitizedHtml)*/}
             </section>

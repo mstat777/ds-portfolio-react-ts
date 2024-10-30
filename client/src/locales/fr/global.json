@@ -8,8 +8,8 @@
     "components": {
         "header": {
             "aboutLink": "à propos",
-            "contactLink": "contact",
-            "projectsLink": "projets"
+            "projectsLink": "projets",
+            "contactLink": "contact"
         }
     },
     "pages": {
@@ -18,7 +18,16 @@
             "text": "Je suis développeur web pationné par la création des applications et des sites web. J'ai aussi un diplôme en architecture. Voici mon CV : télécharger"
         },
         "contact": {
-            "title": "contact"
+            "title": "contact",
+            "text": "Si vous êtez intéressé, n'hésitez pas à me contacter.",
+            "email": "email",
+            "form": {
+                "title": "envoyez-moi un message",
+                "namePlholder": "nom",
+                "emailPlholder": "email",
+                "msgPlholder": "message",
+                "sendBtn": "envoyer"
+            }
         },
         "home": {
             "title": "accueil"
@@ -35,5 +44,8 @@
             "text": "Cette page n'est pas disponible. Retourner à",
             "link": "l'acceuil"
         }
+    },
+    "msg": {
+        "loadingTranslations": "chargement de traductions..."
     }
 }

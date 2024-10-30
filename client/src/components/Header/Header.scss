@@ -8,6 +8,7 @@
     height: global.$header-height;
     border-bottom: 1px solid global.$grey-color;
     background-color: global.$secondary-color;
+    z-index: 100;
     
     nav {
         display: flex;
@@ -42,19 +43,21 @@
                 margin: auto 0;
                 padding: .4rem .8rem;
                 font-family: global.$title-font;
+                font-size: 1.4rem;
                 color: global.$primary-color;
                 text-transform: uppercase;
-                transition: all 1s;
+                transition: color .3s;
                 
                 @media screen and (min-width: global.$tablet) {
                     display: block;
                     padding: 2rem;
                     border-top: 1px solid global.$darkgrey-color;
                     font-weight: 600;
+                    font-size: 1.6rem;
                 }
 
                 &:hover {
-                    color: global.$primary-color;
+                    color: global.$tertiary-color;
                 }
             }
         }

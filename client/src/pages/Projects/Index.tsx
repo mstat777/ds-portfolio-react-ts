@@ -1,23 +1,28 @@
 import './Projects.scss';
 import { useEffect } from 'react';
+import { useTranslation } from 'react-i18next';
+import i18next from 'i18next';
 import ProjectCard from '../../components/ProjectCard/Index';
+import { ProjectData } from '../../types/types';
 
 export default function Projects(){
+    const { ready } = useTranslation();
+    const projects: ProjectData[] = i18next.t('projects:projects', { returnObjects: true });
 
     useEffect(() => {
         window.scrollTo(0, 0);
     },[]);
 
-    return ( 
+    return (
+        !ready ?  
+            <p>{i18next.t('msg.loadingTranslations')}</p> :
         <main id="projects">
             <section className="projects">
-                <h1>Projets</h1>
+                <h1>{i18next.t('projects:title')}</h1>
 
-                <ProjectCard />
-                <ProjectCard />
-                <ProjectCard />
-                <ProjectCard />
-
+                { projects.map((project, i) => 
+                    <ProjectCard projectData={project} key={i}/>
+                )}
             </section>
         </main>
     );

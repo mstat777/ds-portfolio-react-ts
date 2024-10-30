@@ -22,7 +22,7 @@
             }
         }
 
-        p {
+        > div {
             text-align: left;
 
             @media screen and (min-width: global.$tablet){

@@ -1,5 +1,6 @@
 import './Contact.scss';
 import { useState, useEffect } from 'react';
+import { useTranslation } from 'react-i18next';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faEnvelope } from '@fortawesome/free-solid-svg-icons';
 import { faLinkedin, faGithub } from '@fortawesome/free-brands-svg-icons';
@@ -7,12 +8,12 @@ import { validateInput } from '../../utils/validate';
 import MainBtn from '../../components/MainBtn/Index';
 
 export default function Contact(){
-    const IMG_URL = process.env.REACT_APP_IMG_URL;
+    const { t } = useTranslation();
+    const trPath = "pages.contact."; // translation path
 
     const [userName, setUserName] = useState('');
     const [userEmail, setUserEmail] = useState('');
     const [userMessage, setUserMessage] = useState('');
-
     const [okMsg, setOkMsg] = useState('');
     const [errMsg, setErrMsg] = useState('');
 
@@ -56,15 +57,15 @@ export default function Contact(){
     return (
         <main id="contact">
             <section className="contact">
-                <h1>Contact</h1>
+                <h1>{t(`${trPath}title`)}</h1>
 
-                <p>Si vous êtez intéressé, n'hésitez pas à me contacter.</p>
+                <p>{t(`${trPath}text`)}</p>
 
                 <div className="contact_details">
                     <div className="detail_ctn">        
                         <span>
                             <FontAwesomeIcon icon={faEnvelope} className="icon"/> 
-                            email :
+                            {t(`${trPath}email`)} : 
                         </span>
                         <a href="mailto:statevd@gmail.com">statevd@gmail.com</a>
                     </div>
@@ -87,7 +88,7 @@ export default function Contact(){
                 </div>
 
                 <div className="contact_form_ctn">
-                    <h2>envoyez-moi un message</h2>
+                    <h2>{t(`${trPath}form.title`)}</h2>
                     { (okMsg && userName && userEmail && userMessage) ? 
                         <p className="ok_msg">{okMsg}</p> : null }
                     { (errMsg && userName && userEmail && userMessage) ? 
@@ -99,7 +100,7 @@ export default function Contact(){
                             value={userName}
                             onChange={(e) => setUserName(e.target.value)}
                             onFocus={handleOnFocus}
-                            placeholder="nom"
+                            placeholder={t(`${trPath}form.namePlholder`)}
                             required/> 
 
                         <input type="email" 
@@ -107,20 +108,20 @@ export default function Contact(){
                             value={userEmail}
                             onChange={(e) => setUserEmail(e.target.value)}
                             onFocus={handleOnFocus}
-                            placeholder="email"
+                            placeholder={t(`${trPath}form.emailPlholder`)}
                             required/> 
 
                         <textarea name="userMessage"
                             value={userMessage}
                             onChange={(e) => setUserMessage(e.target.value)}
                             onFocus={handleOnFocus}
-                            placeholder="message"
+                            placeholder={t(`${trPath}form.msgPlholder`)}
                             rows={8}
                             maxLength={600}
                             required />
 
                         <MainBtn type="submit" 
-                                onClick={handleSubmit} text="send message"/>
+                                onClick={handleSubmit} text={t(`${trPath}form.sendBtn`)}/>
                     </form>
                 </div>
         

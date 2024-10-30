@@ -8,8 +8,8 @@
     "components": {
         "header": {
             "aboutLink": "about",
-            "contactLink": "contact",
-            "projectsLink": "projects"
+            "projectsLink": "projects",
+            "contactLink": "contact"
         }
     },
     "pages": {
@@ -18,7 +18,16 @@
             "text": "I am a web developer passionate about creating applications and websites. I also have a degree in architecture. Here is my CV: download"
         },
         "contact": {
-            "title": "contact"
+            "title": "contact",
+            "text": "If you are interested, please do not hesitate to contact me.",
+            "email": "email",
+            "form": {
+                "title": "send me a message",
+                "namePlholder": "name",
+                "emailPlholder": "email",
+                "msgPlholder": "message",
+                "sendBtn": "send"
+            }
         },
         "home": {
             "title": "home"
@@ -35,5 +44,8 @@
             "text": "This page is not available. Return to",
             "link": "home"
         }
+    },
+    "msg": {
+        "loadingTranslations": "loading translations..."
     }
 }
