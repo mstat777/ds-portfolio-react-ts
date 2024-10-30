@@ -1,8 +1,15 @@
 import './About.scss';
 import { useEffect } from 'react';
+import { useTranslation } from 'react-i18next';
+import parse from 'html-react-parser';
+import DOMPurify from "dompurify";
 
 export default function About(){
     const IMG_URL = process.env.REACT_APP_IMG_URL;
+    const { t } = useTranslation();
+/*
+    const someHtml = "<div>Hello dude! <a>I'm Jerry</a><br/><ol><li>Ano</li><li>Efa</li><li>ITchi</li></ol><div>";
+    const sanitizedHtml = DOMPurify.sanitize(someHtml);*/
 
     useEffect(() => {
         window.scrollTo(0, 0);
@@ -12,18 +19,14 @@ export default function About(){
         <main id="about">
 
             <section className="about">
-                <h1>Dimitar Statev</h1>
+                <h1>{t("pages.about.title")}</h1>
 
                 <article>
-                    <img src={`${IMG_URL}/dimitar-yellow-stilized-w300.jpg`} alt="Dimitar Statev"/>
+                    <img src={`${IMG_URL}/dimitar.jpg`} alt="Dimitar Statev"/>
                     
-                    <p>Je suis développeur web pationné par la création des applications et des sites web.</p>
-
-                    <p>J'ai aussi un diplôme en architecture.</p>
-
-                    <p>Voici mon CV : télécharger</p>
+                    <p>{t("pages.about.text")}</p>
                 </article>
-                
+                {/* parse(sanitizedHtml)*/}
             </section>
         </main>
     );

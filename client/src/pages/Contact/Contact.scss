@@ -21,7 +21,6 @@
 
     &_details {
         width: 100%;
-        margin-bottom: 2rem;
 
         @media screen and (min-width: global.$tablet) {
             display: inline-block;
@@ -101,7 +100,12 @@
                 display: block;
                 width: 100%;
                 padding: .6rem;
-                font-weight: 500;
+                box-shadow: inset 1px 1px 2px global.$secondary-color;
+                font-weight: 600;
+                overflow: visible;
+            }
+            > input {
+                color: global.$secondary-color;
             }
             > textarea {
                 height: auto;

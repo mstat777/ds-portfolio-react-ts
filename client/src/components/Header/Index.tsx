@@ -1,6 +1,7 @@
 import './Header.scss';
 import { NavLink } from 'react-router-dom';
 import logo from '../../assets/img/dimitarstatev-logo-150.png';
+import SwitchLangCtn from '../SwitchLangCtn/Index';
 
 export default function Header() {
     return (
@@ -19,6 +20,8 @@ export default function Header() {
                     <li><NavLink to={"/contact"}>contact</NavLink></li>
                 </ul>
             </nav>
+
+            <SwitchLangCtn />
         </header>
     )
 }

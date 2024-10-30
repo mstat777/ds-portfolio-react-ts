@@ -1,0 +1,39 @@
+{
+    "title": "Dimitar Statev - portfolio",
+    "lang": {
+        "french": "french",
+        "english": "english",
+        "bulgarian": "bulgarian"
+    },
+    "components": {
+        "header": {
+            "aboutLink": "about",
+            "contactLink": "contact",
+            "projectsLink": "projects"
+        }
+    },
+    "pages": {
+        "about": {
+            "title": "Dimitar Statev",
+            "text": "I am a web developer passionate about creating applications and websites. I also have a degree in architecture. Here is my CV: download"
+        },
+        "contact": {
+            "title": "contact"
+        },
+        "home": {
+            "title": "home"
+        },
+        "intro": {
+            "welcome": "Welcome!",
+            "btn": "enter"
+        },
+        "projects": {
+            "title": "projects"
+        },
+        "notFound": {
+            "title": "error 404: page not found",
+            "text": "This page is not available. Return to",
+            "link": "home"
+        }
+    }
+}

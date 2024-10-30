@@ -5,13 +5,12 @@
     top: 0;
     left: 0;
     right: 0;
-    height: 60px;
+    height: global.$header-height;
     border-bottom: 1px solid global.$grey-color;
     background-color: global.$secondary-color;
     
     nav {
         display: flex;
-        //align-items: center;
         height: 100%;
         @media screen and (min-width: global.$tablet) {
             justify-content: center;

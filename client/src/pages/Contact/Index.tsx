@@ -58,7 +58,7 @@ export default function Contact(){
             <section className="contact">
                 <h1>Contact</h1>
 
-                <p>Si vous êtez intéressé 'hésitez pas à me contacter.</p>
+                <p>Si vous êtez intéressé, n'hésitez pas à me contacter.</p>
 
                 <div className="contact_details">
                     <div className="detail_ctn">        
@@ -66,7 +66,7 @@ export default function Contact(){
                             <FontAwesomeIcon icon={faEnvelope} className="icon"/> 
                             email :
                         </span>
-                        <span>statevd@gmail.com</span>
+                        <a href="mailto:statevd@gmail.com">statevd@gmail.com</a>
                     </div>
 
                     <div className="detail_ctn">        
@@ -74,7 +74,7 @@ export default function Contact(){
                             <FontAwesomeIcon icon={faGithub} className="icon"/> 
                             GitHub :
                         </span>
-                        <a href="https://github.com/mstat777">mstat777</a>
+                        <a href="https://github.com/mstat777" target="_blank"  rel="noreferrer">mstat777</a>
                     </div>
 
                     <div className="detail_ctn">        
@@ -82,7 +82,7 @@ export default function Contact(){
                             <FontAwesomeIcon icon={faLinkedin} className="icon"/> 
                             LinkedIn :
                         </span>
-                        <a href="https://www.linkedin.com/in/dimitar-statev/">dimitar-statev</a>
+                        <a href="https://www.linkedin.com/in/dimitar-statev/" target="_blank"  rel="noreferrer">dimitar-statev</a>
                     </div>
                 </div>
 
@@ -99,7 +99,7 @@ export default function Contact(){
                             value={userName}
                             onChange={(e) => setUserName(e.target.value)}
                             onFocus={handleOnFocus}
-                            placeholder="name"
+                            placeholder="nom"
                             required/> 
 
                         <input type="email" 
@@ -107,7 +107,7 @@ export default function Contact(){
                             value={userEmail}
                             onChange={(e) => setUserEmail(e.target.value)}
                             onFocus={handleOnFocus}
-                            placeholder="e-mail"
+                            placeholder="email"
                             required/> 
 
                         <textarea name="userMessage"

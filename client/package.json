@@ -15,8 +15,12 @@
     "@types/node": "^16.18.115",
     "@types/react": "^18.3.12",
     "@types/react-dom": "^18.3.1",
+    "dompurify": "^3.1.7",
+    "html-react-parser": "^5.1.18",
+    "i18next": "^23.16.4",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
+    "react-i18next": "^15.1.0",
     "react-router-dom": "^6.27.0",
     "react-scripts": "5.0.1",
     "sass": "^1.80.4",
@@ -51,6 +55,7 @@
   "devDependencies": {
     "@babel/plugin-proposal-private-property-in-object": "^7.21.11",
     "@babel/plugin-transform-private-property-in-object": "^7.25.9",
+    "@types/dompurify": "^3.0.5",
     "@types/node-sass": "^4.11.8"
   }
 }
