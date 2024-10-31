@@ -1,6 +1,5 @@
 import i18next from 'i18next';
 import { initReactI18next } from 'react-i18next';
-import HttpApi from 'i18next-http-backend';
 
 import frGlobal from './locales/fr/global.json';
 import frProject from './locales/fr/projects.json';
@@ -39,19 +38,13 @@ export function getLanguage() {
 }
 
 i18next
-    .use(HttpApi)
     .use(initReactI18next)
     .init({
         debug: true,
-        backend: {
-            loadPath: '/locales/{{lng}}/{{ns}}.json'
-        },
         resources,
         ns: ['global', 'projects'],
         defaultNS,
-        nsSeparator: ':',
-        lng: "fr",
-        fallbackLng : false
+        lng: "fr"
     });
 
 export default i18next;

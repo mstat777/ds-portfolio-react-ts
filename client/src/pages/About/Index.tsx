@@ -3,13 +3,14 @@ import { useEffect } from 'react';
 import { useTranslation } from 'react-i18next';
 import parse from 'html-react-parser';
 import DOMPurify from "dompurify";
+import { domPurifyOpenLinksInNewWindow } from '../../utils/sanitize';
 
 export default function About(){
     const IMG_URL = process.env.REACT_APP_IMG_URL;
     const { t } = useTranslation();
-/*
-    const someHtml = "<div>Hello dude! <a>I'm Jerry</a><br/><ol><li>Ano</li><li>Efa</li><li>ITchi</li></ol><div>";
-    const sanitizedHtml = DOMPurify.sanitize(someHtml);*/
+
+    domPurifyOpenLinksInNewWindow();
+    const description = DOMPurify.sanitize(t("pages.about.text"));
 
     useEffect(() => {
         window.scrollTo(0, 0);
@@ -24,9 +25,8 @@ export default function About(){
                 <article>
                     <img src={`${IMG_URL}/dimitar.jpg`} alt="Dimitar Statev"/>
                     
-                    <div>{t("pages.about.text")}</div>
+                    <div className="description">{parse(description)}</div>
                 </article>
-                {/* parse(sanitizedHtml)*/}
             </section>
         </main>
     );

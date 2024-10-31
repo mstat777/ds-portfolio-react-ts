@@ -15,7 +15,7 @@
     "pages": {
         "about": {
             "title": "Dimitar Statev",
-            "text": "Je suis développeur web pationné par la création des applications et des sites web. J'ai aussi un diplôme en architecture. Voici mon CV : télécharger"
+            "text": "<p>Je suis développeur web passionné par la création des applications et des sites web.</p> <p>J'ai aussi un diplôme en architecture.</p> <p>Voici mon CV : <a href='cv/CV - Dimitar STATEV - Développeur Web Full Stack.pdf'  target='_blank' rel='noreferrer'>télécharger</a></p>"
         },
         "contact": {
             "title": "contact",

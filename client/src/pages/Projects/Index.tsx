@@ -3,7 +3,7 @@ import { useEffect } from 'react';
 import { useTranslation } from 'react-i18next';
 import i18next from 'i18next';
 import ProjectCard from '../../components/ProjectCard/Index';
-import { ProjectData } from '../../types/types';
+import { ProjectData } from '../../configs/interfaces';
 
 export default function Projects(){
     const { ready } = useTranslation();

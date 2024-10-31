@@ -15,7 +15,7 @@
     "pages": {
         "about": {
             "title": "Dimitar Statev",
-            "text": "I am a web developer passionate about creating applications and websites. I also have a degree in architecture. Here is my CV: download"
+            "text": "<p>I am a web developer passionate about creating applications and websites.</p> <p>I also have a degree in architecture.</p> <p>Here is my CV: <a href='cv/CV - Dimitar Statev - Full Stack Web Developer.pdf' target='_blank'  rel='noreferrer'>download</a></p>"
         },
         "contact": {
             "title": "contact",

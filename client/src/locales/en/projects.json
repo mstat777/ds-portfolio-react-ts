@@ -2,19 +2,54 @@
     "title": "projects",
     "projects": [
         {
-            "title": "Project1",
-            "subtitle": "full-stack SPA",
-            "description": "I've worked on this project "
+            "title": "Dimitravel",
+            "subtitle": "web application for a travel agency",
+            "link": "https://dt.mitkostatev.com",
+            "images": [
+                "dimitravel-desktop-home.png"
+            ],
+            "tools": "tools: ",
+            "description": "I developped this project as a diploma project at the end of my studies for a  Full Stack Web Developper at 3W Academy."
         },
         {
-            "title": "Project2",
-            "subtitle": "project for",
-            "description": "I've worked on this project "
+            "title": "AG Photography",
+            "subtitle": "a web application for a photographer",
+            "link": "",
+            "images": [
+                "ag-photography-slider-desktop.png"
+            ],
+            "tools": "tools: ",
+            "description": "This application was created for the photographer Angel Georgiev."
         },
         {
-            "title": "Project3",
-            "subtitle": "web site",
-            "description": "I've worked on this project "
+            "title": "Beaumiel",
+            "subtitle": "e-commerce application for selling bio honey",
+            "link": "",
+            "images": [
+                "beaumiel-mobile-all.png"
+            ],
+            "tools": "tools: ",
+            "description": "This application was developed for the company Beaumiel, importer of bio organic honey."
+        },
+        {
+            "title": "Ghenoarch",
+            "subtitle": "GhenoArch architectural agency website",
+            "link": "https://ghenoarch.mitkostatev.com",
+            "images": [
+                "ghenoarch-desktop-intro.jpg"
+            ],
+            "tools": "tools: ",
+            "description": "The site was created in 2023 for the London-based architecture firm GhenoArch."
+        },
+        {
+            "title": "Shifumi",
+            "subtitle": "а rock-paper-scissors game",
+            "link": "https://shifumi.mitkostatev.com",
+            "images": [
+                "shifumi-mobile-all.png"
+            ],
+            "tools": "tools: ",
+            "description": "This game is rapidly developed as a part of a job interview test."
         }
     ]
 }

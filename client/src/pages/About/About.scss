@@ -6,6 +6,7 @@
     h1 {
         margin: 2.5rem auto;
         font-size: 3rem;
+        text-transform: none;
     }
 
     article {
@@ -22,11 +23,15 @@
             }
         }
 
-        > div {
+        .description {
             text-align: left;
 
             @media screen and (min-width: global.$tablet){
                 text-align: justify;
+            }
+
+            > a {
+                color: global.$quaternary-color;
             }
         }
     }

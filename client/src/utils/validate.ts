@@ -1,4 +1,4 @@
-import { InputValidationResult } from "../types/types";
+import { InputValidationResult } from "../configs/types";
 
 export function validateInput(name: string, userData: string): InputValidationResult {
     const result = { isValid: true, errMsg: '' };

@@ -2,19 +2,54 @@
     "title": "проекти",
     "projects": [
         {
-            "title": "Проект 1",
+            "title": "Dimitravel",
             "subtitle": "уеб приложение",
-            "description": "Този проект е създаден за"
+            "link": "https://dt.mitkostatev.com",
+            "images": [
+                "dimitravel-desktop-home.png"
+            ],
+            "tools": "tools",
+            "description": "Дипломният ми проект, който разработих в края на обучението ми като full-stack уеб програмист към 3W Academy, Франция."
         },
         {
-            "title": "Проект 2",
-            "subtitle": "уеб приложение за",
-            "description": "Този проект е създаден за"
+            "title": "AG Photography",
+            "subtitle": "уеб приложение за фотограф",
+            "link": "",
+            "images": [
+                "ag-photography-slider-desktop.png"
+            ],
+            "tools": "Технологии: ",
+            "description": "Това приложение е създадено за Ангел Георгиев, любител фотограф."
         },
         {
-            "title": "Проект 3",
-            "subtitle": "уеб сайт",
-            "description": "Този проект е създаден за"
+            "title": "Beaumiel",
+            "subtitle": "електронен магазин за био мед - фирма &quot;Бомиел&quot;",
+            "link": "",
+            "images": [
+                "beaumiel-mobile-all.png"
+            ],
+            "tools": "Технологии: ",
+            "description": "&quot;Бомиел&quot; е фирма-вносител на български натурален био мед във Франция. Това уеб приложение е съзадено за фирма"
+        },
+        {
+            "title": "Ghenoarch",
+            "subtitle": "уеб сайт на архитектурно бюро &quot;ГеноАрх&quot;",
+            "link": "https://ghenoarch.mitkostatev.com",
+            "images": [
+                "ghenoarch-desktop-intro.jpg"
+            ],
+            "tools": "Технологии: ",
+            "description": "Професионален уебсайт създаден през 2023 г. за арх. фирма &quot;ГеноАрх&quot;"
+        },
+        {
+            "title": "Shifumi",
+            "subtitle": "игра &quot;камък,ножица,хартия&quot;",
+            "link": "https://shifumi.mitkostatev.com",
+            "images": [
+                "shifumi-mobile-all.png"
+            ],
+            "tools": "Технологии: ",
+            "description": "Тази игра е разработена като тест от интервю за работа."
         }
     ]
 }

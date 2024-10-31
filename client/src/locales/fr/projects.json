@@ -2,19 +2,54 @@
     "title": "projets",
     "projects": [
         {
-            "title": "Projet1",
-            "subtitle": "projet full-stack pour",
-            "description": "J'ai travaillé sur ce projet "
+            "title": "Dimitravel",
+            "subtitle": "application web pour une agence de voyage",
+            "link": "https://dt.mitkostatev.com",
+            "images": [
+                "dimitravel-desktop-home.png"
+            ],
+            "tools": "outils : ",
+            "description": "J'ai développé ce projet dans le cadre d'un projet de diplôme à la fin de mes études &laquo; Développeur Web Full Stack &raquo; à la 3W Academy."
         },
         {
-            "title": "Projet2",
-            "subtitle": "projet pour",
-            "description": "J'ai travaillé sur ce projet "
+            "title": "AG Photography",
+            "subtitle": "application web pour un photographe",
+            "link": "",
+            "images": [
+                "ag-photography-slider-desktop.png"
+            ],
+            "tools": "outils : ",
+            "description": "Cette application a été créée pour le photographe Angel Georgiev."
         },
         {
-            "title": "Projet3",
-            "subtitle": "site web",
-            "description": "J'ai travaillé sur ce projet "
+            "title": "Beaumiel",
+            "subtitle": "application e-commerce pour la vente de miel bio",
+            "link": "",
+            "images": [
+                "beaumiel-mobile-all.png"
+            ],
+            "tools": "outils : ",
+            "description": "Cette application a été développée pour la société Beaumiel, importatrice de miel Bio."
+        },
+        {
+            "title": "Ghenoarch",
+            "subtitle": "site web de l'agence d'architecture GhenoArch",
+            "link": "https://ghenoarch.mitkostatev.com",
+            "images": [
+                "ghenoarch-desktop-intro.jpg"
+            ],
+            "tools": "outils : ",
+            "description": "Le site a été créé en 2023 pour l'agence d'architecture GhenoArch, basée à Londres."
+        },
+        {
+            "title": "Shifumi",
+            "subtitle": "un jeu de pierre-papier-ciseaux",
+            "link": "https://shifumi.mitkostatev.com",
+            "images": [
+                "shifumi-mobile-all.png"
+            ],
+            "tools": "outils : ",
+            "description": "Ce jeu est rapidement développé dans le cadre d'un test d'entretien d'embauche. Le jeu est développé en React.JS."
         }
     ]
 }

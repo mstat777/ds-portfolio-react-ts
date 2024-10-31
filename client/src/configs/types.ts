@@ -10,9 +10,3 @@ export type ButtonProps = {
     text: string;
     onClick: (event: FormEvent<HTMLFormElement>) => void | MouseEventHandler<HTMLButtonElement> | undefined;
 }
-
-export type ProjectData = {
-    title: string;
-    subtitle: string;
-    description: string;
-}
