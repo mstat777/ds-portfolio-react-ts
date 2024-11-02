@@ -44,7 +44,7 @@ export default function Contact(){
     },[isFormValid]);
 
     async function submitForm() {
-        const res = await fetch(`${BASE_URL}api/v1/sendmail`, {
+        const res = await fetch(`${BASE_URL}/api/v1/sendmail`, {
             method: "POST",
             headers: { "Content-Type": "application/json" },
             body: JSON.stringify({ 

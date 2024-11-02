@@ -13,7 +13,7 @@ export function validateInput(name: string, userData: string): InputValidationRe
             result.errMsg +="Name is too long.\n";
             result.isValid = false;
         }
-        if (!/^[a-zàâçéèêëîïôûùüÿñæœ .'-]*$/i.test(userData)) {
+        if (!/^[a-zа-яàâçéèêëîïôûùüÿñæœ .'-]*$/i.test(userData)) {
             result.errMsg +="Name shouldn't contain special characters.\n";
             result.isValid = false;
         }

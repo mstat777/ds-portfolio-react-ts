@@ -5,7 +5,7 @@
 /client/build
 
 # misc
-/client/.env
+/client/.env.*
 /client/env.d.ts
 /client/public/img
 
