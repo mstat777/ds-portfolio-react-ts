@@ -4,13 +4,15 @@ import { useTranslation } from 'react-i18next';
 import parse from 'html-react-parser';
 import DOMPurify from "dompurify";
 import { domPurifyOpenLinksInNewWindow } from '../../utils/sanitize';
+import { optionSkills } from '../../configs/variables';
 
 export default function About(){
     const IMG_URL = process.env.REACT_APP_IMG_URL;
     const { t } = useTranslation();
+    const trPath = "pages.about."; // translation path
 
     domPurifyOpenLinksInNewWindow();
-    const description = DOMPurify.sanitize(t("pages.about.text"));
+    const description = DOMPurify.sanitize(t(`${trPath}text`));
 
     useEffect(() => {
         window.scrollTo(0, 0);
@@ -18,14 +20,16 @@ export default function About(){
 
     return (
         <main id="about">
-
             <section className="about">
-                <h1>{t("pages.about.title")}</h1>
+                <h1>{t(`${trPath}title`)}</h1>
 
                 <article>
-                    <img src={`${IMG_URL}/dimitar.jpg`} alt="Dimitar Statev"/>
+                    <img src={`${IMG_URL}/dimitar.jpg`} alt="Dimitar Statev"
+                    className="profile_img"/>
                     
-                    <div className="description">{parse(description)}</div>
+                    <div className="description">
+                        {parse(description, optionSkills)}
+                    </div>
                 </article>
             </section>
         </main>

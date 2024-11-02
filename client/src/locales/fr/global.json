@@ -10,27 +10,32 @@
             "aboutLink": "à propos",
             "projectsLink": "projets",
             "contactLink": "contact"
+        },
+        "footer": {
+            "rights": "\u00A9 2024 Dimitar Statev. Tous droits réservés."
         }
     },
     "pages": {
         "about": {
-            "title": "Dimitar Statev",
-            "text": "<p>Je suis développeur web passionné par la création des applications et des sites web.</p> <p>J'ai aussi un diplôme en architecture.</p> <p>Voici mon CV : <a href='cv/CV - Dimitar STATEV - Développeur Web Full Stack.pdf'  target='_blank' rel='noreferrer'>télécharger</a></p>"
+            "title": "à propos de moi",
+            "text": "<div> <p>Bonjour,</p> <p>Je m'appelle Dimitar Statev</p> <p>Je suis développeur web full-stack passionné par la création d'applications et de sites web. J'ai de l'expérience dans la conception de projets depuis la première idée jusqu'à la mise en production, aussi bien en front-end qu'en back-end. Je suis passionné par le bon design et les technologies innovantes. Je suis toujours à la recherche d'amélioration et de haute performance. J'aime travailler sur toutes types de projets web.</p> <div>Mes compétences techniques : <div name='JavaScript'></div> <div name='Node.JS'></div> <div name='Express.JS'></div> <div name='React'></div> <div name='Redux'></div> <div name='Sass'></div> <div name='CSS'></div> <div name='HTML'></div> <div name='MySQL'></div></div> <div class='margin_10_0'>Je connais également : <div name='TypeScript'></div><div name='Angular'></div>, Canvas.</div> <div class='margin_10_0'> J'ai des notions en : <div name='PHP'></div> <div name='jQuery'></div> </div> <p>Je me concentre actuellement sur la maîtrise d'Angular. Je prévois d'apprendre Next.JS et React Native.</p> <div>"
         },
         "contact": {
             "title": "contact",
-            "text": "Si vous êtez intéressé, n'hésitez pas à me contacter.",
+            "text": "Si vous avez des suggestions, des commentaires ou des opportunités, n'hésitez pas à me contacter.",
             "email": "email",
             "form": {
                 "title": "envoyez-moi un message",
                 "namePlholder": "nom",
                 "emailPlholder": "email",
-                "msgPlholder": "message",
+                "msgPlholder": "message (moins de 600 caractères)",
                 "sendBtn": "envoyer"
             }
         },
         "home": {
-            "title": "accueil"
+            "title": "Dimitar Statev",
+            "subtitle": "développeur web",
+            "text": "J'écris des codes..."
         },
         "intro": {
             "welcome": "Bienvenue !",

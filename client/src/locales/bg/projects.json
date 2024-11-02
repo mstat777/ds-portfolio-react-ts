@@ -8,7 +8,7 @@
             "images": [
                 "dimitravel-desktop-home.png"
             ],
-            "tools": "tools",
+            "tools": "<div>направен с: <div name='JavaScript'></div> <div name='React'></div> <div name='Express.JS'></div> <div name='Sass'></div> <div name='HTML'></div> <div name='MySQL'></div> </div>",
             "description": "Дипломният ми проект, който разработих в края на обучението ми като full-stack уеб програмист към 3W Academy, Франция."
         },
         {
@@ -18,7 +18,7 @@
             "images": [
                 "ag-photography-slider-desktop.png"
             ],
-            "tools": "Технологии: ",
+            "tools": "<div>направен с: <div name='JavaScript'></div> <div name='React'></div> <div name='Sass'></div> <div name='HTML'></div> </div>",
             "description": "Това приложение е създадено за Ангел Георгиев, любител фотограф."
         },
         {
@@ -28,7 +28,7 @@
             "images": [
                 "beaumiel-mobile-all.png"
             ],
-            "tools": "Технологии: ",
+            "tools": "<div>направен с: <div name='TypeScript'></div> <div name='Angular'></div> <div name='Express.JS'></div> <div name='Sass'></div> <div name='HTML'></div> <div name='MySQL'></div> </div>",
             "description": "&quot;Бомиел&quot; е фирма-вносител на български натурален био мед във Франция. Това уеб приложение е съзадено за фирма"
         },
         {
@@ -38,17 +38,17 @@
             "images": [
                 "ghenoarch-desktop-intro.jpg"
             ],
-            "tools": "Технологии: ",
+            "tools": "<div>направен с: <div name='JavaScript'></div> <div name='CSS'></div> <div name='HTML'></div> <div name='PHP'></div> <div name='jQuery'></div> </div>",
             "description": "Професионален уебсайт създаден през 2023 г. за арх. фирма &quot;ГеноАрх&quot;"
         },
         {
             "title": "Shifumi",
-            "subtitle": "игра &quot;камък,ножица,хартия&quot;",
+            "subtitle": "игра &quot;камък, ножица, хартия&quot;",
             "link": "https://shifumi.mitkostatev.com",
             "images": [
                 "shifumi-mobile-all.png"
             ],
-            "tools": "Технологии: ",
+            "tools": "<div>направен с: <div name='TypeScript'></div> <div name='React'></div> <div name='Sass'></div> <div name='HTML'></div> </div>",
             "description": "Тази игра е разработена като тест от интервю за работа."
         }
     ]

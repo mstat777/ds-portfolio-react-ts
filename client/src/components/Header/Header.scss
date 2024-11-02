@@ -11,19 +11,19 @@
     z-index: 100;
     
     nav {
-        display: flex;
         height: 100%;
         @media screen and (min-width: global.$tablet) {
             justify-content: center;
         }
 
         .logo_ctn {
-            position: relative;
+            position: absolute;
             height: 100%;
 
             @media screen and (min-width: global.$tablet) {
                 display: flex;
                 justify-content: center;
+                margin-left: 1rem;
             }
 
             img {
@@ -37,7 +37,9 @@
         .links_ctn {
             display: inline-flex;
             align-items: center;
+            justify-content: center;
             height: 100%;
+            width: 100%;
             
             a {
                 margin: auto 0;

@@ -8,7 +8,7 @@
             "images": [
                 "dimitravel-desktop-home.png"
             ],
-            "tools": "outils : ",
+            "tools": "<div>fait avec : <div name='JavaScript'></div> <div name='React'></div> <div name='Express.JS'></div> <div name='Sass'></div> <div name='HTML'></div> <div name='MySQL'></div> </div>",
             "description": "J'ai développé ce projet dans le cadre d'un projet de diplôme à la fin de mes études &laquo; Développeur Web Full Stack &raquo; à la 3W Academy."
         },
         {
@@ -18,7 +18,7 @@
             "images": [
                 "ag-photography-slider-desktop.png"
             ],
-            "tools": "outils : ",
+            "tools": "<div>fait avec : <div name='JavaScript'></div> <div name='React'></div> <div name='Sass'></div> <div name='HTML'></div> </div>",
             "description": "Cette application a été créée pour le photographe Angel Georgiev."
         },
         {
@@ -28,7 +28,7 @@
             "images": [
                 "beaumiel-mobile-all.png"
             ],
-            "tools": "outils : ",
+            "tools": "<div>fait avec : <div name='TypeScript'></div> <div name='Angular'></div> <div name='Express.JS'></div> <div name='Sass'></div> <div name='HTML'></div> <div name='MySQL'></div> </div>",
             "description": "Cette application a été développée pour la société Beaumiel, importatrice de miel Bio."
         },
         {
@@ -38,7 +38,7 @@
             "images": [
                 "ghenoarch-desktop-intro.jpg"
             ],
-            "tools": "outils : ",
+            "tools": "<div>fait avec : <div name='JavaScript'></div> <div name='CSS'></div> <div name='HTML'></div> <div name='PHP'></div> <div name='jQuery'></div> </div>",
             "description": "Le site a été créé en 2023 pour l'agence d'architecture GhenoArch, basée à Londres."
         },
         {
@@ -48,7 +48,7 @@
             "images": [
                 "shifumi-mobile-all.png"
             ],
-            "tools": "outils : ",
+            "tools": "<div>fait avec : <div name='TypeScript'></div> <div name='React'></div> <div name='Sass'></div> <div name='HTML'></div> </div>",
             "description": "Ce jeu est rapidement développé dans le cadre d'un test d'entretien d'embauche. Le jeu est développé en React.JS."
         }
     ]

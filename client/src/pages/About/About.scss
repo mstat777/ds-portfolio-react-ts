@@ -1,18 +1,13 @@
 @use '../../global';
 
 .about {
-    padding: 0 3rem;
-
-    h1 {
-        margin: 2.5rem auto;
-        font-size: 3rem;
-        text-transform: none;
-    }
+    padding: global.$header-height 3rem 0;
 
     article {
+        padding-top: 1rem;
         color: global.$primary-color;
 
-        img {
+        .profile_img {
             width: 40%;
             max-width: 200px;
             float: left;
@@ -32,6 +27,10 @@
 
             > a {
                 color: global.$quaternary-color;
+            }
+
+            .margin_10_0 {
+                margin: 1rem 0; 
             }
         }
     }

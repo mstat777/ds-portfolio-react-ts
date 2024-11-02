@@ -10,27 +10,32 @@
             "aboutLink": "about",
             "projectsLink": "projects",
             "contactLink": "contact"
+        },
+        "footer": {
+            "rights": "\u00A9 2024 Dimitar Statev. All Rights Reserved."
         }
     },
     "pages": {
         "about": {
-            "title": "Dimitar Statev",
-            "text": "<p>I am a web developer passionate about creating applications and websites.</p> <p>I also have a degree in architecture.</p> <p>Here is my CV: <a href='cv/CV - Dimitar Statev - Full Stack Web Developer.pdf' target='_blank'  rel='noreferrer'>download</a></p>"
+            "title": "about me",
+            "text": "<div> <p>Hello,</p> <p>I'm Dimitar Statev</p> <p>I'm a full-stack web developer passionate about creating applications and websites. I have experience in designing projects from first idea to production release both in front-end as in back-end. I'm pasionnate about good design and innovative technologies. I'm always seeking for improvement and high performance. I love working on all kind of web projects.</p> <div>My tech stack:<div name='JavaScript'></div> <div name='Node.JS'></div> <div name='Express.JS'></div> <div name='React'></div> <div name='Redux'></div> <div name='Sass'></div> <div name='CSS'></div> <div name='HTML'></div> <div name='MySQL'></div></div> <div class='margin_10_0'>I'm also familiar with: <div name='TypeScript'></div><div name='Angular'></div>, Canvas.</div> <div class='margin_10_0'> I have notions in: <div name='PHP'></div> <div name='jQuery'></div> </div> <p>I'm currently focused on mastering Angular. I'm planning to learn Next.JS and React Native.</p> <div>"
         },
         "contact": {
             "title": "contact",
-            "text": "If you are interested, please do not hesitate to contact me.",
+            "text": "If you have any opportunity, suggestion or feedback, I would love to hear from you. Please feel free to reach out to me using the contact form or my contact details.",
             "email": "email",
             "form": {
                 "title": "send me a message",
                 "namePlholder": "name",
                 "emailPlholder": "email",
-                "msgPlholder": "message",
+                "msgPlholder": "message (less than 600 characters)",
                 "sendBtn": "send"
             }
         },
         "home": {
-            "title": "home"
+            "title": "Dimitar Statev",
+            "subtitle": "web developer",
+            "text": "I write code..."
         },
         "intro": {
             "welcome": "Welcome!",

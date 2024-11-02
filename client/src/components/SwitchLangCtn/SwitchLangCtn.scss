@@ -1,9 +1,9 @@
 @use '../../global';
 
 @mixin button() {
-    width: 2.5rem;
-    height: 2.5rem;
-    margin: .5rem;
+    width: 25px;
+    height: 25px;
+    margin: 5px;
     border: none;
     border-radius: 50%;
     outline: 2px solid global.$lightgrey-color;
@@ -15,7 +15,7 @@
     }
 
     & + & {
-        margin-bottom: 1rem;
+        margin-bottom: 10px;
     }
 
     > img {
@@ -28,41 +28,68 @@
     > span {
         display: none;
         position: absolute;
-        top: 2rem;
-        right: -2rem;
+        top: 20px;
+        right: -20px;
     }
 }
 
 .switch_lang_ctn {
     position: absolute;
-    //top: calc(global.$header-height - 2.5rem) / 2;
-    top: 1.2rem;
-    right: 1.5rem;
+    top: 7px;
+    right: 5px;
     display: flex;
-    flex-direction: column;
-    width: 2.5rem;
-    z-index: 10;
+    justify-content: center;
+    width: 45px;
+    height: 115px;
+    padding: 5px;
 
     @media screen and (min-width: global.$tablet) {
         left: unset;
-        right: 2rem;
+        right: 20px;
     }
 
     .current_lang_btn {
         @include button();
+        z-index: 10;
     }
 
     .lang_menu {
         position: absolute;
+        width: 35px;
+        height: 105px;
         border-radius: 20px;
         background-color: global.$grey-color;
+        transition: opacity .5s ease-out;
+        z-index: 20;
 
         .lang_btn {
             position: relative;
             @include button();
         }
         .grey_outline {
-            outline-color: global.$darkgrey-color;
+            outline-color: global.$darkbluegrey-color;
+        }
+    }
+}
+
+.show_lang_menu {
+    .lang_menu {
+        opacity: 1;
+        z-index: 20;
+
+        .lang_btn {
+            display: inline-block;
+        }
+    }
+}
+
+.hide_lang_menu {
+    .lang_menu {
+        opacity: 0;
+        z-index: 0;
+
+        .lang_btn {
+            display: none;
         }
     }
 }

@@ -10,12 +10,15 @@
             "aboutLink": "за мен",
             "projectsLink": "проекти",
             "contactLink": "контакти"
+        },
+        "footer": {
+            "rights": "Димитър Статев \u00A9 2024 Всички права запазени."
         }
     },
     "pages": {
         "about": {
-            "title": "Димитър Статев",
-            "text": "<p>Аз съм уеб програмист, фокусиран върху създаването на приложения и уебсайтове.</p> <p>Имам и диплома по архитектура.</p> <p>Моето CV: <a href='cv/CV - Dimitar Statev - Full Stack Web Developer.pdf' target='_blank'  rel='noreferrer'>изтеглете</a></p>"
+            "title": "за мен",
+            "text": "<div> <p>Здравейте,</p> <p>Аз съм Димитър Статев</p> <p>Аз съм full-stack уеб програмист, запален по създаването на уеб приложения и сайтове. Имам опит в разработването на проекти от първоначална идея до пълна реализация. Обичам добрия дизайн, иновационните технологии и винаги търся усъвършенстване и висока производителност. Обичам да работя по всякакъв тип уеб проекти.</p> <div>Технологиите, които ползвам са: <div name='JavaScript'></div> <div name='Node.JS'></div> <div name='Express.JS'></div> <div name='React'></div> <div name='Redux'></div> <div name='Sass'></div> <div name='CSS'></div> <div name='HTML'></div> <div name='MySQL'></div></div> <div class='margin_10_0'>Също така владея: <div name='TypeScript'></div><div name='Angular'></div>, Canvas.</div> <div class='margin_10_0'> Имам и базови познания по: <div name='PHP'></div> <div name='jQuery'></div> </div> <p>В момента изучавам Angular. Планирам да науча Next.JS и React Native.</p> <div>"
         },
         "contact": {
             "title": "контакт",
@@ -25,12 +28,14 @@
                 "title": "изпратете ми съобщение",
                 "namePlholder": "име",
                 "emailPlholder": "имейл",
-                "msgPlholder": "съобщение",
+                "msgPlholder": "съобщение (не повече от 600 символа)",
                 "sendBtn": "изпрати"
             }
         },
         "home": {
-            "title": "начало"
+            "title": "Димитър Статев",
+            "subtitle": "уеб програмист",
+            "text": "Пиша кодове и не само..."
         },
         "intro": {
             "welcome": "начало",

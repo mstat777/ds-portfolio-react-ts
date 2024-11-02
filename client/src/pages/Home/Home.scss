@@ -1,15 +1,28 @@
 @use '../../global';
 
 .home {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: calc(100vh - global.$header-height - global.$footer-height);
+    padding-top: global.$header-height;
 
-    &_section {
-        height: auto;
-        margin: 3rem;
-        padding-bottom: 3rem;
+    h1 {
+        margin: 0;
+        font-weight: 700;
+        font-size: 4rem;
+    }
 
-        h1 {
-            margin: 2.5rem auto;
-            font-size: 3rem;
-        }
+    .subtitle {
+        font-family: global.$title-font;
+        font-weight: 600;
+        font-size: 3rem;
+        color: global.$quaternary-color;
+    }
+
+    .text {
+        font-family: global.$title-font;
+        font-size: 1.8rem;
+        color: global.$lightgrey-color;
     }
 }

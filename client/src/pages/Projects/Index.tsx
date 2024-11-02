@@ -20,9 +20,11 @@ export default function Projects(){
             <section className="projects">
                 <h1>{i18next.t('projects:title')}</h1>
 
-                { projects.map((project, i) => 
-                    <ProjectCard projectData={project} key={i}/>
-                )}
+                <section className="projects_grid">
+                    { projects.map((project, i) => 
+                        <ProjectCard projectData={project} key={i}/>
+                    )}
+                </section>
             </section>
         </main>
     );

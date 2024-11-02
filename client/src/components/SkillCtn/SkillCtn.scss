@@ -1,0 +1,23 @@
+@use '../../global';
+
+.skill {
+    position: relative;
+    display: inline-block;
+    height: 2rem;
+
+    &_ctn {
+        position: relative;
+        bottom: -.5rem;
+        display: flex;
+
+        > img {
+            display: inline-block;
+            height: 2rem;
+        }
+        
+        > span {
+            display: inline-block;
+            margin: 0 .2rem 0 .5rem;
+        }
+    }
+}

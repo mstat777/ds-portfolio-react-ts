@@ -6,13 +6,14 @@ $quaternary-color: #d7bd16;
 
 $highlight-color: rgb(231, 19, 105);    // highlight texts, errors
 
-$darkgrey-color: #333;                  // input, textarea, select...
+$darkbluegrey-color: #333d4e;    
+$darkgrey-color: #444;                  // input, textarea, select...
 $grey-color: grey;
 $lightgrey-color: rgb(204, 204, 204);   // table cells borders
 $verylightgrey-color: #f9f9f9;          // alternate table rows
 
 // ----------------------- Fonts ---------------------- //
-$main-font: 'Lato', sans-serif;      
+$main-font: 'Manrope', sans-serif;      
 $title-font: 'Anta', sans-serif;        // for headings
 
 // ------------ Breakpoints (media queries) ----------- //
@@ -21,3 +22,4 @@ $desktop: 1100px;
 
 // ----------------------- Other ---------------------- //
 $header-height: 60px;
+$footer-height: 35px;

@@ -8,7 +8,7 @@
             "images": [
                 "dimitravel-desktop-home.png"
             ],
-            "tools": "tools: ",
+            "tools": "<div>made with: <div name='JavaScript'></div> <div name='React'></div> <div name='Express.JS'></div> <div name='Sass'></div> <div name='HTML'></div> <div name='MySQL'></div> </div>",
             "description": "I developped this project as a diploma project at the end of my studies for a  Full Stack Web Developper at 3W Academy."
         },
         {
@@ -18,7 +18,7 @@
             "images": [
                 "ag-photography-slider-desktop.png"
             ],
-            "tools": "tools: ",
+            "tools": "<div>made with: <div name='JavaScript'></div> <div name='React'></div> <div name='Sass'></div> <div name='HTML'></div> </div>",
             "description": "This application was created for the photographer Angel Georgiev."
         },
         {
@@ -28,7 +28,7 @@
             "images": [
                 "beaumiel-mobile-all.png"
             ],
-            "tools": "tools: ",
+            "tools": "<div>made with: <div name='TypeScript'></div> <div name='Angular'></div> <div name='Express.JS'></div> <div name='Sass'></div> <div name='HTML'></div> <div name='MySQL'></div> </div>",
             "description": "This application was developed for the company Beaumiel, importer of bio organic honey."
         },
         {
@@ -38,7 +38,7 @@
             "images": [
                 "ghenoarch-desktop-intro.jpg"
             ],
-            "tools": "tools: ",
+            "tools": "<div>made with: <div name='JavaScript'></div> <div name='CSS'></div> <div name='HTML'></div> <div name='PHP'></div> <div name='jQuery'></div> </div>",
             "description": "The site was created in 2023 for the London-based architecture firm GhenoArch."
         },
         {
@@ -48,8 +48,8 @@
             "images": [
                 "shifumi-mobile-all.png"
             ],
-            "tools": "tools: ",
-            "description": "This game is rapidly developed as a part of a job interview test."
+            "tools": "<div>made with: <div name='TypeScript'></div> <div name='React'></div> <div name='Sass'></div> <div name='HTML'></div> </div>",
+            "description": "This game is quickly developed as a part of a job interview test."
         }
     ]
 }

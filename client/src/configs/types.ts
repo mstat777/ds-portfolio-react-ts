@@ -10,3 +10,8 @@ export type ButtonProps = {
     text: string;
     onClick: (event: FormEvent<HTMLFormElement>) => void | MouseEventHandler<HTMLButtonElement> | undefined;
 }
+
+export type SkillType = {
+    name: string,
+    image: string
+}

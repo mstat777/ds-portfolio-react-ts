@@ -1,9 +1,14 @@
 @use '../../global';
 
 .projects {
-    padding-bottom: 2rem;
+    padding: global.$header-height 2rem 2rem;
 
-    h1 {
-        margin-bottom: 0;
+    &_grid {
+        padding-top: 1rem;
+        @media screen and (min-width: global.$desktop){
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 2rem;
+        }
     }
 }

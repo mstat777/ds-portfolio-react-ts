@@ -4,11 +4,13 @@ import { faArrowUpRightFromSquare } from '@fortawesome/free-solid-svg-icons';
 import { ProjectData } from '../../configs/interfaces';
 import DOMPurify from "dompurify";
 import parse from 'html-react-parser';
+import { optionSkills } from '../../configs/variables';
 
 export default function ProjectCard({projectData}:{projectData: ProjectData}) {
     const IMG_URL = process.env.REACT_APP_IMG_URL;
 
     projectData.subtitle = DOMPurify.sanitize(projectData.subtitle);
+    projectData.tools = DOMPurify.sanitize(projectData.tools);
     projectData.description = DOMPurify.sanitize(projectData.description);
 
     return (
@@ -27,7 +29,7 @@ export default function ProjectCard({projectData}:{projectData: ProjectData}) {
                     </a>
                 }
 
-                <p className="tools">{projectData.tools}</p>
+                <div className="tools">{parse(projectData.tools, optionSkills)}</div>
 
                 <p className="description">{parse(projectData.description)}</p>
             </div>

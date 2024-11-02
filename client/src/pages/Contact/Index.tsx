@@ -1,5 +1,5 @@
 import './Contact.scss';
-import { useState, useEffect } from 'react';
+import React, { useEffect } from 'react';
 import { useTranslation } from 'react-i18next';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faEnvelope } from '@fortawesome/free-solid-svg-icons';
@@ -8,17 +8,20 @@ import { validateInput } from '../../utils/validate';
 import MainBtn from '../../components/MainBtn/Index';
 
 export default function Contact(){
+    const BASE_URL: string = process.env.REACT_APP_BASE_URL as string;
     const { t } = useTranslation();
     const trPath = "pages.contact."; // translation path
 
-    const [userName, setUserName] = useState('');
-    const [userEmail, setUserEmail] = useState('');
-    const [userMessage, setUserMessage] = useState('');
-    const [okMsg, setOkMsg] = useState('');
-    const [errMsg, setErrMsg] = useState('');
+    const [name, setName] = React.useState<string>('');
+    const [email, setEmail] = React.useState<string>('');
+    const [message, setMessage] = React.useState<string>('');
+
+    // for the log message notifications:
+    const [okMsg, setOkMsg] = React.useState<string>('');
+    const [errMsg, setErrMsg] = React.useState<string>('');
 
     // not submit the form, if inputs are not valid:
-    const [isFormValid, setIsFormValid] = useState(false);
+    const [isFormValid, setIsFormValid] = React.useState<boolean>(false);
 
     useEffect(() => {
         window.scrollTo(0, 0);
@@ -26,8 +29,8 @@ export default function Contact(){
 
     // verify if all inputs are valid :
     const validateForm = () => {
-        const nameVerif = validateInput("userName", userName.trim());
-        const emailVerif = validateInput("email", userEmail.trim());
+        const nameVerif = validateInput("userName", name.trim());
+        const emailVerif = validateInput("email", email.trim());
         // show all error messages :
         setErrMsg(nameVerif.errMsg + emailVerif.errMsg);
         // form is valid if all inputs are valid :
@@ -41,7 +44,20 @@ export default function Contact(){
     },[isFormValid]);
 
     async function submitForm() {
-        console.log("The from is validated now. Let's send the mail! :)");
+        const res = await fetch(`${BASE_URL}api/v1/sendmail`, {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify({ 
+                name,
+                email,
+                message})
+        });
+        if (res.status === 201) {
+            setOkMsg("Merci de nous avoir contacté.\nVotre message a bien été transmis à notre équipe.");
+        } else {
+            setErrMsg("Le message n'a pas été envoyé.");
+            console.log(res.status);
+        }
     }
 
     function handleOnFocus(){
@@ -89,31 +105,31 @@ export default function Contact(){
 
                 <div className="contact_form_ctn">
                     <h2>{t(`${trPath}form.title`)}</h2>
-                    { (okMsg && userName && userEmail && userMessage) ? 
+                    { (okMsg && name && email && message) ? 
                         <p className="ok_msg">{okMsg}</p> : null }
-                    { (errMsg && userName && userEmail && userMessage) ? 
+                    { (errMsg && name && email && message) ? 
                         <p className="err_msg">{errMsg}</p> : null }
 
                     <form onSubmit={handleSubmit} className="contact_form">
                         <input type="text" 
-                            name="userName" 
-                            value={userName}
-                            onChange={(e) => setUserName(e.target.value)}
+                            name="name" 
+                            value={name}
+                            onChange={(e) => setName(e.target.value)}
                             onFocus={handleOnFocus}
                             placeholder={t(`${trPath}form.namePlholder`)}
                             required/> 
 
                         <input type="email" 
-                            name="userEmail" 
-                            value={userEmail}
-                            onChange={(e) => setUserEmail(e.target.value)}
+                            name="email" 
+                            value={email}
+                            onChange={(e) => setEmail(e.target.value)}
                             onFocus={handleOnFocus}
                             placeholder={t(`${trPath}form.emailPlholder`)}
                             required/> 
 
-                        <textarea name="userMessage"
-                            value={userMessage}
-                            onChange={(e) => setUserMessage(e.target.value)}
+                        <textarea name="message"
+                            value={message}
+                            onChange={(e) => setMessage(e.target.value)}
                             onFocus={handleOnFocus}
                             placeholder={t(`${trPath}form.msgPlholder`)}
                             rows={8}
@@ -121,7 +137,7 @@ export default function Contact(){
                             required />
 
                         <MainBtn type="submit" 
-                                onClick={handleSubmit} text={t(`${trPath}form.sendBtn`)}/>
+                                onClick={() => console.log("submitted")} text={t(`${trPath}form.sendBtn`)}/>
                     </form>
                 </div>
         

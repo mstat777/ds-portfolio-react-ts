@@ -7,8 +7,8 @@ import bg from '../../assets/img/i18n/flags/bg.png';
 
 export default function SwitchLangCtn() {
     const [ showLangMenu, setShowLangMenu ] = React.useState<boolean>(false);
-    const [ currLang, setCurrLang ] = React.useState<string>('fr');
-    const [ currLangImg, setCurrentLangImg] = React.useState<string>(fr);
+    const [ currLang, setCurrLang ] = React.useState<string>('');
+    const [ currLangImg, setCurrentLangImg] = React.useState<string | undefined>(undefined);
 
     const images = [
         { code: "fr", file: fr }, 
@@ -16,13 +16,22 @@ export default function SwitchLangCtn() {
         { code: "bg", file: bg }
     ];
 
-    useEffect(() => {
-        setCurrLang(getLanguage());
+    const locStLang = localStorage.getItem("lang"); // store current language in localStorage
+
+    useEffect(() => {  
+        if (locStLang) { // if language is defined in localStorage, then load it
+            setCurrLang(locStLang);
+        } else { // otherwise set the default language
+            setCurrLang(getLanguage());
+        }
     },[]);
 
-    // change language image, if current language changes
+    // change language variable & image, every time when current language changes
     useEffect(() => {
-        changeLangImage();
+        if (currLang) {
+            changeLanguage(currLang);
+            changeLangImage();
+        }
     },[currLang]);
 
     // show/hide language menu
@@ -30,9 +39,14 @@ export default function SwitchLangCtn() {
         setShowLangMenu(!showLangMenu);
     }
 
+    // change the language data in i18next & triger hide menu
     function changeLangAndHideMenu(langCode: string) {
         changeLanguage(langCode);
         setCurrLang(getLanguage());
+        // change in localStorage only if lang changed
+        if (langCode !== locStLang) {
+            localStorage.setItem("lang", langCode);
+        } 
         toggleLangMenu();
     }
 
@@ -46,29 +60,24 @@ export default function SwitchLangCtn() {
     }
 
     return (
-        <div className="switch_lang_ctn">
+        <div className={`switch_lang_ctn ${showLangMenu ? 'show_lang_menu' : 'hide_lang_menu'}`} onMouseLeave={() => setShowLangMenu(false)}>
             
             <button onClick={toggleLangMenu}className="current_lang_btn">
                 <img src={currLangImg} alt="language" />
             </button>
-            
-            { showLangMenu &&
-                <div className="lang_menu">
-                    
-                    { languages && 
-                        languages.map((lang, i) => 
-                            <button
-                                onClick={() => changeLangAndHideMenu(lang)}
-                                key={i}
-                                className={`lang_btn ${showLangMenu ? "grey_outline" : null}`}>
 
-                                    <img src={images[i].file} alt="language" />
-                                    
-                            </button>
-                        )
-                    }
-                </div>
-            }
+            <div className="lang_menu">
+                { languages && 
+                    languages.map((lang, i) => 
+                        <button
+                            onClick={() => changeLangAndHideMenu(lang)}
+                            key={i}
+                            className={`lang_btn ${showLangMenu ? "grey_outline" : null}`}>
+                                <img src={images[i].file} alt="language" />
+                        </button>
+                    )
+                }
+            </div>
         </div>
     )
 }
