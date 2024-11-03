@@ -5,6 +5,7 @@ import parse from 'html-react-parser';
 import DOMPurify from "dompurify";
 import { domPurifyOpenLinksInNewWindow } from '../../utils/sanitize';
 import { optionSkills } from '../../configs/variables';
+import { motion } from 'framer-motion';
 
 export default function About(){
     const IMG_URL = process.env.REACT_APP_IMG_URL;
@@ -19,6 +20,13 @@ export default function About(){
     },[]);
 
     return (
+        <motion.div 
+            className="wrapper"
+            initial={{ opacity: 0, x: 20 }}
+            animate={{ opacity: 1, x: 0 }}
+            exit={{ opacity: 0, x: -20 }}
+            transition={{ duration: 0.3 }}
+        >
         <main id="about">
             <section className="about">
                 <h1>{t(`${trPath}title`)}</h1>
@@ -33,5 +41,6 @@ export default function About(){
                 </article>
             </section>
         </main>
+        </motion.div>
     );
 }

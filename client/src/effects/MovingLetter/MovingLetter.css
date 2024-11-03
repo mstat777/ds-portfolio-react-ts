@@ -1,0 +1,22 @@
+@keyframes slidein {
+    from {
+        top: 10px;
+        left: 10px;
+    }
+
+    to {
+        top: 300px;
+        left: 300px;
+    }
+}
+
+
+.mov_ctn {
+    position: absolute;
+    
+    font-weight: 500;
+    color: white;
+
+    animation-duration: 3s;
+    animation-name: slidein;
+}

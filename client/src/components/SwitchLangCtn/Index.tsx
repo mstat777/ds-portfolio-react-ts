@@ -1,14 +1,14 @@
 import './SwitchLangCtn.scss';
-import React, { useEffect } from 'react';
+import { useState, useEffect } from 'react';
 import { languages, changeLanguage, getLanguage } from '../../i18n';
 import fr from '../../assets/img/i18n/flags/fr.png';
 import en from '../../assets/img/i18n/flags/en.png';
 import bg from '../../assets/img/i18n/flags/bg.png';
 
 export default function SwitchLangCtn() {
-    const [ showLangMenu, setShowLangMenu ] = React.useState<boolean>(false);
-    const [ currLang, setCurrLang ] = React.useState<string>('');
-    const [ currLangImg, setCurrentLangImg] = React.useState<string | undefined>(undefined);
+    const [ showLangMenu, setShowLangMenu ] = useState<boolean>(false);
+    const [ currLang, setCurrLang ] = useState<string>('');
+    const [ currLangImg, setCurrentLangImg] = useState<string | undefined>(undefined);
 
     const images = [
         { code: "fr", file: fr }, 

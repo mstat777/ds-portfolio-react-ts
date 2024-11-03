@@ -4,6 +4,7 @@ import { useTranslation } from 'react-i18next';
 import i18next from 'i18next';
 import ProjectCard from '../../components/ProjectCard/Index';
 import { ProjectData } from '../../configs/interfaces';
+import { motion } from 'framer-motion';
 
 export default function Projects(){
     const { ready } = useTranslation();
@@ -16,6 +17,13 @@ export default function Projects(){
     return (
         !ready ?  
             <p>{i18next.t('msg.loadingTranslations')}</p> :
+        <motion.div 
+            className="wrapper"
+            initial={{ opacity: 0, x: 20 }}
+            animate={{ opacity: 1, x: 0 }}
+            exit={{ opacity: 0, x: -20 }}
+            transition={{ duration: 0.3 }}
+        >
         <main id="projects">
             <section className="projects">
                 <h1>{i18next.t('projects:title')}</h1>
@@ -27,5 +35,6 @@ export default function Projects(){
                 </section>
             </section>
         </main>
+        </motion.div>
     );
 }

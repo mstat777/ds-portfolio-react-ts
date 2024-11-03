@@ -1,27 +1,28 @@
 import './Contact.scss';
-import React, { useEffect } from 'react';
+import { useState, useEffect } from 'react';
 import { useTranslation } from 'react-i18next';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faEnvelope } from '@fortawesome/free-solid-svg-icons';
 import { faLinkedin, faGithub } from '@fortawesome/free-brands-svg-icons';
 import { validateInput } from '../../utils/validate';
 import MainBtn from '../../components/MainBtn/Index';
+import { motion } from 'framer-motion';
 
 export default function Contact(){
     const BASE_URL: string = process.env.REACT_APP_BASE_URL as string;
     const { t } = useTranslation();
     const trPath = "pages.contact."; // translation path
 
-    const [name, setName] = React.useState<string>('');
-    const [email, setEmail] = React.useState<string>('');
-    const [message, setMessage] = React.useState<string>('');
+    const [name, setName] = useState<string>('');
+    const [email, setEmail] = useState<string>('');
+    const [message, setMessage] = useState<string>('');
 
     // for the log message notifications:
-    const [okMsg, setOkMsg] = React.useState<string>('');
-    const [errMsg, setErrMsg] = React.useState<string>('');
+    const [okMsg, setOkMsg] = useState<string>('');
+    const [errMsg, setErrMsg] = useState<string>('');
 
     // not submit the form, if inputs are not valid:
-    const [isFormValid, setIsFormValid] = React.useState<boolean>(false);
+    const [isFormValid, setIsFormValid] = useState<boolean>(false);
 
     useEffect(() => {
         window.scrollTo(0, 0);
@@ -52,11 +53,15 @@ export default function Contact(){
                 email,
                 message})
         });
+
+        const json = await res.json();
+        
         if (res.status === 201) {
             setOkMsg("Merci de nous avoir contacté.\nVotre message a bien été transmis à notre équipe.");
         } else {
             setErrMsg("Le message n'a pas été envoyé.");
-            console.log(res.status);
+            console.log(`Error: ${res.status}`);
+            console.log(json.errors);
         }
     }
 
@@ -71,6 +76,13 @@ export default function Contact(){
     }
 
     return (
+        <motion.div 
+            className="wrapper"
+            initial={{ opacity: 0, x: 20 }}
+            animate={{ opacity: 1, x: 0 }}
+            exit={{ opacity: 0.3, x: -20 }}
+            transition={{ duration: 0.3 }}
+        >
         <main id="contact">
             <section className="contact">
                 <h1>{t(`${trPath}title`)}</h1>
@@ -143,5 +155,6 @@ export default function Contact(){
         
             </section>
         </main>
+        </motion.div>
     )
 }

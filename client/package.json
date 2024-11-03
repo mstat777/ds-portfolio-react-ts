@@ -16,6 +16,7 @@
     "@types/react-dom": "^18.3.1",
     "dompurify": "^3.1.7",
     "dotenv": "^16.4.5",
+    "framer-motion": "^11.11.11",
     "html-react-parser": "^5.1.18",
     "i18next": "^23.16.4",
     "react": "^18.3.1",

@@ -1,0 +1,18 @@
+/*:root {
+    --delay-time
+}*/
+
+.typewriter_ctn > span:last-child {
+    animation-name: fadeIn;
+    animation-duration: .2s;
+    animation-timing-function: ease-in-out;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: .3;
+    }
+    to {
+        opacity: 1;
+    }
+}
