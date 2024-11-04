@@ -1,5 +1,5 @@
 import './Contact.scss';
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import { useTranslation } from 'react-i18next';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faEnvelope } from '@fortawesome/free-solid-svg-icons';
@@ -7,11 +7,13 @@ import { faLinkedin, faGithub } from '@fortawesome/free-brands-svg-icons';
 import { validateInput } from '../../utils/validate';
 import MainBtn from '../../components/MainBtn/Index';
 import { motion } from 'framer-motion';
+import ReCAPTCHA from "react-google-recaptcha";
 
 export default function Contact(){
     const BASE_URL: string = process.env.REACT_APP_BASE_URL as string;
     const { t } = useTranslation();
     const trPath = "pages.contact."; // translation path
+    const captchaRef = useRef<ReCAPTCHA>(null);
 
     const [name, setName] = useState<string>('');
     const [email, setEmail] = useState<string>('');
@@ -70,17 +72,20 @@ export default function Contact(){
         setErrMsg('');
     }
 
-    const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
-        event.preventDefault();
+    const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+        e.preventDefault();
+        const token = captchaRef.current?.getValue();
+        console.log(token);
+        captchaRef.current?.reset();
         validateForm();
     }
 
     return (
         <motion.div 
             className="wrapper"
-            initial={{ opacity: 0, x: 20 }}
-            animate={{ opacity: 1, x: 0 }}
-            exit={{ opacity: 0.3, x: -20 }}
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0.3 }}
             transition={{ duration: 0.3 }}
         >
         <main id="contact">
@@ -147,6 +152,10 @@ export default function Contact(){
                             rows={8}
                             maxLength={600}
                             required />
+
+                        <ReCAPTCHA 
+                            ref={captchaRef}
+                            sitekey={process.env.REACT_APP_SITE_KEY as string}/>
 
                         <MainBtn type="submit" 
                                 onClick={() => console.log("submitted")} text={t(`${trPath}form.sendBtn`)}/>

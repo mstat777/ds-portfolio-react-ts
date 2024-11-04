@@ -27,14 +27,16 @@ export default function TypeWriter({text}: {text: string}) {
 
     return (
         <div ref={mainString} className="typewriter_ctn">
-          {text
-            .split("")
-            .slice(0, index)
-            .map((char, i) => (
-              <span key={i}>{char}</span>
-            ))}
+            <span>{text.charAt(0)}</span>{/* in order to get div height on initialization */}
+            {text
+                .split("")
+                .slice(1, index)
+                .map((char, i) => (
+                <span key={i}>{char}</span>
+                ))
+            }
         </div>
-    ) 
+    );
 }
 
 /* ------------- Variant: String with Slice ----------------
