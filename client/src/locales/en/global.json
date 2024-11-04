@@ -51,6 +51,11 @@
         }
     },
     "msg": {
-        "loadingTranslations": "loading translations..."
+        "loadingTranslations": "loading translations...",
+        "mailForm": {
+            "thankYou": "Thank you for contacting us.\nYour message has been sent to our team.",
+            "notSend": "Error: Your message was not sent",
+            "verifyRecaptcha": "Please check the box 'I am not a robot'"
+        }
     }
 }

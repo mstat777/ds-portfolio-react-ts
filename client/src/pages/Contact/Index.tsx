@@ -8,63 +8,89 @@ import { validateInput } from '../../utils/validate';
 import MainBtn from '../../components/MainBtn/Index';
 import { motion } from 'framer-motion';
 import ReCAPTCHA from "react-google-recaptcha";
+import { useMediaQuery } from "react-responsive";
 
 export default function Contact(){
     const BASE_URL: string = process.env.REACT_APP_BASE_URL as string;
     const { t } = useTranslation();
-    const trPath = "pages.contact."; // translation path
+    // translation paths:
+    const trPath = "pages.contact."; //general
+    const msgTrPath = "msg.mailForm."; // messages & alerts
+
+    const isMobile = useMediaQuery({ query: '(max-width: 767px)' });
+
     const captchaRef = useRef<ReCAPTCHA>(null);
+    const [captcha, setCaptcha] = useState<string | null | undefined>('');
 
-    const [name, setName] = useState<string>('');
-    const [email, setEmail] = useState<string>('');
-    const [message, setMessage] = useState<string>('');
+    const [inputs, setInputs] = useState({
+        name: "",
+        email: "",
+        message: ""
+    });
 
-    // for the log message notifications:
+    // for the log message notifications
     const [okMsg, setOkMsg] = useState<string>('');
     const [errMsg, setErrMsg] = useState<string>('');
 
-    // not submit the form, if inputs are not valid:
+    // not submit the form, if inputs are not valid
     const [isFormValid, setIsFormValid] = useState<boolean>(false);
 
     useEffect(() => {
         window.scrollTo(0, 0);
     },[]);
 
-    // verify if all inputs are valid :
+    // verify if all inputs are valid
     const validateForm = () => {
-        const nameVerif = validateInput("userName", name.trim());
-        const emailVerif = validateInput("email", email.trim());
-        // show all error messages :
+        const nameVerif = validateInput("userName", inputs.name.trim());
+        const emailVerif = validateInput("email", inputs.email.trim());
+        // show all error messages
         setErrMsg(nameVerif.errMsg + emailVerif.errMsg);
-        // form is valid if all inputs are valid :
-        setIsFormValid((nameVerif.isValid && emailVerif) ? true : false);
+        
+        // form is valid if all inputs are valid
+        if (nameVerif.isValid && emailVerif.isValid) {
+            setIsFormValid(true);
+            
+            const captchaValue = captchaRef.current?.getValue();
+
+            if (!captchaValue) {
+                setErrMsg(t(`${msgTrPath}verifyRecaptcha`));
+            } else {
+                setCaptcha(captchaValue);
+                captchaRef.current?.reset();
+            }
+        }
     }
 
     useEffect(() => {
-        if (isFormValid) {
+        if (isFormValid && captcha) {
             submitForm();
         }
-    },[isFormValid]);
+    },[isFormValid, captcha]);
 
     async function submitForm() {
         const res = await fetch(`${BASE_URL}/api/v1/sendmail`, {
             method: "POST",
             headers: { "Content-Type": "application/json" },
             body: JSON.stringify({ 
-                name,
-                email,
-                message})
+                captcha,
+                name: inputs.name,
+                email: inputs.email,
+                message: inputs.message
+            })
         });
 
         const json = await res.json();
         
         if (res.status === 201) {
-            setOkMsg("Merci de nous avoir contacté.\nVotre message a bien été transmis à notre équipe.");
+            setOkMsg(t(`${msgTrPath}thankYou`));
         } else {
-            setErrMsg("Le message n'a pas été envoyé.");
+            setErrMsg(t(`${msgTrPath}notSend`));
             console.log(`Error: ${res.status}`);
-            console.log(json.errors);
+            console.log(json.msg);
         }
+
+        // clear inputs
+        setInputs({name: "", email: "", message: ""});
     }
 
     function handleOnFocus(){
@@ -72,11 +98,12 @@ export default function Contact(){
         setErrMsg('');
     }
 
+    const handleChange = (e: React.FormEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+        setInputs({ ...inputs, [(e.target as HTMLInputElement).name]: (e.target as HTMLInputElement).value });
+    }
+
     const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
         e.preventDefault();
-        const token = captchaRef.current?.getValue();
-        console.log(token);
-        captchaRef.current?.reset();
         validateForm();
     }
 
@@ -122,31 +149,32 @@ export default function Contact(){
 
                 <div className="contact_form_ctn">
                     <h2>{t(`${trPath}form.title`)}</h2>
-                    { (okMsg && name && email && message) ? 
-                        <p className="ok_msg">{okMsg}</p> : null }
-                    { (errMsg && name && email && message) ? 
-                        <p className="err_msg">{errMsg}</p> : null }
+
+                    { okMsg  && 
+                        <p className="ok_msg">{okMsg}</p> }
+                    { errMsg && 
+                        <p className="err_msg">{errMsg}</p> }
 
                     <form onSubmit={handleSubmit} className="contact_form">
                         <input type="text" 
                             name="name" 
-                            value={name}
-                            onChange={(e) => setName(e.target.value)}
+                            value={inputs.name}
+                            onChange={handleChange}
                             onFocus={handleOnFocus}
                             placeholder={t(`${trPath}form.namePlholder`)}
                             required/> 
 
                         <input type="email" 
                             name="email" 
-                            value={email}
-                            onChange={(e) => setEmail(e.target.value)}
+                            value={inputs.email}
+                            onChange={handleChange}
                             onFocus={handleOnFocus}
                             placeholder={t(`${trPath}form.emailPlholder`)}
                             required/> 
 
                         <textarea name="message"
-                            value={message}
-                            onChange={(e) => setMessage(e.target.value)}
+                            value={inputs.message}
+                            onChange={handleChange}
                             onFocus={handleOnFocus}
                             placeholder={t(`${trPath}form.msgPlholder`)}
                             rows={8}
@@ -155,6 +183,8 @@ export default function Contact(){
 
                         <ReCAPTCHA 
                             ref={captchaRef}
+                            theme="dark"
+                            size={isMobile ? "compact" : "normal"}
                             sitekey={process.env.REACT_APP_SITE_KEY as string}/>
 
                         <MainBtn type="submit" 

@@ -51,6 +51,11 @@
         }
     },
     "msg": {
-        "loadingTranslations": "chargement de traductions..."
+        "loadingTranslations": "chargement de traductions...",
+        "mailForm": {
+            "thankYou": "Merci de nous avoir contacté.\nVotre message a bien été transmis à notre équipe.",
+            "notSend": "Erreur : votre message n'a pas été envoyé",
+            "verifyRecaptcha": "Veuillez cocher la case \u00AB Je ne suis pas un robot \u00BB"
+        }
     }
 }
