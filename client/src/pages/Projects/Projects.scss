@@ -1,9 +1,9 @@
 @use '../../global';
 
-.projects {
+.projects_section {
     padding: global.$header-height 2rem 2rem;
 
-    &_grid {
+    .projects_grid {
         padding-top: 1rem;
         @media screen and (min-width: global.$desktop){
             display: grid;

@@ -6,7 +6,10 @@
     left: 0;
     right: 0;
     height: global.$header-height;
-    border-bottom: 1px solid global.$grey-color;
+    -webkit-box-sizing: border-box; 
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    border-bottom: 2px solid global.$grey-color;
     background-color: global.$secondary-color;
     z-index: 100;
     

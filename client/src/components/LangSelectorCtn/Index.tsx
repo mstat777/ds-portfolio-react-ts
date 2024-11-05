@@ -1,11 +1,11 @@
-import './SwitchLangCtn.scss';
-import { useState, useEffect } from 'react';
+import './LangSelectorCtn.scss';
+import { useState, useEffect, forwardRef, Ref } from 'react';
 import { languages, changeLanguage, getLanguage } from '../../i18n';
 import fr from '../../assets/img/i18n/flags/fr.png';
 import en from '../../assets/img/i18n/flags/en.png';
 import bg from '../../assets/img/i18n/flags/bg.png';
 
-export default function SwitchLangCtn() {
+const LangSelectorCtn = forwardRef((props, ref: Ref<HTMLDivElement>) => {
     const [ showLangMenu, setShowLangMenu ] = useState<boolean>(false);
     const [ currLang, setCurrLang ] = useState<string>('');
     const [ currLangImg, setCurrentLangImg] = useState<string | undefined>(undefined);
@@ -60,8 +60,10 @@ export default function SwitchLangCtn() {
     }
 
     return (
-        <div className={`switch_lang_ctn ${showLangMenu ? 'show_lang_menu' : 'hide_lang_menu'}`} onMouseLeave={() => setShowLangMenu(false)}>
-            
+        <div 
+            className={`switch_lang_ctn ${showLangMenu ? 'show_lang_menu' : 'hide_lang_menu'}`} onMouseLeave={() => setShowLangMenu(false)}
+            ref={ref}
+        >
             <button onClick={toggleLangMenu}className="current_lang_btn">
                 <img src={currLangImg} alt="language" />
             </button>
@@ -80,4 +82,6 @@ export default function SwitchLangCtn() {
             </div>
         </div>
     )
-}
+});
+
+export default LangSelectorCtn;

@@ -5,6 +5,7 @@ import i18next from 'i18next';
 import ProjectCard from '../../components/ProjectCard/Index';
 import { ProjectData } from '../../configs/interfaces';
 import { motion } from 'framer-motion';
+import { mainVariants } from '../../configs/motionFramer';
 
 export default function Projects(){
     const { ready } = useTranslation();
@@ -19,13 +20,13 @@ export default function Projects(){
             <p>{i18next.t('msg.loadingTranslations')}</p> :
         <motion.div 
             className="wrapper"
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            exit={{ opacity: 0 }}
-            transition={{ duration: 0.3 }}
+            variants={mainVariants}
+            initial="hidden"
+            animate="visible"
+            exit="hidden"
         >
         <main id="projects">
-            <section className="projects">
+            <section className="projects_section">
                 <h1>{i18next.t('projects:title')}</h1>
 
                 <section className="projects_grid">

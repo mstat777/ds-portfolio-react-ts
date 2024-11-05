@@ -1,10 +1,10 @@
 @use '../../global';
 
-.home {
+.home_section {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    height: calc(100vh - global.$header-height - global.$footer-height);
+    height: calc(100vh - global.$footer-height);
     padding-top: global.$header-height;
 
     h1 {
@@ -20,7 +20,7 @@
         color: global.$quaternary-color;
     }
 
-    .text {
+    .typewriter {
         font-family: global.$title-font;
         font-size: 1.8rem;
         color: global.$lightgrey-color;

@@ -30,12 +30,13 @@ export default function App() {
     return (
         <BrowserRouter>
             <Routes>
+                <Route index element={<Navigate to="/intro" replace />}/>
+                
                 <Route path="/intro" element={<IntroLayout/>}>
                     <Route index element={<Intro/>}/>
                 </Route>
 
                 <Route path="/" element={<GeneralLayout/>}>
-                    <Route index element={<Navigate to="/intro" replace />}/>
                     <Route path="home" element={<Home/>}/>
                     <Route path="projects" element={<Projects/>}/>
                     <Route path="about" element={<About/>}/>

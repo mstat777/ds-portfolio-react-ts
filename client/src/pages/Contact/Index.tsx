@@ -7,6 +7,7 @@ import { faLinkedin, faGithub } from '@fortawesome/free-brands-svg-icons';
 import { validateInput } from '../../utils/validate';
 import MainBtn from '../../components/MainBtn/Index';
 import { motion } from 'framer-motion';
+import { mainVariants } from '../../configs/motionFramer';
 import ReCAPTCHA from "react-google-recaptcha";
 import { useMediaQuery } from "react-responsive";
 
@@ -34,6 +35,8 @@ export default function Contact(){
 
     // not submit the form, if inputs are not valid
     const [isFormValid, setIsFormValid] = useState<boolean>(false);
+
+    const MotionMainBtn = motion.create(MainBtn);
 
     useEffect(() => {
         window.scrollTo(0, 0);
@@ -110,18 +113,18 @@ export default function Contact(){
     return (
         <motion.div 
             className="wrapper"
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            exit={{ opacity: 0.3 }}
-            transition={{ duration: 0.3 }}
+            variants={mainVariants}
+            initial="hidden"
+            animate="visible"
+            exit="hidden"
         >
         <main id="contact">
-            <section className="contact">
+            <section className="contact_section">
                 <h1>{t(`${trPath}title`)}</h1>
 
                 <p>{t(`${trPath}text`)}</p>
 
-                <div className="contact_details">
+                <div className="contact_section_details">
                     <div className="detail_ctn">        
                         <span>
                             <FontAwesomeIcon icon={faEnvelope} className="icon"/> 
@@ -147,7 +150,7 @@ export default function Contact(){
                     </div>
                 </div>
 
-                <div className="contact_form_ctn">
+                <div className="contact_section_form_ctn">
                     <h2>{t(`${trPath}form.title`)}</h2>
 
                     { okMsg  && 
@@ -187,8 +190,12 @@ export default function Contact(){
                             size={isMobile ? "compact" : "normal"}
                             sitekey={process.env.REACT_APP_SITE_KEY as string}/>
 
-                        <MainBtn type="submit" 
-                                onClick={() => console.log("submitted")} text={t(`${trPath}form.sendBtn`)}/>
+                        <MotionMainBtn 
+                            type="submit" 
+                            onClick={() => console.log("submitted")} 
+                            text={t(`${trPath}form.sendBtn`)}
+                            whileHover={{ scale: 1.05 }}
+                        />
                     </form>
                 </div>
         

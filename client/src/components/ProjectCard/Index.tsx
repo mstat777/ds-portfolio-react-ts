@@ -5,10 +5,11 @@ import { ProjectData } from '../../configs/interfaces';
 import DOMPurify from "dompurify";
 import parse from 'html-react-parser';
 import { optionSkills } from '../../configs/variables';
+import { motion } from 'framer-motion';
 
 export default function ProjectCard({projectData}:{projectData: ProjectData}) {
     const IMG_URL = process.env.REACT_APP_IMG_URL;
-
+    
     projectData.subtitle = DOMPurify.sanitize(projectData.subtitle);
     projectData.tools = DOMPurify.sanitize(projectData.tools);
     projectData.description = DOMPurify.sanitize(projectData.description);

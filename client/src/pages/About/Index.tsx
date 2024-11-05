@@ -6,6 +6,7 @@ import DOMPurify from "dompurify";
 import { domPurifyOpenLinksInNewWindow } from '../../utils/sanitize';
 import { optionSkills } from '../../configs/variables';
 import { motion } from 'framer-motion';
+import { mainVariants } from '../../configs/motionFramer';
 
 export default function About(){
     const IMG_URL = process.env.REACT_APP_IMG_URL;
@@ -22,13 +23,13 @@ export default function About(){
     return (
         <motion.div 
             className="wrapper"
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            exit={{ opacity: 0 }}
-            transition={{ duration: 0.3 }}
-        >
+            variants={mainVariants}
+            initial="hidden"
+            animate="visible"
+            exit="hidden"
+        > 
         <main id="about">
-            <section className="about">
+            <section className="about_section">
                 <h1>{t(`${trPath}title`)}</h1>
 
                 <article>

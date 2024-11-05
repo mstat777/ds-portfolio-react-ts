@@ -15,10 +15,11 @@ html {
 
 body{
     font-family: global.$main-font;  
-    font-size: 1.4rem;
     font-weight: 300;
+    font-size: 1.4rem;
     font-optical-sizing: none;
-    background-color: global.$secondary-color;
+    background: linear-gradient(global.$secondary-color, global.$verydarkbluegrey-color);
+    
     > div { // "root"
         min-height: 100vh; // pour positionner le footer toujours en bas de la page
         display: flex;
@@ -27,7 +28,6 @@ body{
         main {
             width: 100%;
             text-align: center;
-            
             @media screen and (min-width: global.$tablet) {
                 margin-top: 0;
             }
@@ -37,7 +37,6 @@ body{
                 margin: 0 auto;
                 padding: 0 2rem;
                 color: global.$primary-color;
-
                 @media screen and (min-width: global.$tablet){
                     padding: 0 8rem;
                 }
@@ -162,6 +161,10 @@ textarea {
 
 .hidden {
     display: none;
+}
+
+.wrapper {
+    height: 100%;
 }
 
 .margin_10_0 {
