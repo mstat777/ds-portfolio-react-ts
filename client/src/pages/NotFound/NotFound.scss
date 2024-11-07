@@ -1,0 +1,25 @@
+@use '../../global';
+
+#notFound {
+    padding: calc(global.$header-height + 4rem) 2rem 0;
+    
+    p {
+        color: global.$quaternary-color;
+    
+        a {
+            margin-left: .5rem;
+            padding: .3rem .5rem;
+            border: 1px solid global.$lightgrey-color;
+            border-radius: 4px;
+            font-weight: 500;
+            color: global.$tertiary-color;
+            background-color: global.$darkbluegrey-color;
+            transition: all .5s;
+    
+            &:hover {
+                color: global.$secondary-color;
+                background-color: global.$lightgrey-color;
+            }
+        }
+    }
+}

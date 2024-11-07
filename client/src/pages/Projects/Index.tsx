@@ -5,7 +5,8 @@ import i18next from 'i18next';
 import ProjectCard from '../../components/ProjectCard/Index';
 import { ProjectData } from '../../configs/interfaces';
 import { motion } from 'framer-motion';
-import { mainVariants } from '../../configs/motionFramer';
+import { pageVariants } from '../../configs/motionFramerVariants';
+import Loading from '../../components/Loading/Index';
 
 export default function Projects(){
     const { ready } = useTranslation();
@@ -17,13 +18,13 @@ export default function Projects(){
 
     return (
         !ready ?  
-            <p>{i18next.t('msg.loadingTranslations')}</p> :
+            <Loading/> :
+            
         <motion.div 
-            className="wrapper"
-            variants={mainVariants}
+            variants={pageVariants}
             initial="hidden"
             animate="visible"
-            exit="hidden"
+            exit="exit"
         >
         <main id="projects">
             <section className="projects_section">

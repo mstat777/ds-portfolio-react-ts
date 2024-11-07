@@ -7,7 +7,7 @@ import { faLinkedin, faGithub } from '@fortawesome/free-brands-svg-icons';
 import { validateInput } from '../../utils/validate';
 import MainBtn from '../../components/MainBtn/Index';
 import { motion } from 'framer-motion';
-import { mainVariants } from '../../configs/motionFramer';
+import { pageVariants } from '../../configs/motionFramerVariants';
 import ReCAPTCHA from "react-google-recaptcha";
 import { useMediaQuery } from "react-responsive";
 
@@ -112,8 +112,8 @@ export default function Contact(){
 
     return (
         <motion.div 
-            className="wrapper"
-            variants={mainVariants}
+            
+            variants={pageVariants}
             initial="hidden"
             animate="visible"
             exit="hidden"

@@ -3,7 +3,6 @@ import { useEffect } from 'react';
 import { useTranslation } from 'react-i18next';
 import { motion } from 'framer-motion';
 import TypeWriter from '../../effects/TypeWriter/Index';
-import { mainVariants } from '../../configs/motionFramer';
 
 export default function Home(){
     const { t } = useTranslation();
@@ -15,14 +14,38 @@ export default function Home(){
         window.scrollTo(0, 0);
     },[]);
 
+    const homePageVariants = {
+        hidden: {
+            opacity: 0,
+            transform: "scale(.9)", 
+            originX: "50vw",
+            originY: "60px"
+        },
+        visible: {
+            opacity: 1,
+            transform: "scale(1)", 
+            transition: { 
+                type: "tween",
+                delay: 1.2,
+                duration: .5
+            }
+        },
+        exit: {
+            opacity: 0, 
+            transform: "scale(.9)",       
+            transition: { 
+                type: "tween",
+                duration: .5
+            } 
+        }
+    }
+
     return ( 
         <motion.div 
-            className="wrapper"
-            variants={mainVariants}
+            variants={homePageVariants}
             initial="hidden"
-            animate={{ opacity:1 }}
-            exit="hidden"
-            transition={{ delay: .6, duration: .5 }}
+            animate="visible"
+            exit="exit"
         >
         <main id="home">
             <section className="home_section">
@@ -32,7 +55,10 @@ export default function Home(){
                 <MotionTypeWriter 
                     initial={{ x: -100 }}
                     animate={{ x: 0 }}
-                    transition={{ duration: .2, type: "tween" }}
+                    transition={{ 
+                        type: "tween",
+                        duration: .2 
+                    }}
                     text={t(`${trPath}text`)} 
                 />
             </section>

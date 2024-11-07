@@ -6,7 +6,7 @@ import DOMPurify from "dompurify";
 import { domPurifyOpenLinksInNewWindow } from '../../utils/sanitize';
 import { optionSkills } from '../../configs/variables';
 import { motion } from 'framer-motion';
-import { mainVariants } from '../../configs/motionFramer';
+import { pageVariants } from '../../configs/motionFramerVariants';
 
 export default function About(){
     const IMG_URL = process.env.REACT_APP_IMG_URL;
@@ -22,11 +22,10 @@ export default function About(){
 
     return (
         <motion.div 
-            className="wrapper"
-            variants={mainVariants}
+            variants={pageVariants}
             initial="hidden"
             animate="visible"
-            exit="hidden"
+            exit="exit"
         > 
         <main id="about">
             <section className="about_section">

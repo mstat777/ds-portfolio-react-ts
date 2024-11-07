@@ -1,9 +1,14 @@
 import './App.module.scss';
-import { BrowserRouter, Routes, Route, Outlet, Navigate } from 'react-router-dom';
+import { Routes, Route, Navigate, useLocation } from 'react-router-dom';
+import { DataLayerContext } from './context/DataLayerProvider';
+import { useContext, useEffect, useState } from 'react';
+import { getLanguage, changeLanguage } from './i18n';
+import { AnimatePresence } from 'framer-motion';
 
-// ------------------- CONTAINERS  -----------------------
+// ------------------- COMPONENTS  -----------------------
 import Header from './components/Header/Index';
 import Footer from './components/Footer/Index';
+import Loading from './components/Loading/Index';
 
 // --------------------- PAGES  --------------------------
 import Intro from './pages/Intro/Index';
@@ -14,36 +19,66 @@ import Contact from './pages/Contact/Index';
 import NotFound from './pages/NotFound/Index';
 
 export default function App() {
+    const location = useLocation();
+    const DATA_LAYER = useContext(DataLayerContext);
+    const [isLoading, setIsLoading] = useState<boolean>(true);
 
-    function IntroLayout() {
-        return <Outlet/>
-    }
-    
-    function GeneralLayout() {
-        return <>
-                <Header/>
-                <Outlet/>
-                <Footer/>
-            </>
-    }
+    // current language in localStorage (if exists)
+    const [locStLang, setLocStLang] = useState(localStorage.getItem("lang") || '');
+
+    useEffect(() => { 
+        if (locStLang) {
+            if (DATA_LAYER?.currLang) {
+                if (DATA_LAYER.currLangImg) {
+                    // if the language & its image are defined in the context AND in the localStorage, then stop the loading bar
+                    setIsLoading(false);
+                } else {
+                    // the language image is NOT loaded, then load it
+                    DATA_LAYER.changeLangImage(locStLang);
+                }
+            } else {
+                // the language is defined in localStorage, but NOT in the context
+                DATA_LAYER?.setCurrLang(locStLang);
+                // change the default language in i18next
+                changeLanguage(locStLang);
+            }
+        } else { 
+            // the language is NOT defined at all, then set the i18n default language
+            const defaultLang = getLanguage();
+            localStorage.setItem("lang", defaultLang);
+            setLocStLang(defaultLang);
+            DATA_LAYER?.setCurrLang(defaultLang);
+        }
+    },[DATA_LAYER?.currLang, DATA_LAYER?.currLangImg, locStLang]);
 
     return (
-        <BrowserRouter>
-            <Routes>
-                <Route index element={<Navigate to="/intro" replace />}/>
-                
-                <Route path="/intro" element={<IntroLayout/>}>
-                    <Route index element={<Intro/>}/>
-                </Route>
+        isLoading ? 
+            <Loading /> :
+            
+            <>
+            { location.pathname !== '/intro' &&
+                <Header />
+            }
 
-                <Route path="/" element={<GeneralLayout/>}>
-                    <Route path="home" element={<Home/>}/>
-                    <Route path="projects" element={<Projects/>}/>
-                    <Route path="about" element={<About/>}/>
-                    <Route path="contact" element={<Contact/>}/>
-                    <Route path="*" element={<NotFound/>}/>
-                </Route>
-            </Routes>
-        </BrowserRouter>
+            <AnimatePresence>
+                <Routes location={location} key={location.key}>
+                    <Route index element={<Navigate to="/intro" replace />}/>
+                    
+                    <Route path="/intro" element={<Intro/>}/>
+
+                    <Route path="/">
+                        <Route path="home" element={<Home/>}/>
+                        <Route path="projects" element={<Projects/>}/>
+                        <Route path="about" element={<About/>}/>
+                        <Route path="contact" element={<Contact/>}/>
+                        <Route path="*" element={<NotFound/>}/>
+                    </Route>
+                </Routes>
+            </AnimatePresence>
+
+            { location.pathname !== '/intro' &&
+                <Footer />
+            }
+            </>
     );
 }
