@@ -111,14 +111,13 @@ export default function Contact(){
     }
 
     return (
-        <motion.div 
-            
+        <motion.main 
+            id="contact"
             variants={pageVariants}
             initial="hidden"
             animate="visible"
             exit="hidden"
         >
-        <main id="contact">
             <section className="contact_section">
                 <h1>{t(`${trPath}title`)}</h1>
 
@@ -200,7 +199,6 @@ export default function Contact(){
                 </div>
         
             </section>
-        </main>
-        </motion.div>
+        </motion.main>
     )
 }

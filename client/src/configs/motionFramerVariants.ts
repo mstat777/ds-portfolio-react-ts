@@ -3,7 +3,7 @@
 export const pageVariants = {
     hidden: {
         opacity: 0,
-        transform: "scale(.9)", 
+        transform: "scale(.95)", 
         originX: "50vw",
         originY: "60px"
     },
@@ -12,17 +12,17 @@ export const pageVariants = {
         transform: "scale(1)", 
         transition: { 
             type: "tween",
-            delay: .5,
+            delay: .1,
             duration: .5
         }
     },
     exit: {
         opacity: 0,
-        transform: "scale(.9)", 
+        transform: "scale(.95)", 
         transition: { 
             type: "tween",
             ease: "easeInOut",
-            duration: .5 
+            duration: .3
         }
     }
 }

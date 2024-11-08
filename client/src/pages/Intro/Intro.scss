@@ -1,16 +1,28 @@
 @use '../../global';
 
 .intro {
+    position: fixed;
+    top: 0;
+    left: 0;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    height: 100vh;
-    padding-bottom: 6rem;
+    height: 100%;
+    width: 100%;
     color: white;
+    overflow: hidden;
 
-    .p {
-        position: absolute;
-        display: inline-block;
+    &_section {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+
+        .motion_logo_ctn {
+            width: 80%;
+            max-width: 360px;
+            height: 80%;
+        }
     }
 }

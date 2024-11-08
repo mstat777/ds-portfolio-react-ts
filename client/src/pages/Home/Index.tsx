@@ -17,13 +17,13 @@ export default function Home(){
     const homePageVariants = {
         hidden: {
             opacity: 0,
-            transform: "scale(.9)", 
+            //transform: "scale(.9)", 
             originX: "50vw",
             originY: "60px"
         },
         visible: {
             opacity: 1,
-            transform: "scale(1)", 
+            //transform: "scale(1)", 
             transition: { 
                 type: "tween",
                 delay: 1.2,
@@ -32,22 +32,22 @@ export default function Home(){
         },
         exit: {
             opacity: 0, 
-            transform: "scale(.9)",       
+            //transform: "scale(.9)",       
             transition: { 
-                type: "tween",
+                ease: "easeInOut",
                 duration: .5
             } 
         }
     }
 
     return ( 
-        <motion.div 
+        <motion.main 
+            id="home"
             variants={homePageVariants}
             initial="hidden"
             animate="visible"
             exit="exit"
         >
-        <main id="home">
             <section className="home_section">
                 <h1>{t(`${trPath}title`)}</h1>
                 <p className="subtitle">{t(`${trPath}subtitle`)}</p>
@@ -62,7 +62,6 @@ export default function Home(){
                     text={t(`${trPath}text`)} 
                 />
             </section>
-        </main>
-        </motion.div>
+        </motion.main>
     );
 }

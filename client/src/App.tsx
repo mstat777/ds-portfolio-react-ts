@@ -21,35 +21,33 @@ import NotFound from './pages/NotFound/Index';
 export default function App() {
     const location = useLocation();
     const DATA_LAYER = useContext(DataLayerContext);
+
     const [isLoading, setIsLoading] = useState<boolean>(true);
 
-    // current language in localStorage (if exists)
-    const [locStLang, setLocStLang] = useState(localStorage.getItem("lang") || '');
-
     useEffect(() => { 
-        if (locStLang) {
+        if (DATA_LAYER?.locStLang) {
             if (DATA_LAYER?.currLang) {
                 if (DATA_LAYER.currLangImg) {
                     // if the language & its image are defined in the context AND in the localStorage, then stop the loading bar
                     setIsLoading(false);
                 } else {
                     // the language image is NOT loaded, then load it
-                    DATA_LAYER.changeLangImage(locStLang);
+                    DATA_LAYER.changeLangImage(DATA_LAYER?.locStLang);
                 }
             } else {
                 // the language is defined in localStorage, but NOT in the context
-                DATA_LAYER?.setCurrLang(locStLang);
+                DATA_LAYER?.setCurrLang(DATA_LAYER?.locStLang);
                 // change the default language in i18next
-                changeLanguage(locStLang);
+                changeLanguage(DATA_LAYER?.locStLang);
             }
         } else { 
             // the language is NOT defined at all, then set the i18n default language
             const defaultLang = getLanguage();
             localStorage.setItem("lang", defaultLang);
-            setLocStLang(defaultLang);
+            DATA_LAYER?.setLocStLang(defaultLang);
             DATA_LAYER?.setCurrLang(defaultLang);
         }
-    },[DATA_LAYER?.currLang, DATA_LAYER?.currLangImg, locStLang]);
+    },[DATA_LAYER?.locStLang, DATA_LAYER?.currLang, DATA_LAYER?.currLangImg]);
 
     return (
         isLoading ? 
@@ -60,7 +58,7 @@ export default function App() {
                 <Header />
             }
 
-            <AnimatePresence>
+            <AnimatePresence mode="wait" initial={false}>
                 <Routes location={location} key={location.key}>
                     <Route index element={<Navigate to="/intro" replace />}/>
                     

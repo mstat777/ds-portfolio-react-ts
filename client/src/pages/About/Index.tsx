@@ -21,13 +21,13 @@ export default function About(){
     },[]);
 
     return (
-        <motion.div 
+        <motion.main 
+            id="about"
             variants={pageVariants}
             initial="hidden"
             animate="visible"
             exit="exit"
-        > 
-        <main id="about">
+        >
             <section className="about_section">
                 <h1>{t(`${trPath}title`)}</h1>
 
@@ -40,7 +40,6 @@ export default function About(){
                     </div>
                 </article>
             </section>
-        </main>
-        </motion.div>
+        </motion.main>
     );
 }

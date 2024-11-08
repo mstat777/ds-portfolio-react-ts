@@ -2,16 +2,14 @@ import './Header.scss';
 import { NavLink } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 import logo from '../../assets/img/dimitarstatev-logo-150.png';
-import LangSelectorCtn from '../LangSelectorCtn/Index';
 import { motion } from 'framer-motion';
 import { memo } from 'react';
+import MotionLangSelector from '../LangSelectorCtn/Index';
 
 // memo is in order to avoid rerendering
-export default function Header() {
+export default memo(function Header() {
     const { t } = useTranslation();
     const trPath = "components.header."; // translation path
-
-    let MotionLangSelector = motion.create(LangSelectorCtn);
 
     const headerVariants = {
         hidden: {
@@ -23,7 +21,7 @@ export default function Header() {
             backgroundColor: "#121b2b",
             transition:{ 
                 type: "tween", 
-                duration: .6,
+                duration: .4,
                 when: "beforeChildren"
             }
         }
@@ -83,7 +81,6 @@ export default function Header() {
     }
 
     return (
-        MotionLangSelector &&
         <motion.header 
             className="header"
             variants={headerVariants}
@@ -123,9 +120,10 @@ export default function Header() {
                 </motion.ul>
 
                 <MotionLangSelector
-                    variants={langSelectorVariants}
-                />
+                    variants={langSelectorVariants}/>
             </nav>
+            
+            {/*<MotionLangSelector variants={langSelectorVariants}/>*/}
         </motion.header>
     )
-};
+});

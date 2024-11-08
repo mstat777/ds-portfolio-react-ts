@@ -1,14 +1,12 @@
 import './LangSelectorCtn.scss';
-import { useState, forwardRef, Ref, memo, useContext } from 'react';
-import { languages, changeLanguage, getLanguage } from '../../i18n';
+import { useState, forwardRef, Ref, useContext } from 'react';
+import { languages, changeLanguage } from '../../i18n';
 import { DataLayerContext } from '../../context/DataLayerProvider';
+import { motion } from 'framer-motion';
 
 const LangSelectorCtn = forwardRef((props, ref: Ref<HTMLDivElement>) => {
     const DATA_LAYER = useContext(DataLayerContext);
     const [showLangMenu, setShowLangMenu] = useState<boolean>(false);
-
-    // current language in localStorage (if exists)
-    const [locStLang, setLocStLang] = useState(localStorage.getItem("lang") || '');
 
     // show/hide language menu
     function toggleLangMenu() {
@@ -18,9 +16,10 @@ const LangSelectorCtn = forwardRef((props, ref: Ref<HTMLDivElement>) => {
     // change the language data in i18next & localStorage, then triger hide menu
     function changeLangAndHideMenu(langCode: string) {
         // change only if lang has been changed
-        if (langCode !== locStLang) {
+        if (langCode !== DATA_LAYER?.locStLang) {
             changeLanguage(langCode); // change the language data in i18next
-            DATA_LAYER?.setCurrLang(getLanguage());
+            DATA_LAYER?.setLocStLang(langCode);
+            DATA_LAYER?.setCurrLang(langCode);
             DATA_LAYER?.changeLangImage(langCode);
             localStorage.setItem("lang", langCode);
         } 
@@ -53,4 +52,6 @@ const LangSelectorCtn = forwardRef((props, ref: Ref<HTMLDivElement>) => {
     )
 });
 
-export default memo(LangSelectorCtn);
+const MotionLangSelector = motion.create(LangSelectorCtn);
+
+export default MotionLangSelector;

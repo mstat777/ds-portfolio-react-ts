@@ -1,4 +1,5 @@
 import './ProjectCard.scss';
+import { forwardRef, Ref } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faArrowUpRightFromSquare } from '@fortawesome/free-solid-svg-icons';
 import { ProjectData } from '../../configs/interfaces';
@@ -7,7 +8,7 @@ import parse from 'html-react-parser';
 import { optionSkills } from '../../configs/variables';
 import { motion } from 'framer-motion';
 
-export default function ProjectCard({projectData}:{projectData: ProjectData}) {
+const ProjectCard = forwardRef(({projectData}:{projectData: ProjectData}, ref: Ref<HTMLElement>) => {
     const IMG_URL = process.env.REACT_APP_IMG_URL;
     
     projectData.subtitle = DOMPurify.sanitize(projectData.subtitle);
@@ -15,7 +16,7 @@ export default function ProjectCard({projectData}:{projectData: ProjectData}) {
     projectData.description = DOMPurify.sanitize(projectData.description);
 
     return (
-        <article className="project_card">
+        <article className="project_card" ref={ref}>
             <div className="project_card_img_ctn">
                 <img src={`${IMG_URL}/projects/screenshots/${projectData.images[0]}`} alt=""/>
             </div>
@@ -36,4 +37,8 @@ export default function ProjectCard({projectData}:{projectData: ProjectData}) {
             </div>
         </article>
     )
-}
+});
+
+const MotionProjectCard = motion.create(ProjectCard);
+
+export default MotionProjectCard;

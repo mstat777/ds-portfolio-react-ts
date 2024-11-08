@@ -26,7 +26,6 @@ body{
         flex-direction: column;
 
         main {
-            width: 100%;
             text-align: center;
             @media screen and (min-width: global.$tablet) {
                 margin-top: 0;
@@ -161,10 +160,6 @@ textarea {
 
 .hidden {
     display: none;
-}
-
-.wrapper {
-    height: 100%;
 }
 
 .margin_10_0 {
