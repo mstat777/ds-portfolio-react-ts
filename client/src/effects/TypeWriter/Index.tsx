@@ -3,13 +3,12 @@ import { useState, useEffect, forwardRef, Ref } from "react";
 
 type Props = {
     text: string;
+    className: string | undefined;
 }
 
 const TypeWriter = forwardRef((props: Props, ref: Ref<HTMLDivElement>) => {
-    const { text } = props;
+    const { text, className } = props;
     const [index, setIndex] = useState<number>(0);
-
-    //const mainString = useRef<HTMLDivElement>(null);
 
     useEffect(() => {
         const timeout = setInterval(() => {
@@ -24,7 +23,7 @@ const TypeWriter = forwardRef((props: Props, ref: Ref<HTMLDivElement>) => {
     },[index]);
 
     return (
-        <div ref={ref} className="typewriter_ctn">
+        <div ref={ref} className={`typewriter_ctn ${className}`}>
             <span>{text.charAt(0)}</span>{/* in order to set div some initial height */}
             {text
                 .split("")

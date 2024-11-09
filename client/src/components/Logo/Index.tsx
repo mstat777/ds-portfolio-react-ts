@@ -16,7 +16,7 @@ const Logo = forwardRef((props: React.SVGProps<SVGSVGElement>, ref: Ref<SVGSVGEl
     return (
         <motion.svg 
             ref={ref}
-            className="logo_ctn"
+            className="motion_logo_ctn"
             variants={svgVariants}
             initial="start"
             animate="end"
@@ -27,6 +27,7 @@ const Logo = forwardRef((props: React.SVGProps<SVGSVGElement>, ref: Ref<SVGSVGEl
             strokeLinejoin="round" 
             xmlSpace="preserve" 
         >  
+            
             <motion.path 
                 className="d_letter_fill"
                 strokeLinecap="square"
@@ -62,8 +63,8 @@ const Logo = forwardRef((props: React.SVGProps<SVGSVGElement>, ref: Ref<SVGSVGEl
                 variants={dashVariants}
                 transform="translate(25, 19) scale(0.95)"
                 d="M970 620V758H553L641 620H970Z" />
-            
-        </motion.svg>
+    
+    </motion.svg>
     );
 });
 

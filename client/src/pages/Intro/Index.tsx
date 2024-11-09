@@ -7,14 +7,14 @@ import MotionLogo from '../../components/Logo/Index';
 
 export default function Intro(){
     const navigate = useNavigate();
-/*
+
     useEffect(() => {
         const timeout = setTimeout(() => {
             navigate('/home');
-        }, 3000);
+        }, 4500);
 
         return () => clearTimeout(timeout);
-    },[]);*/
+    },[]);
     
     /*const textData = ["JavaScript", "React", "Web Applications", "Responsive Design", "Single Page App", "Wireframes", "Websites", "Web content", "Design", "Performance", "Security", "Interaction", "UX Design"]
 

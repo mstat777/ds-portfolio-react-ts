@@ -20,9 +20,21 @@
         color: global.$quaternary-color;
     }
 
-    .typewriter {
+    .home_typewriter_ctn {
+        > span:first-child {
+            color: transparent;
+            user-select: none;
+            -moz-user-select: none;
+            -webkit-user-select: none;
+        }
+        display: flex;
+        justify-content: center;
         font-family: global.$title-font;
         font-size: 1.8rem;
         color: global.$lightgrey-color;
+
+        .typewriter {
+            margin-right: .5rem;
+        }
     }
 }
