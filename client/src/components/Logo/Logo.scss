@@ -3,41 +3,4 @@
 .motion_logo_ctn {
     width: 90%;
     height: 90%;
-    
-    >path {
-        stroke-width: 16px;
-    }
-
-    .d_letter_fill {
-        stroke: global.$verylightgrey-color;
-        stroke-width: 152px;
-        clip-path: path('M315 0H472V492Q471 583 420 644 386 687 327 719 274 749 201 748 133 748 64 708-2 667-35 605-68 553-69 466-69 388-35 327-5 269 64 223 139 183 201 183L269 183V341H201Q149 344 119 378 89 412 88 466 88 516 121 555 159 591 201 591 249 590 278 565 312 537 315 492V0Z');
-        fill: none;
-    }
-    .d_letter {
-        stroke: global.$tertiary-color;
-        fill: none;
-    }
-
-    .c_letter_fill {
-        stroke: global.$lightgrey-color;
-        stroke-width: 130px;
-        clip-path: path('M302-64H99A1 1 0 0099 273H169L257 135H98A1 1 0 0198 75H213L302-64Z');
-        fill: none;
-    }
-    .c_letter {
-        stroke: global.$quaternary-color;
-        fill: none;
-    }
-
-    .dash_fill {
-        stroke: global.$grey-color;
-        stroke-width: 130px;
-        clip-path: path('M416.717-64.222V74.221H0L88.37-64.222H416.717Z');
-        fill: none;
-    }
-    .dash {
-        stroke: global.$quaternary-color;
-        fill: none;
-    }
 }

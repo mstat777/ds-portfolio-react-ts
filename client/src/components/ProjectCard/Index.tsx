@@ -1,39 +1,39 @@
 import './ProjectCard.scss';
-import { forwardRef, Ref } from 'react';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faArrowUpRightFromSquare } from '@fortawesome/free-solid-svg-icons';
+import { forwardRef, Ref, Dispatch, SetStateAction } from 'react';
 import { ProjectData } from '../../configs/interfaces';
-import DOMPurify from "dompurify";
-import parse from 'html-react-parser';
-import { optionSkills } from '../../configs/variables';
 import { motion } from 'framer-motion';
 
-const ProjectCard = forwardRef(({projectData}:{projectData: ProjectData}, ref: Ref<HTMLElement>) => {
-    const IMG_URL = process.env.REACT_APP_IMG_URL;
+type Props = {
+    projectData: ProjectData;
+    index: number;
+    setProjectIndex: Dispatch<SetStateAction<number>>;
+    setShowModal: Dispatch<SetStateAction<boolean>>;
+}
+
+const ProjectCard = forwardRef(({
+    projectData, 
+    index, 
+    setProjectIndex, 
+    setShowModal
+}: Props, ref: Ref<HTMLElement>) => {
     
-    projectData.subtitle = DOMPurify.sanitize(projectData.subtitle);
-    projectData.tools = DOMPurify.sanitize(projectData.tools);
-    projectData.description = DOMPurify.sanitize(projectData.description);
+    const IMG_URL = process.env.REACT_APP_IMG_URL;
 
     return (
-        <article className="project_card" ref={ref}>
-            <div className="project_card_img_ctn">
+        <article 
+            className="project_card" 
+            ref={ref}
+        >
+            <div className="project_card_img_ctn"
+                onClick={() => { 
+                    setProjectIndex(index);
+                    setShowModal(true);
+                }}>
                 <img src={`${IMG_URL}/projects/screenshots/${projectData.images[0]}`} alt=""/>
             </div>
 
             <div className="project_card_info">
                 <h2>{projectData.title}</h2>
-                <p className="subtitle">{parse(projectData.subtitle)}</p>
-
-                { projectData.link &&
-                    <a href={projectData.link} className="link" target="_blank" rel="noreferrer">
-                        <FontAwesomeIcon icon={faArrowUpRightFromSquare} />
-                    </a>
-                }
-
-                <div className="tools">{parse(projectData.tools, optionSkills)}</div>
-
-                <p className="description">{parse(projectData.description)}</p>
             </div>
         </article>
     )

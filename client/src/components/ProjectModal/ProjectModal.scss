@@ -1,0 +1,120 @@
+@use '../../global';
+
+// !!! IMPORTANT !!!
+//
+// Position 'fixed' doesn't work if some of the parents has 'transorm' applied!
+
+.modal_ctn {
+   position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0, 0.9);
+    z-index: 301;
+    
+    .project_modal {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        width: 80%;
+        max-width: 460px;
+        max-height: calc(100% - 2 * calc(global.$header-height * 4 / 3));
+        padding: 1.5rem 1rem 1rem;
+        border-radius: 8px;
+        text-align: left;
+        background-color: global.$darkbluegrey-color;
+
+        @media screen and (min-width: global.$tablet){
+            max-width: 500px;
+            padding: 2rem;
+        }
+
+        .close_btn {
+            position: absolute;
+            top: -40px;
+            left: 50%;
+            transform: translateX(-50%);
+            border: none;
+            font-size: 30px;
+            color: white;
+            background-color: transparent;
+        }
+
+        &_img_ctn {
+            width: 100%;
+            outline: 1px solid global.$lightgrey-color;
+            border: 2px solid global.$darkgrey-color;
+            border-radius: 4px;
+            background-color: black;
+            transition: opacity .4s;
+
+            @media screen and (min-width: global.$tablet) {   
+                margin: 0 auto;
+            }
+
+            > img {
+                height: 100%;
+                aspect-ratio: 2.05;
+                margin: 0 auto;
+                border-radius: 4px;
+                object-fit: contain;
+            }
+        }
+
+        &_info {
+            position: relative;
+            max-width: 800px;
+            margin-top: 1rem;
+            padding: 1rem;
+            color: global.$primary-color;
+
+            @media screen and (min-width: global.$tablet) {   
+                width: 100%;
+                margin-top: 1.5rem;
+                padding: 0 1rem;
+            }
+
+            h2 {
+                margin: 0;
+                font-size: 2rem;
+            }
+
+            .subtitle {
+                margin: .5rem 0 2rem;
+                font-family: global.$title-font;
+                color: global.$quaternary-color;
+            }
+
+            .link {
+                position: absolute;
+                top: 1.3rem;
+                right: 1rem;
+                padding: 0 .5rem;
+
+                @media screen and (min-width: global.$tablet) {    
+                    top: .2rem;
+                }
+
+                > span {
+                    margin-right: .5rem;
+                }
+            }
+
+            .tools {
+                margin: 1rem 0 2rem;
+            }
+
+            .description {
+                height: 100%;
+                overflow-y: auto;
+            }
+        }
+    }
+}

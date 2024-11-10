@@ -6,21 +6,16 @@
     align-items: flex-start;
     text-align: left;
     padding: 1.5rem 1rem 1rem;
-    border: 1px solid global.$grey-color;
     border-radius: 8px;
     background-color: global.$darkbluegrey-color;
 
-    @media screen and (min-width: global.$tablet) {   
-        flex-direction: row;
-    }
-    @media screen and (min-width: global.$desktop){
-        flex-direction: column;
+    @media screen and (min-width: global.$tablet){
         padding: 2rem;
     }
 
     & + .project_card {
         margin-top: 2rem;
-        @media screen and (min-width: global.$desktop){
+        @media screen and (min-width: global.$tablet){
             margin-top: 0;
         }
     }
@@ -31,21 +26,19 @@
         border: 2px solid global.$darkgrey-color;
         border-radius: 4px;
         background-color: black;
+        transition: opacity .4s;
+        &:hover {
+            cursor: pointer;
+            opacity: .7;
+        }
 
         @media screen and (min-width: global.$tablet) {   
-            width: 300px;
-        }
-        @media screen and (min-width: global.$desktop) {   
-            width: 100%;
-            
             margin: 0 auto;
         }
 
         > img {
             height: 100%;
             aspect-ratio: 2.05;
-            //width: 100%;
-            //max-width: 400px;
             margin: 0 auto;
             border-radius: 4px;
             object-fit: contain;
@@ -58,11 +51,6 @@
         padding: 1rem;
 
         @media screen and (min-width: global.$tablet) {   
-            width: calc(100% - 300px);
-            margin-top: 0;
-            padding: 0 1rem 1rem 2rem;
-        }
-        @media screen and (min-width: global.$desktop) {   
             width: 100%;
             margin-top: 1.5rem;
             padding: 0 1rem;
@@ -70,31 +58,7 @@
 
         h2 {
             margin: 0;
-            font-size: 2.2rem;
-        }
-
-        .subtitle {
-            margin: .5rem 0 2rem;
-            font-family: global.$title-font;
-            color: global.$quaternary-color;
-        }
-
-        .tools {
-            margin: 1rem 0 2rem;
-        }
-
-        .link {
-            position: absolute;
-            top: 1.3rem;
-            right: 1rem;
-            padding: 0 .5rem;
-
-            @media screen and (min-width: global.$tablet) {   
-                top: .3rem;
-            }
-            @media screen and (min-width: global.$desktop) {   
-                top: .2rem;
-            }
+            font-size: 2rem;
         }
     }
 }

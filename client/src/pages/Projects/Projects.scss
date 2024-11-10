@@ -1,14 +1,22 @@
 @use '../../global';
 
 .projects_section {
-    padding: global.$header-height 2rem 2rem;
+    padding: global.$header-height 3rem 3rem;
 
     .projects_grid {
         padding-top: 1rem;
-        @media screen and (min-width: global.$desktop){
+        max-width: 460px;
+        margin: 0 auto;
+
+        @media screen and (min-width: global.$tablet){
             display: grid;
             grid-template-columns: 1fr 1fr;
             gap: 2rem;
+            max-width: 850px;
+        }
+        @media screen and (min-width: global.$desktop){
+            grid-template-columns: 1fr 1fr 1fr;
+            max-width: unset;
         }
     }
 }
