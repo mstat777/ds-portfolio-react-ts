@@ -23,12 +23,12 @@ const ProjectCard = forwardRef(({
         <article 
             className="project_card" 
             ref={ref}
+            onClick={() => { 
+                setProjectIndex(index);
+                setShowModal(true);
+            }}
         >
-            <div className="project_card_img_ctn"
-                onClick={() => { 
-                    setProjectIndex(index);
-                    setShowModal(true);
-                }}>
+            <div className="project_card_img_ctn">
                 <img src={`${IMG_URL}/projects/screenshots/${projectData.images[0]}`} alt=""/>
             </div>
 

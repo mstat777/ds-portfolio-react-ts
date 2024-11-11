@@ -4,7 +4,8 @@
         {
             "title": "Dimitravel",
             "subtitle": "web application for a travel agency",
-            "link": "https://dt.mitkostatev.com",
+            "linkSite": "https://dt.mitkostatev.com",
+            "linkGitHub": "https://github.com/mstat777/final-project",
             "images": [
                 "dimitravel-desktop-home.png"
             ],
@@ -14,7 +15,8 @@
         {
             "title": "AG Photography",
             "subtitle": "a web application for a photographer",
-            "link": "",
+            "linkSite": "",
+            "linkGitHub": "https://github.com/mstat777/ag-photography",
             "images": [
                 "ag-photography-slider-desktop.png"
             ],
@@ -24,7 +26,8 @@
         {
             "title": "Beaumiel",
             "subtitle": "e-commerce application for selling bio honey",
-            "link": "",
+            "linkSite": "",
+            "linkGitHub": "https://github.com/mstat777/beaumiel-ng",
             "images": [
                 "beaumiel-mobile-all.png"
             ],
@@ -34,7 +37,8 @@
         {
             "title": "Ghenoarch",
             "subtitle": "GhenoArch architectural agency website",
-            "link": "https://ghenoarch.mitkostatev.com",
+            "linkSite": "https://ghenoarch.mitkostatev.com",
+            "linkGitHub": "",
             "images": [
                 "ghenoarch-desktop-intro.jpg"
             ],
@@ -44,7 +48,8 @@
         {
             "title": "Shifumi",
             "subtitle": "а rock-paper-scissors game",
-            "link": "https://shifumi.mitkostatev.com",
+            "linkSite": "https://shifumi.mitkostatev.com",
+            "linkGitHub": "https://github.com/mstat777/shifumi_TS",
             "images": [
                 "shifumi-mobile-all.png"
             ],

@@ -81,30 +81,56 @@
                 padding: 0 1rem;
             }
 
-            h2 {
-                margin: 0;
-                font-size: 2rem;
+            .info_header {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+
+                h2 {
+                    margin: 0;
+                    font-size: 2rem;
+                }
+
+                .links {
+                    display: flex;
+                    align-items: center;
+                    height: 100%;
+                    > a {
+                        position: relative;
+                        height: 100%;
+                        padding: 0 .5rem;
+                        font-size: 1.6rem;
+                        @media screen and (min-width: global.$tablet) {    
+                            top: .2rem;
+                        }
+
+                        &:hover {
+                            > span {
+                                opacity: 1;
+                            }
+                        }
+        
+                        > span {
+                            position: absolute;
+                            top: -13px;
+                            left: 50%;
+                            transform: translateX(-50%);
+                            font-size: 1rem;
+                            opacity: 0;
+                            transition: opacity .4s;
+                        }
+
+                        & + a {
+                            margin-left: 2rem;
+                        }
+                    }
+                }
             }
 
             .subtitle {
                 margin: .5rem 0 2rem;
                 font-family: global.$title-font;
                 color: global.$quaternary-color;
-            }
-
-            .link {
-                position: absolute;
-                top: 1.3rem;
-                right: 1rem;
-                padding: 0 .5rem;
-
-                @media screen and (min-width: global.$tablet) {    
-                    top: .2rem;
-                }
-
-                > span {
-                    margin-right: .5rem;
-                }
             }
 
             .tools {

@@ -2,6 +2,7 @@ import './ProjectModal.scss';
 import { Dispatch, SetStateAction } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCircleXmark } from '@fortawesome/free-regular-svg-icons';
+import { faGithub } from '@fortawesome/free-brands-svg-icons';
 import { faArrowUpRightFromSquare } from '@fortawesome/free-solid-svg-icons';
 import DOMPurify from "dompurify";
 import parse from 'html-react-parser';
@@ -42,18 +43,29 @@ export default function ProjectModal({
                 </div>
 
                 <div className="project_modal_info">
-                    <h2>{projectData.title}</h2>
+                    <div className="info_header">
+                        <h2>{projectData.title}</h2>
+
+                        <div className="links">
+                            { projectData.linkGitHub &&
+                                <a href={projectData.linkGitHub} target="_blank" rel="noreferrer">
+                                    <span>GitHub</span>
+                                    <FontAwesomeIcon icon={faGithub} />
+                                </a>
+                            }
+
+                            { projectData.linkSite &&
+                                <a href={projectData.linkSite} target="_blank" rel="noreferrer">
+                                    <span>Web</span>
+                                    <FontAwesomeIcon icon={faArrowUpRightFromSquare} />
+                                </a>
+                            }
+                        </div>
+                    </div>
 
                     <p className="subtitle">
                         {parse(projectData.subtitle)}
                     </p>
-
-                    { projectData.link &&
-                        <a href={projectData.link} className="link" target="_blank" rel="noreferrer">
-                            <span>web</span>
-                            <FontAwesomeIcon icon={faArrowUpRightFromSquare} />
-                        </a>
-                    }
 
                     <div className="tools">
                         {parse(projectData.tools, optionSkills)}

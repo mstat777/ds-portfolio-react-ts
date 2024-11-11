@@ -18,7 +18,7 @@ body{
     font-weight: 300;
     font-size: 1.4rem;
     font-optical-sizing: none;
-    background: linear-gradient(global.$secondary-color, global.$verydarkbluegrey-color);
+    background-color: global.$secondary-color;
     
     > div { // "root"
         min-height: 100vh; // pour positionner le footer toujours en bas de la page
@@ -27,8 +27,10 @@ body{
 
         main {
             text-align: center;
+            
             @media screen and (min-width: global.$tablet) {
                 margin-top: 0;
+                background: radial-gradient(global.$verydarkbluegrey-color, global.$secondary-color);
             }
 
             > section {

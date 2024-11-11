@@ -18,5 +18,12 @@
             grid-template-columns: 1fr 1fr 1fr;
             max-width: unset;
         }
+/*
+        &:hover {
+
+            .project_card:not(:hover) {
+                opacity: .3;
+            }
+        }*/
     }
 }
