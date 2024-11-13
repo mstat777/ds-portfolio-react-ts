@@ -14,7 +14,9 @@ export default function About(){
     const trPath = "pages.about."; // translation path
 
     domPurifyOpenLinksInNewWindow();
-    const description = DOMPurify.sanitize(t(`${trPath}text`));
+    const introText = DOMPurify.sanitize(t(`${trPath}introText`));
+    const skillsText = DOMPurify.sanitize(t(`${trPath}skillsText`));
+    const finalText = DOMPurify.sanitize(t(`${trPath}finalText`));
 
     useEffect(() => {
         window.scrollTo(0, 0);
@@ -31,13 +33,26 @@ export default function About(){
             <section className="about_section">
                 <h1>{t(`${trPath}title`)}</h1>
 
-                <article>
-                    <img src={`${IMG_URL}/dimitar.jpg`} alt="Dimitar Statev"
-                    className="profile_img"/>
+                <article className="about_article">
+                    <img 
+                        className="profile_img"
+                        loading="lazy"
+                        src={`${IMG_URL}/dimitar.jpg`} 
+                        alt="Dimitar Statev"
+                    />
                     
-                    <div className="description">
-                        {parse(description, optionSkills)}
-                    </div>
+                    <section className="description">
+                        {parse(introText, optionSkills)}
+                    </section>
+
+                    <section className="description">
+                        <h2>{t(`${trPath}skillsTitle`)}</h2>
+                        {parse(skillsText, optionSkills)}
+                    </section>
+
+                    <section className="description">
+                        {parse(finalText, optionSkills)}
+                    </section>
                 </article>
             </section>
         </motion.main>

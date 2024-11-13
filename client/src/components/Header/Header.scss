@@ -9,7 +9,7 @@
     -webkit-box-sizing: border-box; 
     -moz-box-sizing: border-box;
     box-sizing: border-box;
-    border-bottom: 2px solid global.$darkgrey-color;
+    border-bottom: 2px solid global.$darkgrey-color-2;
     background-color: global.$secondary-color;
     z-index: 100;
     
@@ -55,13 +55,13 @@
                 @media screen and (min-width: global.$tablet) {
                     display: block;
                     padding: 2rem;
-                    border-top: 1px solid global.$darkgrey-color;
+                    border-top: 1px solid global.$darkgrey-color-2;
                     font-weight: 600;
                     font-size: 1.6rem;
                 }
 
                 &:hover {
-                    color: global.$tertiary-color;
+                    color: global.$tertiary-color-1;
                 }
             }
         }

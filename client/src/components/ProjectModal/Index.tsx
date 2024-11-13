@@ -48,16 +48,15 @@ export default function ProjectModal({
 
                         <div className="links">
                             { projectData.linkGitHub &&
-                                <a href={projectData.linkGitHub} target="_blank" rel="noreferrer">
+                                <a href={projectData.linkGitHub} target="_blank" rel="noreferrer" className="pulsate">
                                     <span>GitHub</span>
                                     <FontAwesomeIcon icon={faGithub} />
                                 </a>
                             }
-
                             { projectData.linkSite &&
-                                <a href={projectData.linkSite} target="_blank" rel="noreferrer">
-                                    <span>Web</span>
-                                    <FontAwesomeIcon icon={faArrowUpRightFromSquare} />
+                                <a href={projectData.linkSite} target="_blank" rel="noreferrer" className="pulsate">
+                                    <span>Site</span>
+                                    <FontAwesomeIcon icon={faArrowUpRightFromSquare} className="pulsate"/>
                                 </a>
                             }
                         </div>

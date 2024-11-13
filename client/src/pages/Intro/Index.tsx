@@ -15,6 +15,7 @@ export default function Intro(){
         return () => clearTimeout(timeout);
     },[]);
 
+
     const introVariants = {
         hidden: {
             opacity: 0,

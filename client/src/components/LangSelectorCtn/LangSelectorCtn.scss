@@ -6,12 +6,12 @@
     margin: 5px;
     border: none;
     border-radius: 50%;
-    outline: 2px solid global.$lightgrey-color;
+    outline: 2px solid global.$lightgrey-color-1;
     background-color: transparent;
     transition: all .3s;
 
     &:hover {
-        outline-color: global.$tertiary-color;
+        outline-color: global.$tertiary-color-1;
     }
 
     & + & {
@@ -67,7 +67,7 @@
             @include button();
         }
         .grey_outline {
-            outline-color: global.$darkbluegrey-color;
+            outline-color: global.$darkbluegrey-color-2;
         }
     }
 }

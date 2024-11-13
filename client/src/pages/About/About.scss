@@ -3,13 +3,13 @@
 .about_section {
     padding: global.$header-height 3rem 0;
 
-    article {
+    .about_article {
         padding: 1rem 0;
         color: global.$primary-color;
 
         .profile_img {
             width: 40%;
-            max-width: 200px;
+            max-width: 180px;
             float: left;
             margin-right: 1.5rem;
 
@@ -18,18 +18,29 @@
             }
         }
 
+        >section + section {
+            margin-top: 3rem;
+        }
+
         .description {
             text-align: left;
             /*user-select: none;
             -moz-user-select: none;
             -webkit-user-select: none;*/
-
             @media screen and (min-width: global.$tablet){
                 text-align: justify;
             }
 
+            h2 {
+                font-size: 2rem;
+                text-transform: uppercase;
+                @media screen and (min-width: global.$tablet){
+                    font-size: 2.2rem;
+                }
+            }
+
             > a {
-                color: global.$quaternary-color;
+                color: global.$tertiary-color-2;
             }
 
             .margin_10_0 {

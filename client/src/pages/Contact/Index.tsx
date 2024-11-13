@@ -28,6 +28,7 @@ export default function Contact(){
         email: "",
         message: ""
     });
+    const textAreaMaxLength: number = 600;
 
     // for the log message notifications
     const [okMsg, setOkMsg] = useState<string>('');
@@ -103,6 +104,7 @@ export default function Contact(){
 
     const handleChange = (e: React.FormEvent<HTMLInputElement | HTMLTextAreaElement>) => {
         setInputs({ ...inputs, [(e.target as HTMLInputElement).name]: (e.target as HTMLInputElement).value });
+        console.log(inputs.message.length) 
     }
 
     const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
@@ -121,7 +123,7 @@ export default function Contact(){
             <section className="contact_section">
                 <h1>{t(`${trPath}title`)}</h1>
 
-                <p>{t(`${trPath}text`)}</p>
+                <p className="contact_text">{t(`${trPath}text`)}</p>
 
                 <div className="contact_section_details">
                     <div className="detail_ctn">        
@@ -180,8 +182,12 @@ export default function Contact(){
                             onFocus={handleOnFocus}
                             placeholder={t(`${trPath}form.msgPlholder`)}
                             rows={8}
-                            maxLength={600}
+                            maxLength={textAreaMaxLength}
                             required />
+                        
+                        <p className="counter">
+                            {t(`${trPath}form.counterTxt`, { left: (textAreaMaxLength - inputs.message.length).toString(), maxNb: textAreaMaxLength })} 
+                        </p>
 
                         <ReCAPTCHA 
                             ref={captchaRef}

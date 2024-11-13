@@ -18,7 +18,10 @@
     "pages": {
         "about": {
             "title": "à propos de moi",
-            "text": "<div> <p>Bonjour et bienvenue,</p> <p>Je suis <b>Dimitar Statev</b>, développeur web full-stack passionné par la création d'applications et de sites web, de la première idée à leur mise en production. Mon objectif est de créer des solutions web non seulement fonctionnelles, mais aussi intuitives et agréables à utiliser.<p/> <p>Mon approche est à la fois technique et créative. Je crois fermement que la performance d’une application passe par un code solide et bien structuré, mais également par une interface soignée et ergonomique. L'esthétique et l'expérience utilisateur sont au cœur de mes préoccupations, car je suis convaincu qu'un produit bien conçu a un impact direct sur la satisfaction des utilisateurs.</p> <p>Toujours animé par la curiosité et la volonté d'apprendre, je cherche constamment à repousser mes limites en travaillant sur des projets variés. Chaque projet est une occasion de repousser mes limites, d'explorer de nouvelles technologies et d'enrichir mon expertise.</p> <div>Mes compétences techniques incluent : <div name='JavaScript'></div> <div name='Node.JS'></div> <div name='Express.JS'></div> <div name='React'></div> <div name='Redux'></div> <div name='Sass'></div> <div name='CSS'></div> <div name='HTML'></div> <div name='MySQL'></div></div> <div class='margin_10_0'>Je connais également : <div name='TypeScript'></div><div name='Angular'></div>, Canvas.</div> <div class='margin_10_0'> J'ai des notions en : <div name='PHP'></div> <div name='jQuery'></div> </div> <p>Actuellement, je me concentre sur la maîtrise d'Angular, et je prévois d'explorer prochainement Next.JS et React Native pour élargir encore mes compétences.</p> <p>J’aime travailler sur des projets variés, qu'ils soient complexes ou simples. Si vous avez une idée ou un projet en tête, n’hésitez pas à me contacter. Ensemble, nous pourrons créer des solutions uniques et performantes !</p> <div>"
+            "introText": "<div> <p>Bonjour et bienvenue,</p> <p>Je suis <b>Dimitar Statev</b>, développeur web full-stack.</p> <p>Je suis passionné par la création d'applications et de sites web, de l'idée à la mise en production. Mon objectif est de concevoir des solutions web fonctionnelles, intuitives et esthétiques.<p/> <p>Mon approche est à la fois technique et créative, en mettant l'accent sur un code structuré et une interface ergonomique. L'expérience utilisateur et l'esthétique sont au cœur de mon travail, car un produit bien conçu améliore la satisfaction des utilisateurs.</p> <p>Toujours animé par la curiosité et la volonté d'apprendre, je cherche à repousser mes limites et enrichir mon expertise à travers des projets variés.</p></div>",
+            "skillsTitle": "compétences techniques",
+            "skillsText": "<div>Mes compétences techniques incluent : <div name='JavaScript'></div> <div name='Node.JS'></div> <div name='Express.JS'></div> <div name='React'></div> <div name='Redux'></div> <div name='Sass'></div> <div name='CSS'></div> <div name='HTML'></div> <div name='MySQL'></div></div> <div class='margin_10_0'>Je connais également : <div name='TypeScript'></div><div name='Angular'></div>, Canvas.</div> <div class='margin_10_0'> J'ai des notions en : <div name='PHP'></div> <div name='jQuery'></div></div>",
+            "finalText": "<p>Si vous avez une idée ou un projet en tête, n’hésitez pas à me contacter. Ensemble, nous pourrons créer des solutions uniques et performantes !</p>"
         },
         "contact": {
             "title": "contact",
@@ -28,7 +31,8 @@
                 "title": "envoyez-moi un message",
                 "namePlholder": "nom",
                 "emailPlholder": "email",
-                "msgPlholder": "message (moins de 600 caractères)",
+                "msgPlholder": "message",
+                "counterTxt": "{{left}} de {{maxNb}} caractère(s) restant(s)",
                 "sendBtn": "envoyer"
             }
         },

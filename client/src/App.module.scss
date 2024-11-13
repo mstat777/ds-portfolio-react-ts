@@ -30,7 +30,7 @@ body{
             
             @media screen and (min-width: global.$tablet) {
                 margin-top: 0;
-                background: radial-gradient(global.$verydarkbluegrey-color, global.$secondary-color);
+                background: radial-gradient(global.$darkbluegrey-color-1, global.$secondary-color);
             }
 
             > section {
@@ -51,7 +51,7 @@ h1, h2, h3 {
     display: block;
     font-family: global.$title-font;
     font-weight: 500;
-    color: global.$tertiary-color;
+    color: global.$tertiary-color-1;
 }
 
 h1 {
@@ -75,7 +75,7 @@ a {
     display: inline-block;
     font-weight: 500;
     text-decoration: none;
-    color: global.$quaternary-color;
+    color: global.$tertiary-color-2;
 }
 
 li {
@@ -105,7 +105,7 @@ table {
     thead {
         th {
             padding: 1.4rem;
-            border: 1px solid global.$lightgrey-color;
+            border: 1px solid global.$lightgrey-color-1;
             font-weight: 600;
             text-align: center;
         }
@@ -113,12 +113,12 @@ table {
     tbody {
         tr {
             td {
-                border: 1px solid global.$lightgrey-color;
+                border: 1px solid global.$lightgrey-color-1;
                 text-align: center;
             }
             &:nth-child(odd) {
                 td {
-                    background-color: global.$verylightgrey-color;
+                    background-color: global.$lightgrey-color-3;
                 }
             }
         }
@@ -144,8 +144,8 @@ textarea {
 	display: inline-block;
 	font-size: 1.6rem;
     font-family: global.$main-font; 
-	color: global.$darkgrey-color; 
-	border: 1px solid global.$lightgrey-color;
+	color: global.$darkgrey-color-2; 
+	border: 1px solid global.$lightgrey-color-1;
 	border-radius: .6rem;
 }
 textarea {

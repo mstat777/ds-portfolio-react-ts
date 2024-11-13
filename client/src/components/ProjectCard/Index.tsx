@@ -2,6 +2,7 @@ import './ProjectCard.scss';
 import { forwardRef, Ref, Dispatch, SetStateAction } from 'react';
 import { ProjectData } from '../../configs/interfaces';
 import { motion } from 'framer-motion';
+import LazyImage from '../LazyImage/Index';
 
 type Props = {
     projectData: ProjectData;
@@ -18,6 +19,7 @@ const ProjectCard = forwardRef(({
 }: Props, ref: Ref<HTMLElement>) => {
     
     const IMG_URL = process.env.REACT_APP_IMG_URL;
+    const PUBLIC_IMG_URL = process.env.REACT_APP_PUBLIC_IMG_URL; 
 
     return (
         <article 
@@ -29,7 +31,10 @@ const ProjectCard = forwardRef(({
             }}
         >
             <div className="project_card_img_ctn">
-                <img src={`${IMG_URL}/projects/screenshots/${projectData.images[0]}`} alt=""/>
+                <LazyImage 
+                    imgSrc={`${IMG_URL}/projects/screenshots/${projectData.images[0]}`}
+                    blurImgSrc={`${PUBLIC_IMG_URL}/projects/screenshots/small/${projectData.images[0]}`}
+                />
             </div>
 
             <div className="project_card_info">

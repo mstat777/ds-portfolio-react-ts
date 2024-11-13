@@ -8,7 +8,7 @@
     }
 }
 
-@include property($variable: gradient-border, $syntax: "<color>", $initial-value: global.$darkbluegrey-color, $inherits: false);
+@include property($variable: gradient-border, $syntax: "<color>", $initial-value: global.$darkbluegrey-color-2, $inherits: false);
 @include property($variable: gradient-center, $syntax: "<color>", $initial-value: global.$bluegrey-color, $inherits: false);
 
 .project_card {
@@ -18,12 +18,12 @@
     text-align: left;
     padding: 1.5rem 1rem 1rem;
     border-radius: 8px;
-    //background: linear-gradient(to bottom, global.$darkbluegrey-color, global.$bluegrey-color 50%, global.$darkbluegrey-color 100%);
+    //background: linear-gradient(to bottom, global.$darkbluegrey-color-2, global.$bluegrey-color 50%, global.$darkbluegrey-color-2 100%);
     background: linear-gradient(to bottom, var(--gradient-border), var(--gradient-center) 50%, var(--gradient-border) 100%);
     transition: --gradient-border .8s ease-in, --gradient-center .8s ease-in;
     &:hover {
         cursor: pointer;
-        //background: linear-gradient(to bottom, global.$bluegrey-color, global.$lightgrey-color 50%, global.$bluegrey-color 100%);
+        //background: linear-gradient(to bottom, global.$bluegrey-color, global.$lightgrey-color-1 50%, global.$bluegrey-color 100%);
         --gradient-border: #525d70;   
         --gradient-center: #cccccc;
     }
@@ -41,8 +41,8 @@
 
     &_img_ctn {
         width: 100%;
-        outline: 1px solid global.$lightgrey-color;
-        border: 2px solid global.$darkgrey-color;
+        outline: 1px solid global.$lightgrey-color-1;
+        border: 2px solid global.$darkgrey-color-2;
         border-radius: 4px;
         background-color: black;
 
@@ -50,12 +50,22 @@
             margin: 0 auto;
         }
 
-        > img {
+        .blur_ctn {
             height: 100%;
-            aspect-ratio: 2.05;
+            aspect-ratio: 2;
             margin: 0 auto;
             border-radius: 4px;
-            object-fit: contain;
+            background-size: contain;
+            background-position: center;
+            background-repeat: no-repeat;
+
+            img {
+                height: 100%;
+                width: 100%;
+                border-radius: 4px;
+                object-fit: contain;
+                object-position: center;
+            }
         }
     }
 

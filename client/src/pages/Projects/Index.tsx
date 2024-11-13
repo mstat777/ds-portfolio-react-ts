@@ -20,7 +20,7 @@ export default function Projects(){
     const [showModal, setShowModal] = useState<boolean>(false);
     const [projectIndex, setProjectIndex] = useState<number>(-1);
 
-    // disable background scroll
+    // disable background scroll when ProjectModal is visible
     useEffect(() => {
         document.body.style.overflow = showModal ? "hidden" : "unset";
     },[showModal]);
