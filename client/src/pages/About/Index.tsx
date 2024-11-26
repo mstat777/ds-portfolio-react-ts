@@ -7,9 +7,11 @@ import { domPurifyOpenLinksInNewWindow } from '../../utils/sanitize';
 import { optionSkills } from '../../configs/variables';
 import { motion } from 'framer-motion';
 import { pageVariants } from '../../configs/motionFramerVariants';
+import LazyImage from '../../components/LazyImage/Index';
 
 export default function About(){
     const IMG_URL = process.env.REACT_APP_IMG_URL;
+    const PUBLIC_IMG_URL = process.env.REACT_APP_PUBLIC_IMG_URL; 
     const { t } = useTranslation();
     const trPath = "pages.about."; // translation path
 
@@ -34,13 +36,15 @@ export default function About(){
                 <h1>{t(`${trPath}title`)}</h1>
 
                 <article className="about_article">
-                    <img 
+
+
+                        <LazyImage 
                         className="profile_img"
-                        loading="lazy"
-                        src={`${IMG_URL}/dimitar.jpg`} 
-                        alt="Dimitar Statev"
-                    />
-                    
+                            imgSrc={`${IMG_URL}/dimitar.jpg`} 
+                            blurImgSrc={`${PUBLIC_IMG_URL}/dimitar-small.jpg`}
+                            alt="Dimitar Statev"
+                        />
+                  
                     <section className="description">
                         {parse(introText, optionSkills)}
                     </section>

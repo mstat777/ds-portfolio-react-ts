@@ -1,13 +1,22 @@
 import { useState } from 'react';
 
 type Props = {
+    className?: string;
     imgSrc: string;
     blurImgSrc: string;
+    alt?: string;
     children?: JSX.Element[] | JSX.Element;
     style?: React.CSSProperties;
 };
 
-export default function LazyImage({ imgSrc, blurImgSrc, children, style }: Props) {
+export default function LazyImage({ 
+    className, 
+    imgSrc, 
+    blurImgSrc, 
+    alt, 
+    children, 
+    style 
+}: Props) {
     const [loaded, setLoaded] = useState<boolean>(false);
 
     const handleLoad = () => {
@@ -16,12 +25,15 @@ export default function LazyImage({ imgSrc, blurImgSrc, children, style }: Props
 
     return (
         <div 
-            className="blur_ctn"
+            className={className}
             style={{ 
                 position: "relative",
                 height: "100%",
                 overflow: "hidden",
                 backgroundImage: loaded ? "unset" :`url(${blurImgSrc})`,
+                backgroundPosition: "center",
+                backgroundRepeat: "no-repeat",
+                backgroundSize: "100%",
                 ...style
             }}
         >
@@ -45,8 +57,8 @@ export default function LazyImage({ imgSrc, blurImgSrc, children, style }: Props
             </div>
 
             <img
-                alt=""
                 loading="lazy"
+                alt={alt}
                 src={imgSrc} 
                 onLoad={handleLoad}
             />

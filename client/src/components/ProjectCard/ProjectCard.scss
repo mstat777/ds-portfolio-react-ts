@@ -1,4 +1,4 @@
-@use '../../global';
+@use '../../global' as *;
 
 @mixin property($variable: variable, $syntax: "<color>", $initial-value: #000000, $inherits: false){
     @property --#{$variable} {
@@ -8,8 +8,8 @@
     }
 }
 
-@include property($variable: gradient-border, $syntax: "<color>", $initial-value: global.$darkbluegrey-color-2, $inherits: false);
-@include property($variable: gradient-center, $syntax: "<color>", $initial-value: global.$bluegrey-color, $inherits: false);
+@include property($variable: gradient-border, $syntax: "<color>", $initial-value: $darkbluegrey-color-2, $inherits: false);
+@include property($variable: gradient-center, $syntax: "<color>", $initial-value: $bluegrey-color, $inherits: false);
 
 .project_card {
     display: flex;
@@ -18,35 +18,35 @@
     text-align: left;
     padding: 1.5rem 1rem 1rem;
     border-radius: 8px;
-    //background: linear-gradient(to bottom, global.$darkbluegrey-color-2, global.$bluegrey-color 50%, global.$darkbluegrey-color-2 100%);
+    //background: linear-gradient(to bottom, $darkbluegrey-color-2, $bluegrey-color 50%, $darkbluegrey-color-2 100%);
     background: linear-gradient(to bottom, var(--gradient-border), var(--gradient-center) 50%, var(--gradient-border) 100%);
     transition: --gradient-border .8s ease-in, --gradient-center .8s ease-in;
     &:hover {
         cursor: pointer;
-        //background: linear-gradient(to bottom, global.$bluegrey-color, global.$lightgrey-color-1 50%, global.$bluegrey-color 100%);
+        //background: linear-gradient(to bottom, $bluegrey-color, $lightgrey-color-1 50%, $bluegrey-color 100%);
         --gradient-border: #525d70;   
         --gradient-center: #cccccc;
     }
 
-    @media screen and (min-width: global.$tablet){
+    @media screen and (min-width: $tablet){
         padding: 2rem;
     }
 
     & + .project_card {
         margin-top: 2rem;
-        @media screen and (min-width: global.$tablet){
+        @media screen and (min-width: $tablet){
             margin-top: 0;
         }
     }
 
     &_img_ctn {
         width: 100%;
-        outline: 1px solid global.$lightgrey-color-1;
-        border: 2px solid global.$darkgrey-color-2;
+        outline: 1px solid $lightgrey-color-1;
+        border: 2px solid $darkgrey-color-2;
         border-radius: 4px;
         background-color: black;
 
-        @media screen and (min-width: global.$tablet) {   
+        @media screen and (min-width: $tablet) {   
             margin: 0 auto;
         }
 
@@ -74,7 +74,7 @@
         max-width: 800px;
         padding: 1rem;
 
-        @media screen and (min-width: global.$tablet) {   
+        @media screen and (min-width: $tablet) {   
             width: 100%;
             margin-top: 1.5rem;
             padding: 0 1rem;

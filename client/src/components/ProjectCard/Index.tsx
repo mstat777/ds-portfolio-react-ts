@@ -32,6 +32,7 @@ const ProjectCard = forwardRef(({
         >
             <div className="project_card_img_ctn">
                 <LazyImage 
+                    className="blur_ctn"
                     imgSrc={`${IMG_URL}/projects/screenshots/${projectData.images[0]}`}
                     blurImgSrc={`${PUBLIC_IMG_URL}/projects/screenshots/small/${projectData.images[0]}`}
                 />

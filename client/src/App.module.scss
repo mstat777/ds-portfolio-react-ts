@@ -1,4 +1,4 @@
-@use './global';
+@use './global' as *;
 
 /*************************************************************/
 /* ----------------------- GENERALES ----------------------- */
@@ -14,11 +14,11 @@ html {
 }
 
 body{
-    font-family: global.$main-font;  
+    font-family: $main-font;  
     font-weight: 300;
     font-size: 1.4rem;
     font-optical-sizing: none;
-    background-color: global.$secondary-color;
+    background-color: $secondary-color;
     
     > div { // "root"
         min-height: 100vh; // pour positionner le footer toujours en bas de la page
@@ -28,17 +28,17 @@ body{
         main {
             text-align: center;
             
-            @media screen and (min-width: global.$tablet) {
+            @media screen and (min-width: $tablet) {
                 margin-top: 0;
-                background: radial-gradient(global.$darkbluegrey-color-1, global.$secondary-color);
+                background: radial-gradient($darkbluegrey-color-1, $secondary-color);
             }
 
             > section {
                 max-width: 1000px;
                 margin: 0 auto;
                 padding: 0 2rem;
-                color: global.$primary-color;
-                @media screen and (min-width: global.$tablet){
+                color: $primary-color;
+                @media screen and (min-width: $tablet){
                     padding: 0 8rem;
                 }
             }
@@ -49,9 +49,9 @@ body{
 /* ------------ HEADINGS ------------- */
 h1, h2, h3 {
     display: block;
-    font-family: global.$title-font;
+    font-family: $title-font;
     font-weight: 500;
-    color: global.$tertiary-color-1;
+    color: $tertiary-color-1;
 }
 
 h1 {
@@ -75,7 +75,7 @@ a {
     display: inline-block;
     font-weight: 500;
     text-decoration: none;
-    color: global.$tertiary-color-2;
+    color: $tertiary-color-2;
 }
 
 li {
@@ -105,7 +105,7 @@ table {
     thead {
         th {
             padding: 1.4rem;
-            border: 1px solid global.$lightgrey-color-1;
+            border: 1px solid $lightgrey-color-1;
             font-weight: 600;
             text-align: center;
         }
@@ -113,19 +113,19 @@ table {
     tbody {
         tr {
             td {
-                border: 1px solid global.$lightgrey-color-1;
+                border: 1px solid $lightgrey-color-1;
                 text-align: center;
             }
             &:nth-child(odd) {
                 td {
-                    background-color: global.$lightgrey-color-3;
+                    background-color: $lightgrey-color-3;
                 }
             }
         }
     }
     tfoot {
         th {
-            border-top: 1px solid global.$grey-color;
+            border-top: 1px solid $grey-color;
         }
     }
 }
@@ -143,9 +143,9 @@ select,
 textarea {
 	display: inline-block;
 	font-size: 1.6rem;
-    font-family: global.$main-font; 
-	color: global.$darkgrey-color-2; 
-	border: 1px solid global.$lightgrey-color-1;
+    font-family: $main-font; 
+	color: $darkgrey-color-2; 
+	border: 1px solid $lightgrey-color-1;
 	border-radius: .6rem;
 }
 textarea {
@@ -155,7 +155,7 @@ textarea {
 
 ::placeholder {
     font-weight: 400;
-	color: global.$grey-color; 
+	color: $grey-color; 
 }
 
 /* ----------- CUSTOM CLASSES ------------ */

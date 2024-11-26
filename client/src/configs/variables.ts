@@ -20,21 +20,21 @@ import { Element } from 'domhandler/lib/node';
 import SkillCtn from '../components/SkillCtn/Index';
 
 export const Skill: SkillType[] = [
-    { name: "Adobe Flash", image: adobeFlash }, 
+    { name: "JavaScript", image: javascript },  
+    { name: "TypeScript", image: typescript }, 
+    { name: "React", image: react },  
     { name: "Angular", image: angular }, 
-    { name: "CSS", image: css }, 
+    { name: "Node.JS", image: node }, 
     { name: "Express.JS", image: express }, 
     { name: "HTML", image: html }, 
-    { name: "JavaScript", image: javascript },  
-    { name: "TypeScript", image: typescript },  
+    { name: "CSS", image: css }, 
+    { name: "Sass", image: sass },  
     { name: "MySQL", image: mySql}, 
-    { name: "Node.JS", image: node },  
-    { name: "PHP", image: php }, 
-    { name: "React", image: react }, 
     { name: "Redux", image: redux },  
     { name: "jQuery", image: jquery },
-    { name: "Sass", image: sass },  
+    { name: "PHP", image: php }, 
     { name: "Photoshop", image: photoshop }, 
+    { name: "Adobe Flash", image: adobeFlash },
 ];
 
 export const optionSkills: HTMLReactParserOptions = {
@@ -49,17 +49,4 @@ export const optionSkills: HTMLReactParserOptions = {
             }
         }
     }
-    /*transform(reactNode, domNode, index) {
-        if (domNode as Element && 
-            domNode.type === "tag" &&
-            domNode.attribs.id === "common"
-        ){
-            if (domNode) {
-                console.log(Object.keys(domNode.attribs)[0]);
-                const i = domNode.children;
-                //if (i[0]) console.log(i);
-            }
-            return <SkillCtn skill={domNode.attribs.name} key={index}/>;
-        }
-    }*/
 }

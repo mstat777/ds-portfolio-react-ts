@@ -1,4 +1,4 @@
-@use '../../global';
+@use '../../global' as *;
 
 .main_btn {
     display: block;
@@ -7,11 +7,11 @@
     border: none;
     border-radius: .6rem;
     font-weight: 600;
-    color: global.$secondary-color;
+    color: $secondary-color;
     letter-spacing: .1rem;
     text-transform: uppercase;
     user-select: none;
-    background-color: global.$tertiary-color-1;
+    background-color: $tertiary-color-1;
     transition: opacity .3s;
     &:hover {
         cursor: pointer;

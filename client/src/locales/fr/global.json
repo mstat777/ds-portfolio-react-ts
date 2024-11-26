@@ -39,7 +39,10 @@
         "home": {
             "title": "Dimitar Statev",
             "subtitle": "développeur web",
-            "text": "J'écris des codes..."
+            "text": "J'écris des codes...",
+            "aboutTitle": "Bonjour et bienvenue !",
+            "aboutText": "<div> <p>Je suis <b>Dimitar Statev</b>, développeur web full-stack.</p> <p>Je suis passionné par la création d'applications et de sites web, de l'idée à la mise en production.</p> </div>",
+            "skillsTitle": "Mon tech stack"
         },
         "intro": {
             "welcome": "Bienvenue !",

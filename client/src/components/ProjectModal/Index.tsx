@@ -70,9 +70,9 @@ export default function ProjectModal({
                         {parse(projectData.tools, optionSkills)}
                     </div>
 
-                    <p className="description">
+                    <div className="description">
                         {parse(projectData.description)}
-                    </p>
+                    </div>
                 
                 </div>
             </article>

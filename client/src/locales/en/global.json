@@ -39,7 +39,10 @@
         "home": {
             "title": "Dimitar Statev",
             "subtitle": "web developer",
-            "text": "I write code..."
+            "text": "I write code...",
+            "aboutTitle": "Hello and welcome!",
+            "aboutText": "<div> <p>I am <b>Dimitar Statev</b>, a full-stack web developer.</p> <p>I'm passionate about web applications and websites, from the first idea to their implementation in production.</p> </div>",
+            "skillsTitle": "My tech stack"
         },
         "intro": {
             "welcome": "Welcome!",

@@ -35,6 +35,17 @@
             "description": "This application was developed for the company Beaumiel, importer of bio organic honey."
         },
         {
+            "title": "PGN Player",
+            "subtitle": "а viewer for chess games",
+            "linkSite": "",
+            "linkGitHub": "https://github.com/mstat777/pgn-player-react-ts",
+            "images": [
+                "pgn-player-home-desktop.png"
+            ],
+            "tools": "<div>made with: <div name='TypeScript'></div> <div name='React'></div> <div name='Sass'></div> <div name='HTML'></div> </div>",
+            "description": "<p>PGN Player is a viewer that allows visualizing chess games by loading their text notation. Chess game is loaded either in .PGN file format or as a plain text.</p> <p>I developed this application with the idea to view and analyze my chess games and openings. Having searched for applications of this type, I had not found any that suited my needs. This is how I had the idea to create my own application. Started in 2023 it was initially coded in Vanilla JS. The current version is remade in React, Redux & TypeScript. <i>(work in progress...)</i></p>"
+        },
+        {
             "title": "Ghenoarch",
             "subtitle": "GhenoArch architectural agency website",
             "linkSite": "https://ghenoarch.mitkostatev.com",

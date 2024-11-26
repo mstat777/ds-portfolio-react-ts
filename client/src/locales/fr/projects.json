@@ -35,6 +35,17 @@
             "description": "Cette application a été développée pour la société Beaumiel, importatrice de miel Bio."
         },
         {
+            "title": "PGN Player",
+            "subtitle": "visionneuse de parties d'échecs",
+            "linkSite": "",
+            "linkGitHub": "https://github.com/mstat777/pgn-player-react-ts",
+            "images": [
+                "pgn-player-home-desktop.png"
+            ],
+            "tools": "<div>fait avec : <div name='TypeScript'></div> <div name='React'></div> <div name='Sass'></div> <div name='HTML'></div> </div>",
+            "description": "<p>Cette application permet de visualiser des parties d'échecs en chargeant leur notation textuelle soit au format de fichier .PGN, soit en texte brut.</p> <p>J'ai développé cette application avec l'idée d'enregistrer, afficher et analyser mes parties et ouvertures. Ayant cherché des applications de ce type, je n'en avais trouvé aucune qui convenait à mes besoins. C'est ainsi que j'ai eu l'idée de créer ma propre application. Commencé en 2023 codée en Vanilla JS. La 2ème version est refaite en React, Redux et TypeScript. <i>(travail en cours...)</i></p>"
+        },
+        {
             "title": "Ghenoarch",
             "subtitle": "site web de l'agence d'architecture GhenoArch",
             "linkSite": "https://ghenoarch.mitkostatev.com",

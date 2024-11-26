@@ -92,10 +92,7 @@ export default memo(function Header() {
                     className="logo_ctn"
                     variants={logoVariants}
                 >
-                    <NavLink to={"/home"} 
-                        onClick={() => window.scrollTo(0, 0)}>
-                        <img src={logo} alt="Dimitar Statev" />
-                    </NavLink>
+                    <img src={logo} alt="Dimitar Statev" />
                 </motion.div>
 
                 <motion.ul 

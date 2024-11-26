@@ -1,21 +1,21 @@
-@use '../../global';
+@use '../../global' as *;
 
 .header {
     position: fixed;
     top: 0;
     left: 0;
     right: 0;
-    height: global.$header-height;
+    height: $header-height;
     -webkit-box-sizing: border-box; 
     -moz-box-sizing: border-box;
     box-sizing: border-box;
-    border-bottom: 2px solid global.$darkgrey-color-2;
-    background-color: global.$secondary-color;
+    border-bottom: 2px solid $darkgrey-color-2;
+    background-color: $secondary-color;
     z-index: 100;
     
     nav {
         height: 100%;
-        @media screen and (min-width: global.$tablet) {
+        @media screen and (min-width: $tablet) {
             justify-content: center;
         }
 
@@ -23,7 +23,7 @@
             position: absolute;
             height: 100%;
 
-            @media screen and (min-width: global.$tablet) {
+            @media screen and (min-width: $tablet) {
                 display: flex;
                 margin-left: 1rem;
             }
@@ -46,22 +46,21 @@
             a {
                 margin: auto 0;
                 padding: .4rem .8rem;
-                font-family: global.$title-font;
+                font-family: $title-font;
                 font-size: 1.4rem;
-                color: global.$primary-color;
+                color: $primary-color;
                 text-transform: uppercase;
                 transition: color .3s;
                 
-                @media screen and (min-width: global.$tablet) {
+                @media screen and (min-width: $tablet) {
                     display: block;
                     padding: 2rem;
-                    border-top: 1px solid global.$darkgrey-color-2;
-                    font-weight: 600;
+                    border-top: 1px solid $darkgrey-color-2;
                     font-size: 1.6rem;
                 }
 
                 &:hover {
-                    color: global.$tertiary-color-1;
+                    color: $tertiary-color-1;
                 }
             }
         }

@@ -1,19 +1,20 @@
-@use '../../global';
+@use '../../global' as *;
 
 .about_section {
-    padding: global.$header-height 3rem 0;
+    padding: $header-height 3rem 0;
 
     .about_article {
         padding: 1rem 0;
-        color: global.$primary-color;
+        color: $primary-color;
 
         .profile_img {
             width: 40%;
+            aspect-ratio: 1/1.2;
             max-width: 180px;
             float: left;
             margin-right: 1.5rem;
 
-            @media screen and (min-width: global.$tablet){
+            @media screen and (min-width: $tablet){
                 margin-right: 2rem;
             }
         }
@@ -24,23 +25,23 @@
 
         .description {
             text-align: left;
-            /*user-select: none;
+            user-select: none;
             -moz-user-select: none;
-            -webkit-user-select: none;*/
-            @media screen and (min-width: global.$tablet){
+            -webkit-user-select: none;
+            @media screen and (min-width: $tablet){
                 text-align: justify;
             }
 
             h2 {
                 font-size: 2rem;
                 text-transform: uppercase;
-                @media screen and (min-width: global.$tablet){
+                @media screen and (min-width: $tablet){
                     font-size: 2.2rem;
                 }
             }
 
             > a {
-                color: global.$tertiary-color-2;
+                color: $tertiary-color-2;
             }
 
             .margin_10_0 {

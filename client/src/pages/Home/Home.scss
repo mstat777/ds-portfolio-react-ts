@@ -1,11 +1,17 @@
-@use '../../global';
+@use '../../global' as *;
 
-.home_section {
+.home_general_section,
+.home_intro_section {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
     display: flex;
     flex-direction: column;
     justify-content: center;
-    height: calc(100vh - global.$footer-height);
-    padding: global.$header-height 2rem;
+    height: calc(100vh - $footer-height);
+    width: 100%;
+    padding: $header-height 2rem;
 
     h1 {
         margin: 0;
@@ -14,10 +20,10 @@
     }
 
     .subtitle {
-        font-family: global.$title-font;
+        font-family: $title-font;
         font-weight: 600;
         font-size: 3rem;
-        color: global.$tertiary-color-2;
+        color: $tertiary-color-2;
     }
 
     .home_typewriter_ctn {
@@ -29,12 +35,99 @@
         }
         display: flex;
         justify-content: center;
-        font-family: global.$title-font;
+        font-family: $title-font;
         font-size: 1.8rem;
-        color: global.$lightgrey-color-1;
+        color: $lightgrey-color-1;
 
         .typewriter {
             margin-right: .5rem;
+        }
+    }
+}
+
+.home_general_section {
+    position: relative;
+    top: unset;
+    left: unset;
+    transform: none;
+    justify-content: flex-start;
+    max-width: unset;
+    height: unset;
+    min-height: calc(100vh - $footer-height);
+    padding: $header-height 0 0;
+    background-color: $darkbluegrey-color-2;
+
+    > article {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        
+        &:first-child {
+            min-height: 50vh;
+            background-color: $bluegrey-color;
+        }
+
+        &:nth-child(2) {
+            
+
+            .container {
+                margin: auto 0;
+                padding: 2rem;
+
+                > h2 {
+                    font-size: 2.4rem;
+                    margin: 1.4rem 0 1rem;
+                }
+            }
+        }
+
+        .container {
+            width: 100%;
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 2rem 4rem 4rem;
+            @media screen and (min-width: $tablet) {
+                padding: 6rem;
+            }
+
+            > h2 {
+                font-size: 7vw;
+                @media screen and (min-width: $tablet) {
+                    font-size: 3.6rem;
+                }
+            }
+    
+            .large {
+                font-size: 6vw;
+                @media screen and (min-width: $tablet) {
+                    font-size: 2.8rem;
+                }
+            }
+
+            .skill_ctn {
+                display: grid;
+                grid-template-columns: repeat(5, 1fr);
+                width: 100%;
+                padding: 1rem 0;
+                @media screen and (min-width: $tablet) {
+                    grid-template-columns: repeat(8, 1fr);
+                    padding: 2rem 4rem;
+                }
+                @media screen and (min-width: $desktop) {
+                    display: flex;
+                    padding: 2rem 4rem;
+                }
+
+                > img {
+                    height: 36px;
+                    width: 36px;
+                    margin: 1rem auto;
+                    @media screen and (min-width: $tablet) {
+                        height: 48px;
+                        width: 48px;
+                    }
+                }
+            }
         }
     }
 }

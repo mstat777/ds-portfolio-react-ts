@@ -1,4 +1,4 @@
-@use '../../global';
+@use '../../global' as *;
 
 @mixin button() {
     width: 25px;
@@ -6,12 +6,12 @@
     margin: 5px;
     border: none;
     border-radius: 50%;
-    outline: 2px solid global.$lightgrey-color-1;
+    outline: 2px solid $lightgrey-color-1;
     background-color: transparent;
     transition: all .3s;
 
     &:hover {
-        outline-color: global.$tertiary-color-1;
+        outline-color: $tertiary-color-1;
     }
 
     & + & {
@@ -43,7 +43,7 @@
     height: 115px;
     padding: 5px;
 
-    @media screen and (min-width: global.$tablet) {
+    @media screen and (min-width: $tablet) {
         left: unset;
         right: 20px;
     }
@@ -58,7 +58,7 @@
         width: 35px;
         height: 105px;
         border-radius: 20px;
-        background-color: global.$grey-color;
+        background-color: $grey-color;
         transition: opacity .5s ease-out;
         z-index: 20;
 
@@ -67,7 +67,7 @@
             @include button();
         }
         .grey_outline {
-            outline-color: global.$darkbluegrey-color-2;
+            outline-color: $darkbluegrey-color-2;
         }
     }
 }

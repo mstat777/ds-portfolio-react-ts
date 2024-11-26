@@ -1,12 +1,12 @@
-@use '../../global';
+@use '../../global' as *;
 
 .contact_section {
     display: flex;
     flex-wrap: wrap;
-    padding: global.$header-height 2rem 4rem;
+    padding: $header-height 2rem 4rem;
     
-    @media screen and (min-width: global.$tablet) {
-        padding: global.$header-height 4rem 4rem;
+    @media screen and (min-width: $tablet) {
+        padding: $header-height 4rem 4rem;
     }
 
     h1 {
@@ -17,7 +17,7 @@
         width: 100%;
         margin: 0 0 3rem;
         text-align: justify;
-        @media screen and (min-width: global.$tablet) {
+        @media screen and (min-width: $tablet) {
             margin: 0 0 2rem;
             text-align: center;
         }
@@ -29,13 +29,13 @@
         margin: auto;
         padding: 1rem;
         border-radius: .6rem;
-        background-color: global.$darkbluegrey-color-2;
-        @media screen and (min-width: global.$tablet) {
+        background-color: $darkbluegrey-color-2;
+        @media screen and (min-width: $tablet) {
             display: inline-block;
             width: calc(50% - 2rem);
             margin: 6.2rem 2rem auto 0;
         }
-        @media screen and (min-width: global.$desktop) {
+        @media screen and (min-width: $desktop) {
             width: unset;
             margin: 6.2rem auto auto;
         }
@@ -44,7 +44,7 @@
             //width: 100%;
             margin: 0 4rem .5rem;
             text-align: left;
-            @media screen and (min-width: global.$tablet) {
+            @media screen and (min-width: $tablet) {
                 margin-bottom: 1rem;
             }
 
@@ -53,7 +53,7 @@
                 vertical-align: top;
 
                 &:first-child {
-                    color: global.$lightgrey-color-1;
+                    color: $lightgrey-color-1;
                 }
 
                 > svg {
@@ -68,7 +68,7 @@
         max-width: 400px;
         margin: 2rem auto 0;
 
-        @media screen and (min-width: global.$tablet) {
+        @media screen and (min-width: $tablet) {
             display: inline-block;
             width: 50%;
             margin-top: 0;
@@ -85,7 +85,7 @@
             margin: 0 auto;
             padding: 0 1.5rem 2rem;
             font-size: 1.4rem;
-            color: global.$highlight-color;
+            color: $highlight-color;
             white-space: break-spaces;
         }
         .ok_msg {
@@ -107,16 +107,16 @@
                 display: block;
                 width: 100%;
                 padding: .6rem;
-                box-shadow: inset 1px 1px 2px global.$secondary-color;
+                box-shadow: inset 1px 1px 2px $secondary-color;
                 font-weight: 600;
                 overflow: visible;
 
                 &:focus {
-                    outline: 2px solid global.$tertiary-color-1;
+                    outline: 2px solid $tertiary-color-1;
                 }
             }
             > input {
-                color: global.$secondary-color;
+                color: $secondary-color;
             }
             > textarea {
                 height: auto;

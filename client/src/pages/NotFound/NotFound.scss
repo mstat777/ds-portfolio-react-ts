@@ -1,24 +1,24 @@
-@use '../../global';
+@use '../../global' as *;
 
 #notFound {
-    padding: calc(global.$header-height + 4rem) 2rem 0;
+    padding: calc($header-height + 4rem) 2rem 0;
     
     p {
-        color: global.$tertiary-color-2;
+        color: $tertiary-color-2;
     
         a {
             margin-left: .5rem;
             padding: .3rem .5rem;
-            border: 1px solid global.$lightgrey-color-1;
+            border: 1px solid $lightgrey-color-1;
             border-radius: 4px;
             font-weight: 500;
-            color: global.$tertiary-color-1;
-            background-color: global.$darkbluegrey-color-2;
+            color: $tertiary-color-1;
+            background-color: $darkbluegrey-color-2;
             transition: all .5s;
     
             &:hover {
-                color: global.$secondary-color;
-                background-color: global.$lightgrey-color-1;
+                color: $secondary-color;
+                background-color: $lightgrey-color-1;
             }
         }
     }

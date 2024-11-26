@@ -1,20 +1,20 @@
-@use '../../global';
+@use '../../global' as *;
 
 .projects_section {
-    padding: global.$header-height 3rem 3rem;
+    padding: $header-height 3rem 3rem;
 
     .projects_grid {
         padding-top: 1rem;
         max-width: 460px;
         margin: 0 auto;
 
-        @media screen and (min-width: global.$tablet){
+        @media screen and (min-width: $tablet){
             display: grid;
             grid-template-columns: 1fr 1fr;
             gap: 2rem;
             max-width: 850px;
         }
-        @media screen and (min-width: global.$desktop){
+        @media screen and (min-width: $desktop){
             grid-template-columns: 1fr 1fr 1fr;
             max-width: unset;
         }

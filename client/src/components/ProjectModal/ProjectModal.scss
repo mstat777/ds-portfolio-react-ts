@@ -1,4 +1,4 @@
-@use '../../global';
+@use '../../global' as *;
 
 // !!! IMPORTANT !!!
 //
@@ -25,13 +25,13 @@
         align-items: flex-start;
         width: 80%;
         max-width: 460px;
-        max-height: calc(100% - 2 * calc(global.$header-height * 4 / 3));
+        max-height: calc(100% - 2 * calc($header-height * 4 / 3));
         padding: 1.5rem 1rem 1rem;
         border-radius: 8px;
         text-align: left;
-        background-color: global.$darkbluegrey-color-2;
+        background-color: $darkbluegrey-color-2;
 
-        @media screen and (min-width: global.$tablet){
+        @media screen and (min-width: $tablet){
             max-width: 500px;
             padding: 2rem;
         }
@@ -49,13 +49,13 @@
 
         &_img_ctn {
             width: 100%;
-            outline: 1px solid global.$lightgrey-color-1;
-            border: 2px solid global.$darkgrey-color-2;
+            outline: 1px solid $lightgrey-color-1;
+            border: 2px solid $darkgrey-color-2;
             border-radius: 4px;
             background-color: black;
             transition: opacity .4s;
 
-            @media screen and (min-width: global.$tablet) {   
+            @media screen and (min-width: $tablet) {   
                 margin: 0 auto;
             }
 
@@ -71,14 +71,27 @@
         &_info {
             position: relative;
             max-width: 800px;
-            margin-top: 1rem;
-            padding: 1rem;
-            color: global.$primary-color;
-
-            @media screen and (min-width: global.$tablet) {   
+            margin: 2rem 0;
+            padding: 0 1rem;
+            color: $primary-color;
+            overflow-y: scroll;
+            @media screen and (min-width: $tablet) {   
                 width: 100%;
-                margin-top: 1.5rem;
-                padding: 0 1rem;
+                margin: 2rem 0 1rem;
+                //padding: 0 1;
+            }
+
+            &::-webkit-scrollbar {
+                width: 5px;
+            }
+            &::-webkit-scrollbar-track {
+                background: $darkgrey-color-3;
+            }
+            &::-webkit-scrollbar-thumb {
+                background: $grey-color;
+                &:hover {
+                    background: $lightgrey-color-1;
+                }
             }
 
             .info_header {
@@ -101,7 +114,7 @@
                         height: 100%;
                         padding: 0 .5rem;
                         font-size: 1.6rem;
-                        @media screen and (min-width: global.$tablet) {    
+                        @media screen and (min-width: $tablet) {    
                             top: .2rem;
                         }
 
@@ -114,7 +127,7 @@
                         > span {
                             display: none;
                             font-size: 1.4rem;
-                            @media screen and (min-width: global.$tablet) {    
+                            @media screen and (min-width: $tablet) {    
                                 display: inline-block;
                                 margin-right: .5rem;
                             }
@@ -122,7 +135,7 @@
 
                         & + a {
                             margin-left: 2rem;
-                            @media screen and (min-width: global.$tablet) {    
+                            @media screen and (min-width: $tablet) {    
                                 margin-left: 1rem;
                             }
                         }
@@ -132,17 +145,12 @@
 
             .subtitle {
                 margin: .5rem 0 2rem;
-                font-family: global.$title-font;
-                color: global.$tertiary-color-2;
+                font-family: $title-font;
+                color: $tertiary-color-2;
             }
 
             .tools {
                 margin: 1rem 0 2rem;
-            }
-
-            .description {
-                height: 100%;
-                overflow-y: auto;
             }
         }
     }
