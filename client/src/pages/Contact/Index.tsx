@@ -104,7 +104,6 @@ export default function Contact(){
 
     const handleChange = (e: React.FormEvent<HTMLInputElement | HTMLTextAreaElement>) => {
         setInputs({ ...inputs, [(e.target as HTMLInputElement).name]: (e.target as HTMLInputElement).value });
-        console.log(inputs.message.length) 
     }
 
     const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {

@@ -1,71 +1,82 @@
 {
-    "title": "projects",
-    "projects": [
-        {
-            "title": "Dimitravel",
-            "subtitle": "web application for a travel agency",
-            "linkSite": "https://dt.mitkostatev.com",
-            "linkGitHub": "https://github.com/mstat777/final-project",
-            "images": [
-                "dimitravel-desktop-home.png"
-            ],
-            "tools": "<div>made with: <div name='JavaScript'></div> <div name='React'></div> <div name='Express.JS'></div> <div name='Sass'></div> <div name='HTML'></div> <div name='MySQL'></div> </div>",
-            "description": "I developped this project as a diploma project at the end of my studies for a  Full Stack Web Developper at 3W Academy."
-        },
-        {
-            "title": "AG Photography",
-            "subtitle": "a web application for a photographer",
-            "linkSite": "",
-            "linkGitHub": "https://github.com/mstat777/ag-photography",
-            "images": [
-                "ag-photography-slider-desktop.png"
-            ],
-            "tools": "<div>made with: <div name='JavaScript'></div> <div name='React'></div> <div name='Sass'></div> <div name='HTML'></div> </div>",
-            "description": "This application was created for the photographer Angel Georgiev."
-        },
-        {
-            "title": "Beaumiel",
-            "subtitle": "e-commerce application for selling bio honey",
-            "linkSite": "",
-            "linkGitHub": "https://github.com/mstat777/beaumiel-ng",
-            "images": [
-                "beaumiel-mobile-all.png"
-            ],
-            "tools": "<div>made with: <div name='TypeScript'></div> <div name='Angular'></div> <div name='Express.JS'></div> <div name='Sass'></div> <div name='HTML'></div> <div name='MySQL'></div> </div>",
-            "description": "This application was developed for the company Beaumiel, importer of bio organic honey."
-        },
-        {
-            "title": "PGN Player",
-            "subtitle": "а viewer for chess games",
-            "linkSite": "",
-            "linkGitHub": "https://github.com/mstat777/pgn-player-react-ts",
-            "images": [
-                "pgn-player-home-desktop.png"
-            ],
-            "tools": "<div>made with: <div name='TypeScript'></div> <div name='React'></div> <div name='Sass'></div> <div name='HTML'></div> </div>",
-            "description": "<p>PGN Player is a viewer that allows visualizing chess games by loading their text notation. Chess game is loaded either in .PGN file format or as a plain text.</p> <p>I developed this application with the idea to view and analyze my chess games and openings. Having searched for applications of this type, I had not found any that suited my needs. This is how I had the idea to create my own application. Started in 2023 it was initially coded in Vanilla JS. The current version is remade in React, Redux & TypeScript. <i>(work in progress...)</i></p>"
-        },
-        {
-            "title": "Ghenoarch",
-            "subtitle": "GhenoArch architectural agency website",
-            "linkSite": "https://ghenoarch.mitkostatev.com",
-            "linkGitHub": "",
-            "images": [
-                "ghenoarch-desktop-intro.jpg"
-            ],
-            "tools": "<div>made with: <div name='JavaScript'></div> <div name='CSS'></div> <div name='HTML'></div> <div name='PHP'></div> <div name='jQuery'></div> </div>",
-            "description": "The site was created in 2023 for the London-based architecture firm GhenoArch."
-        },
-        {
-            "title": "Shifumi",
-            "subtitle": "а rock-paper-scissors game",
-            "linkSite": "https://shifumi.mitkostatev.com",
-            "linkGitHub": "https://github.com/mstat777/shifumi_TS",
-            "images": [
-                "shifumi-mobile-all.png"
-            ],
-            "tools": "<div>made with: <div name='TypeScript'></div> <div name='React'></div> <div name='Sass'></div> <div name='HTML'></div> </div>",
-            "description": "This game is quickly developed as a part of a job interview test."
-        }
-    ]
+   "title": "projects",
+   "projects": [
+      {
+         "title": "Dimitravel",
+         "subtitle": "web application for a travel agency",
+         "linkSite": "https://dt.mitkostatev.com",
+         "linkGitHub": "https://github.com/mstat777/final-project",
+         "images": [
+            "dimitravel-desktop-home.png"
+         ],
+         "tools": "<div>made with: <div name='JavaScript'></div> <div name='React'></div> <div name='Redux'></div> <div name='Express.JS'></div> <div name='Sass'></div> <div name='HTML'></div> <div name='MySQL'></div> </div>",
+         "description": "I developped this project as a diploma project at the end of my studies for a  Full Stack Web Developper at 3W Academy."
+      },
+      {
+         "title": "AG Photography",
+         "subtitle": "a web application for a photographer",
+         "linkSite": "",
+         "linkGitHub": "https://github.com/mstat777/ag-photography",
+         "images": [
+            "ag-photography-slider-desktop.png"
+         ],
+         "tools": "<div>made with: <div name='JavaScript'></div> <div name='React'></div> <div name='Sass'></div> <div name='HTML'></div> </div>",
+         "description": "This application was created for the photographer Angel Georgiev."
+      },
+      {
+         "title": "Beaumiel",
+         "subtitle": "e-commerce application for selling bio honey",
+         "linkSite": "",
+         "linkGitHub": "https://github.com/mstat777/beaumiel-ng",
+         "images": [
+            "beaumiel-mobile-all.png"
+         ],
+         "tools": "<div>made with: <div name='TypeScript'></div> <div name='Angular'></div> <div name='Express.JS'></div> <div name='Sass'></div> <div name='HTML'></div> <div name='MySQL'></div> </div>",
+         "description": "This application was developed for the company Beaumiel, importer of bio organic honey."
+      },
+      {
+         "title": "PGN Player",
+         "subtitle": "а viewer for chess games",
+         "linkSite": "",
+         "linkGitHub": "https://github.com/mstat777/pgn-player-react-ts",
+         "images": [
+            "pgn-player-home-desktop.png"
+         ],
+         "tools": "<div>made with: <div name='TypeScript'></div> <div name='React'></div> <div name='Redux'></div> <div name='Sass'></div> <div name='HTML'></div> </div>",
+         "description": "<p>PGN Player is a viewer that allows visualizing chess games by loading their text notation. Chess game is loaded either in .PGN file format or as a plain text.</p> <p>I developed this application with the idea to view and analyze my chess games and openings. Having searched for applications of this type, I had not found any that suited my needs. This is how I had the idea to create my own application. Started in 2023 it was initially coded in Vanilla JS. The current version is remade in React, Redux & TypeScript. <i>(work in progress...)</i></p>"
+      },
+      {
+         "title": "Ghenoarch",
+         "subtitle": "GhenoArch architectural agency website",
+         "linkSite": "https://ghenoarch.mitkostatev.com",
+         "linkGitHub": "",
+         "images": [
+            "ghenoarch-desktop-intro.jpg"
+         ],
+         "tools": "<div>made with: <div name='JavaScript'></div> <div name='CSS'></div> <div name='HTML'></div> <div name='PHP'></div> <div name='jQuery'></div> </div>",
+         "description": "The site was created in 2023 for the London-based architecture firm GhenoArch."
+      },
+      {
+         "title": "DS Kanji Game",
+         "subtitle": "Kanji learning game",
+         "linkSite": "https://kanji.mitkostatev.com",
+         "linkGitHub": "https://github.com/mstat777/ds-kanji",
+         "images": [
+            "ds-kanji-all.png"
+         ],
+         "tools": "<div>made with: <div name='TypeScript'></div> <div name='React'></div> <div name='Redux'></div> <div name='Sass'></div> <div name='HTML'></div>",
+         "description": "<p>An application for testing the knowledge of Japanese kanji.</p> <ul>Features:<li>SPA</li><li>responsive design ('mobile first')</li><li>4 languages & switch language button</li><li>2 game modes: kanji -> meaning & meaning -> kanji</li><li>levels of difficulty</li><li>settings</li></ul>"
+      },
+      {
+         "title": "Shifumi",
+         "subtitle": "а rock-paper-scissors game",
+         "linkSite": "https://shifumi.mitkostatev.com",
+         "linkGitHub": "https://github.com/mstat777/shifumi_TS",
+         "images": [
+            "shifumi-mobile-all.png"
+         ],
+         "tools": "<div>made with: <div name='TypeScript'></div> <div name='React'></div> <div name='Sass'></div> <div name='HTML'></div> </div>",
+         "description": "This game is quickly developed as a part of a job interview test."
+      }
+   ]
 }

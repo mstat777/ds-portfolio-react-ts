@@ -1,71 +1,82 @@
 {
-    "title": "проекти",
-    "projects": [
-        {
-            "title": "Dimitravel",
-            "subtitle": "уеб приложение",
-            "linkSite": "https://dt.mitkostatev.com",
-            "linkGitHub": "https://github.com/mstat777/final-project",
-            "images": [
-                "dimitravel-desktop-home.png"
-            ],
-            "tools": "<div>направен с: <div name='JavaScript'></div> <div name='React'></div> <div name='Express.JS'></div> <div name='Sass'></div> <div name='HTML'></div> <div name='MySQL'></div> </div>",
-            "description": "Дипломният ми проект, който разработих в края на обучението ми като full-stack уеб програмист към 3W Academy, Франция."
-        },
-        {
-            "title": "AG Photography",
-            "subtitle": "уеб приложение за фотограф",
-            "linkSite": "",
-            "linkGitHub": "https://github.com/mstat777/ag-photography",
-            "images": [
-                "ag-photography-slider-desktop.png"
-            ],
-            "tools": "<div>направен с: <div name='JavaScript'></div> <div name='React'></div> <div name='Sass'></div> <div name='HTML'></div> </div>",
-            "description": "Това приложение е създадено за Ангел Георгиев, любител фотограф."
-        },
-        {
-            "title": "Beaumiel",
-            "subtitle": "електронен магазин за био мед - фирма &quot;Бомиел&quot;",
-            "linkSite": "",
-            "linkGitHub": "https://github.com/mstat777/beaumiel-ng",
-            "images": [
-                "beaumiel-mobile-all.png"
-            ],
-            "tools": "<div>направен с: <div name='TypeScript'></div> <div name='Angular'></div> <div name='Express.JS'></div> <div name='Sass'></div> <div name='HTML'></div> <div name='MySQL'></div> </div>",
-            "description": "&quot;Бомиел&quot; е фирма-вносител на български натурален био мед във Франция. Това уеб приложение е съзадено за фирма"
-        },
-        {
-            "title": "PGN плейър",
-            "subtitle": "визуализатор на шахматни партии",
-            "linkSite": "",
-            "linkGitHub": "https://github.com/mstat777/pgn-player-react-ts",
-            "images": [
-                "pgn-player-home-desktop.png"
-            ],
-            "tools": "<div>направен с: <div name='TypeScript'></div> <div name='React'></div> <div name='Sass'></div> <div name='HTML'></div> </div>",
-            "description": "<p>PGN плейърът е приложение за визуализация на шахматни партии чрез зареждане на тяхната нотация. Партията може да бъде заредена във файлов формат (.PGN) или като обикновен текст.</p> <p>Разработих това приложение с идеята да преглеждам и анализирам шахматни партии и дебюти. След като търсих приложения от този тип и не намерих нито едно, което да отговаря на нуждите ми като съзтезател по шах, ми хрумна идеята да създам собствено приложение. Започнато през 2023 г., първоначално е кодирано на Vanilla JS. Текущата версия е изцяло преработена на React, Redux & TypeScript. <i>(в процес на разработка...)</i></p>"
-        },
-        {
-            "title": "Ghenoarch",
-            "subtitle": "уеб сайт на архитектурно бюро &quot;ГеноАрх&quot;",
-            "linkSite": "https://ghenoarch.mitkostatev.com",
-            "linkGitHub": "",
-            "images": [
-                "ghenoarch-desktop-intro.jpg"
-            ],
-            "tools": "<div>направен с: <div name='JavaScript'></div> <div name='CSS'></div> <div name='HTML'></div> <div name='PHP'></div> <div name='jQuery'></div> </div>",
-            "description": "Професионален уебсайт създаден през 2023 г. за арх. фирма &quot;ГеноАрх&quot;"
-        },
-        {
-            "title": "Shifumi",
-            "subtitle": "игра &quot;камък, ножица, хартия&quot;",
-            "linkSite": "https://shifumi.mitkostatev.com",
-            "linkGitHub": "https://github.com/mstat777/shifumi_TS",
-            "images": [
-                "shifumi-mobile-all.png"
-            ],
-            "tools": "<div>направен с: <div name='TypeScript'></div> <div name='React'></div> <div name='Sass'></div> <div name='HTML'></div> </div>",
-            "description": "Тази игра е разработена като тест от интервю за работа."
-        }
-    ]
+   "title": "проекти",
+   "projects": [
+      {
+         "title": "Dimitravel",
+         "subtitle": "уеб приложение",
+         "linkSite": "https://dt.mitkostatev.com",
+         "linkGitHub": "https://github.com/mstat777/final-project",
+         "images": [
+            "dimitravel-desktop-home.png"
+         ],
+         "tools": "<div>направен с: <div name='JavaScript'></div> <div name='React'></div> <div name='Redux'></div> <div name='Express.JS'></div> <div name='Sass'></div> <div name='HTML'></div> <div name='MySQL'></div> </div>",
+         "description": "Дипломният ми проект, който разработих в края на обучението ми като full-stack уеб програмист към 3W Academy, Франция."
+      },
+      {
+         "title": "AG Photography",
+         "subtitle": "уеб приложение за фотограф",
+         "linkSite": "",
+         "linkGitHub": "https://github.com/mstat777/ag-photography",
+         "images": [
+            "ag-photography-slider-desktop.png"
+         ],
+         "tools": "<div>направен с: <div name='JavaScript'></div> <div name='React'></div> <div name='Sass'></div> <div name='HTML'></div> </div>",
+         "description": "Това приложение е създадено за Ангел Георгиев, любител фотограф."
+      },
+      {
+         "title": "Beaumiel",
+         "subtitle": "електронен магазин за био мед - фирма &quot;Бомиел&quot;",
+         "linkSite": "",
+         "linkGitHub": "https://github.com/mstat777/beaumiel-ng",
+         "images": [
+            "beaumiel-mobile-all.png"
+         ],
+         "tools": "<div>направен с: <div name='TypeScript'></div> <div name='Angular'></div> <div name='Express.JS'></div> <div name='Sass'></div> <div name='HTML'></div> <div name='MySQL'></div> </div>",
+         "description": "&quot;Бомиел&quot; е фирма-вносител на български натурален био мед във Франция. Това уеб приложение е съзадено за фирма"
+      },
+      {
+         "title": "PGN плейър",
+         "subtitle": "визуализатор на шахматни партии",
+         "linkSite": "",
+         "linkGitHub": "https://github.com/mstat777/pgn-player-react-ts",
+         "images": [
+            "pgn-player-home-desktop.png"
+         ],
+         "tools": "<div>направен с: <div name='TypeScript'></div> <div name='React'></div> <div name='Redux'></div> <div name='Sass'></div> <div name='HTML'></div> </div>",
+         "description": "<p>PGN плейърът е приложение за визуализация на шахматни партии чрез зареждане на тяхната нотация. Партията може да бъде заредена във файлов формат (.PGN) или като обикновен текст.</p> <p>Разработих това приложение с идеята да преглеждам и анализирам шахматни партии и дебюти. След като търсих приложения от този тип и не намерих нито едно, което да отговаря на нуждите ми като съзтезател по шах, ми хрумна идеята да създам собствено приложение. Започнато през 2023 г., първоначално е кодирано на Vanilla JS. Текущата версия е изцяло преработена на React, Redux & TypeScript. <i>(в процес на разработка...)</i></p>"
+      },
+      {
+         "title": "Ghenoarch",
+         "subtitle": "уеб сайт на архитектурно бюро &quot;ГеноАрх&quot;",
+         "linkSite": "https://ghenoarch.mitkostatev.com",
+         "linkGitHub": "",
+         "images": [
+            "ghenoarch-desktop-intro.jpg"
+         ],
+         "tools": "<div>направен с: <div name='JavaScript'></div> <div name='CSS'></div> <div name='HTML'></div> <div name='PHP'></div> <div name='jQuery'></div> </div>",
+         "description": "Професионален уебсайт създаден през 2023 г. за арх. фирма &quot;ГеноАрх&quot;"
+      },
+      {
+         "title": "DS Kanji",
+         "subtitle": "приложение-игра за изучаване на канджи",
+         "linkSite": "https://kanji.mitkostatev.com",
+         "linkGitHub": "https://github.com/mstat777/ds-kanji",
+         "images": [
+            "ds-kanji-all.png"
+         ],
+         "tools": "<div>направен с: <div name='TypeScript'></div> <div name='React'></div> <div name='Redux'></div> <div name='Sass'></div> <div name='HTML'></div>",
+         "description": "<p>Уеб приложение за тестване на познания по японски канджи символи.</p> <ul>Характеристики:<li>SPA</li><li>адаптивен дизайн</li><li>4 езика, бутон за смяна на езика</li><li>2 типа игра: канджи -> значение, значение -> канджи</li><li>4 нива на трудност</li><li>настройки</li></ul>"
+      },
+      {
+         "title": "Shifumi",
+         "subtitle": "игра &quot;камък, ножица, хартия&quot;",
+         "linkSite": "https://shifumi.mitkostatev.com",
+         "linkGitHub": "https://github.com/mstat777/shifumi_TS",
+         "images": [
+            "shifumi-mobile-all.png"
+         ],
+         "tools": "<div>направен с: <div name='TypeScript'></div> <div name='React'></div> <div name='Sass'></div> <div name='HTML'></div> </div>",
+         "description": "Тази игра е разработена като тест от интервю за работа."
+      }
+   ]
 }

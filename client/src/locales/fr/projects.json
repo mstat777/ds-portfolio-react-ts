@@ -1,71 +1,82 @@
 {
-    "title": "projets",
-    "projects": [
-        {
-            "title": "Dimitravel",
-            "subtitle": "application web pour une agence de voyage",
-            "linkSite": "https://dt.mitkostatev.com",
-            "linkGitHub": "https://github.com/mstat777/final-project",
-            "images": [
-                "dimitravel-desktop-home.png"
-            ],
-            "tools": "<div>fait avec : <div name='JavaScript'></div> <div name='React'></div> <div name='Express.JS'></div> <div name='Sass'></div> <div name='HTML'></div> <div name='MySQL'></div> </div>",
-            "description": "J'ai développé ce projet dans le cadre d'un projet de diplôme à la fin de mes études &laquo; Développeur Web Full Stack &raquo; à la 3W Academy."
-        },
-        {
-            "title": "AG Photography",
-            "subtitle": "application web pour un photographe",
-            "linkSite": "",
-            "linkGitHub": "https://github.com/mstat777/ag-photography",
-            "images": [
-                "ag-photography-slider-desktop.png"
-            ],
-            "tools": "<div>fait avec : <div name='JavaScript'></div> <div name='React'></div> <div name='Sass'></div> <div name='HTML'></div> </div>",
-            "description": "Cette application a été créée pour le photographe Angel Georgiev."
-        },
-        {
-            "title": "Beaumiel",
-            "subtitle": "application e-commerce pour la vente de miel bio",
-            "linkSite": "",
-            "linkGitHub": "https://github.com/mstat777/beaumiel-ng",
-            "images": [
-                "beaumiel-mobile-all.png"
-            ],
-            "tools": "<div>fait avec : <div name='TypeScript'></div> <div name='Angular'></div> <div name='Express.JS'></div> <div name='Sass'></div> <div name='HTML'></div> <div name='MySQL'></div> </div>",
-            "description": "Cette application a été développée pour la société Beaumiel, importatrice de miel Bio."
-        },
-        {
-            "title": "PGN Player",
-            "subtitle": "visionneuse de parties d'échecs",
-            "linkSite": "",
-            "linkGitHub": "https://github.com/mstat777/pgn-player-react-ts",
-            "images": [
-                "pgn-player-home-desktop.png"
-            ],
-            "tools": "<div>fait avec : <div name='TypeScript'></div> <div name='React'></div> <div name='Sass'></div> <div name='HTML'></div> </div>",
-            "description": "<p>Cette application permet de visualiser des parties d'échecs en chargeant leur notation textuelle soit au format de fichier .PGN, soit en texte brut.</p> <p>J'ai développé cette application avec l'idée d'enregistrer, afficher et analyser mes parties et ouvertures. Ayant cherché des applications de ce type, je n'en avais trouvé aucune qui convenait à mes besoins. C'est ainsi que j'ai eu l'idée de créer ma propre application. Commencé en 2023 codée en Vanilla JS. La 2ème version est refaite en React, Redux et TypeScript. <i>(travail en cours...)</i></p>"
-        },
-        {
-            "title": "Ghenoarch",
-            "subtitle": "site web de l'agence d'architecture GhenoArch",
-            "linkSite": "https://ghenoarch.mitkostatev.com",
-            "linkGitHub": "",
-            "images": [
-                "ghenoarch-desktop-intro.jpg"
-            ],
-            "tools": "<div>fait avec : <div name='JavaScript'></div> <div name='CSS'></div> <div name='HTML'></div> <div name='PHP'></div> <div name='jQuery'></div> </div>",
-            "description": "Le site a été créé en 2023 pour l'agence d'architecture GhenoArch, basée à Londres."
-        },
-        {
-            "title": "Shifumi",
-            "subtitle": "un jeu de pierre-papier-ciseaux",
-            "linkSite": "https://shifumi.mitkostatev.com",
-            "linkGitHub": "https://github.com/mstat777/shifumi_TS",
-            "images": [
-                "shifumi-mobile-all.png"
-            ],
-            "tools": "<div>fait avec : <div name='TypeScript'></div> <div name='React'></div> <div name='Sass'></div> <div name='HTML'></div> </div>",
-            "description": "Ce jeu est rapidement développé dans le cadre d'un test d'entretien d'embauche. Le jeu est développé en React.JS."
-        }
-    ]
+   "title": "projets",
+   "projects": [
+      {
+         "title": "Dimitravel",
+         "subtitle": "application web pour une agence de voyage",
+         "linkSite": "https://dt.mitkostatev.com",
+         "linkGitHub": "https://github.com/mstat777/final-project",
+         "images": [
+            "dimitravel-desktop-home.png"
+         ],
+         "tools": "<div>fait avec : <div name='JavaScript'></div> <div name='React'></div> <div name='Redux'></div> <div name='Express.JS'></div> <div name='Sass'></div> <div name='HTML'></div> <div name='MySQL'></div> </div>",
+         "description": "J'ai développé ce projet dans le cadre d'un projet de diplôme à la fin de mes études &laquo; Développeur Web Full Stack &raquo; à la 3W Academy."
+      },
+      {
+         "title": "AG Photography",
+         "subtitle": "application web pour un photographe",
+         "linkSite": "",
+         "linkGitHub": "https://github.com/mstat777/ag-photography",
+         "images": [
+            "ag-photography-slider-desktop.png"
+         ],
+         "tools": "<div>fait avec : <div name='JavaScript'></div> <div name='React'></div> <div name='Sass'></div> <div name='HTML'></div> </div>",
+         "description": "Cette application a été créée pour le photographe Angel Georgiev."
+      },
+      {
+         "title": "Beaumiel",
+         "subtitle": "application e-commerce pour la vente de miel bio",
+         "linkSite": "",
+         "linkGitHub": "https://github.com/mstat777/beaumiel-ng",
+         "images": [
+            "beaumiel-mobile-all.png"
+         ],
+         "tools": "<div>fait avec : <div name='TypeScript'></div> <div name='Angular'></div> <div name='Express.JS'></div> <div name='Sass'></div> <div name='HTML'></div> <div name='MySQL'></div> </div>",
+         "description": "Cette application a été développée pour la société Beaumiel, importatrice de miel Bio."
+      },
+      {
+         "title": "PGN Player",
+         "subtitle": "visionneuse de parties d'échecs",
+         "linkSite": "",
+         "linkGitHub": "https://github.com/mstat777/pgn-player-react-ts",
+         "images": [
+            "pgn-player-home-desktop.png"
+         ],
+         "tools": "<div>fait avec : <div name='TypeScript'></div> <div name='React'></div> <div name='Redux'></div> <div name='Sass'></div> <div name='HTML'></div> </div>",
+         "description": "<p>Cette application permet de visualiser des parties d'échecs en chargeant leur notation textuelle soit au format de fichier .PGN, soit en texte brut.</p> <p>J'ai développé cette application avec l'idée d'enregistrer, afficher et analyser mes parties et ouvertures. Ayant cherché des applications de ce type, je n'en avais trouvé aucune qui convenait à mes besoins. C'est ainsi que j'ai eu l'idée de créer ma propre application. Commencé en 2023 codée en Vanilla JS. La 2ème version est refaite en React, Redux et TypeScript. <i>(travail en cours...)</i></p>"
+      },
+      {
+         "title": "Ghenoarch",
+         "subtitle": "site web de l'agence d'architecture GhenoArch",
+         "linkSite": "https://ghenoarch.mitkostatev.com",
+         "linkGitHub": "",
+         "images": [
+            "ghenoarch-desktop-intro.jpg"
+         ],
+         "tools": "<div>fait avec : <div name='JavaScript'></div> <div name='CSS'></div> <div name='HTML'></div> <div name='PHP'></div> <div name='jQuery'></div> </div>",
+         "description": "Le site a été créé en 2023 pour l'agence d'architecture GhenoArch, basée à Londres."
+      },
+      {
+         "title": "DS Kanji Game",
+         "subtitle": "Jeu d'apprentissage des kanji",
+         "linkSite": "https://kanji.mitkostatev.com",
+         "linkGitHub": "https://github.com/mstat777/ds-kanji",
+         "images": [
+            "ds-kanji-all.png"
+         ],
+         "tools": "<div>fait avec : <div name='TypeScript'></div> <div name='React'></div> <div name='Redux'></div> <div name='Sass'></div> <div name='HTML'></div>",
+         "description": "<p>Une application pour tester la connaissance des kanji japonais.</p> <ul>Caractéristiques :<li>SPA</li><li>responsive design ('mobile first')</li><li>4 langues et bouton de changement de langue</li><li>2 modes de jeu : kanji -> signification & signification -> kanji</li><li>niveaux de difficulté</li><li>paramètres</li></ul>"
+      },
+      {
+         "title": "Shifumi",
+         "subtitle": "un jeu de pierre-papier-ciseaux",
+         "linkSite": "https://shifumi.mitkostatev.com",
+         "linkGitHub": "https://github.com/mstat777/shifumi_TS",
+         "images": [
+            "shifumi-mobile-all.png"
+         ],
+         "tools": "<div>fait avec : <div name='TypeScript'></div> <div name='React'></div> <div name='Sass'></div> <div name='HTML'></div> </div>",
+         "description": "Ce jeu est rapidement développé dans le cadre d'un test d'entretien d'embauche. Le jeu est développé en React.JS."
+      }
+   ]
 }
